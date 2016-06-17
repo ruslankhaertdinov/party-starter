@@ -11,12 +11,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130319140714) do
+ActiveRecord::Schema.define(version: 20160617121835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "users", force: true do |t|
+  create_table "availabilities", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.datetime "start_time", null: false
+    t.datetime "end_time",   null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "availabilities", ["user_id"], name: "index_availabilities_on_user_id", using: :btree
+
+  create_table "event_users", force: :cascade do |t|
+    t.integer "user_id",  null: false
+    t.integer "event_id", null: false
+  end
+
+  add_index "event_users", ["event_id"], name: "index_event_users_on_event_id", using: :btree
+  add_index "event_users", ["user_id"], name: "index_event_users_on_user_id", using: :btree
+
+  create_table "events", force: :cascade do |t|
+    t.integer  "user_id",                  null: false
+    t.string   "name",                     null: false
+    t.string   "description", default: "", null: false
+    t.integer  "start_time"
+    t.integer  "end_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "events", ["user_id"], name: "index_events_on_user_id", using: :btree
+
+  create_table "invitations", force: :cascade do |t|
+    t.integer  "event_id",                null: false
+    t.integer  "user_id",                 null: false
+    t.string   "token",      default: "", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "invitations", ["event_id"], name: "index_invitations_on_event_id", using: :btree
+  add_index "invitations", ["user_id"], name: "index_invitations_on_user_id", using: :btree
+
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

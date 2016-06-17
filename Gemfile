@@ -56,6 +56,7 @@ group :development, :test, :staging do
   gem "factory_girl_rails"
   gem "rspec_api_documentation"
   gem "apitome"
+  gem "pry-rails"
 end
 
 group :staging, :production do
