@@ -38,8 +38,8 @@ ActiveRecord::Schema.define(version: 20160617121835) do
     t.integer  "user_id",                  null: false
     t.string   "name",                     null: false
     t.string   "description", default: "", null: false
-    t.integer  "start_time"
-    t.integer  "end_time"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

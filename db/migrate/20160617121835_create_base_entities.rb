@@ -4,8 +4,8 @@ class CreateBaseEntities < ActiveRecord::Migration
       t.belongs_to :user,        index: true, null: false
       t.string     :name,                     null: false
       t.string     :description,              null: false, default: ""
-      t.integer    :start_time
-      t.integer    :end_time
+      t.datetime   :start_time
+      t.datetime   :end_time
       t.timestamps
     end
 
