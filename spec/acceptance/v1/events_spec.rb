@@ -12,11 +12,23 @@ resource "Events" do
     let(:description) { "Repetition" }
 
     parameter :name, name, required: true, scope: :event
-    parameter :description, description, required: true, scope: :event
+    parameter :description, description, scope: :event
 
-    example "Sign in with valid password" do
+    example "Creates event with valid params" do
       do_request(token: user.authentication_token)
       expect(response["event"]).to be_an_event_representation
+    end
+
+    example_request "Creates event with invalid user token" do
+      expect(response_status).to eq 401
+      expect(response["error"]).to eq("Unauthorized")
+    end
+
+    example "Creates event with invalid params" do
+      do_request(token: user.authentication_token, event: { name: "", description: "" })
+
+      expect(response_status).to eq 422
+      expect(response["error"]).to eq(["Name can't be blank"])
     end
   end
 end

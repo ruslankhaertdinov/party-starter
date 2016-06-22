@@ -3,4 +3,6 @@ class Event < ActiveRecord::Base
   has_many :event_users, dependent: :destroy
   has_many :users, through: :event_users
   has_many :availabilities, through: :users
+
+  validates :name, presence: true
 end
