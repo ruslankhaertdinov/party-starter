@@ -1,8 +1,8 @@
 {
-  "resource": "User Events",
+  "resource": "Owner Events",
   "http_method": "GET",
-  "route": "/v1/user_events",
-  "description": "Returns events where user was added",
+  "route": "/v1/owner_events",
+  "description": "Returns own events",
   "explanation": null,
   "parameters": [
     {
@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/user_events?token=bHMoN3G2FWvQSyZyrCdx",
+      "request_path": "/v1/owner_events?token=Czr4yv3YcoXXW6uyuwyS",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "token": "bHMoN3G2FWvQSyZyrCdx"
+        "token": "Czr4yv3YcoXXW6uyuwyS"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":7,\"name\":\"Ipsa repellat quas vitae.\",\"description\":\"\",\"start_at\":0,\"end_at\":0},{\"id\":8,\"name\":\"Omnis et libero quos.\",\"description\":\"\",\"start_at\":0,\"end_at\":0}]}",
+      "response_body": "{\"events\":[{\"id\":1,\"name\":\"Rem repellendus necessitatibus eligendi unde culpa dolor ut.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[]}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user_events?token=bHMoN3G2FWvQSyZyrCdx\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/owner_events?token=Czr4yv3YcoXXW6uyuwyS\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

@@ -1,0 +1,39 @@
+{
+  "resource": "Events",
+  "http_method": "GET",
+  "route": "/v1/events",
+  "description": "Returns events where user was added",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "token",
+      "description": "Authentication token"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/events?token=aqHNn7GL82Jy4L7VA9eC",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json"
+      },
+      "request_query_parameters": {
+        "token": "aqHNn7GL82Jy4L7VA9eC"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"events\":[{\"id\":6,\"name\":\"Iusto ea aspernatur ratione et.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[{\"id\":9,\"authentication_token\":\"aqHNn7GL82Jy4L7VA9eC\",\"email\":\"user9@example.com\"}]},{\"id\":7,\"name\":\"Possimus quae dignissimos voluptatem molestiae laboriosam sit itaque voluptas.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[{\"id\":9,\"authentication_token\":\"aqHNn7GL82Jy4L7VA9eC\",\"email\":\"user9@example.com\"}]}]}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/events?token=aqHNn7GL82Jy4L7VA9eC\" -X GET \\\n\t-H \"Accept: application/json\""
+    }
+  ]
+}

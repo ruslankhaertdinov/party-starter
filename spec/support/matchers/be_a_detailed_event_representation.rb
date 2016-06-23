@@ -1,4 +1,4 @@
-RSpec::Matchers.define :be_a_detailed_event_representation do
+RSpec::Matchers.define :be_an_event_representation do
   match do |json|
     response_attributes = %w(
       id
@@ -6,7 +6,6 @@ RSpec::Matchers.define :be_a_detailed_event_representation do
       description
       start_at
       end_at
-      users
     )
 
     expect(json).to be

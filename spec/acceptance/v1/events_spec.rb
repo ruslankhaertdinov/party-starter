@@ -9,6 +9,41 @@ resource "Events" do
   let!(:user) { create :user }
   let(:token) { user.authentication_token }
 
+  get "/v1/events" do
+    let!(:event_1) { create(:event) }
+    let!(:event_2) { create(:event) }
+    let!(:event_3) { create(:event) }
+
+    before do
+      event_1.users << user
+      event_2.users << user
+    end
+
+    parameter :token, "Authentication token", required: true
+
+    example_request "Returns events where user was added" do
+      expect(response_status).to eq 200
+      expect(response["events"].size).to eq(2)
+      expect(response["events"].first).to be_an_event_representation
+    end
+  end
+
+  get "/v1/events/:id" do
+    let(:event) { create(:event) }
+    let(:id) { event.id }
+
+    before do
+      event.users << user
+    end
+
+    parameter :token, "Authentication token", required: true
+
+    example_request "Shows detailed event information" do
+      expect(response_status).to eq 200
+      expect(response["event"]).to be_an_event_representation
+    end
+  end
+
   post "/v1/events" do
     let(:name) { "Meeting" }
     let(:description) { "Repetition" }
@@ -31,33 +66,6 @@ resource "Events" do
 
       expect(response_status).to eq 422
       expect(response["error"]).to eq(["Name can't be blank"])
-    end
-  end
-
-  get "/v1/events" do
-    before do
-      create_list(:event, 2, owner: user)
-      create(:event)
-    end
-
-    parameter :token, "Authentication token", required: true
-
-    example_request "Fetches own events" do
-      expect(response_status).to eq 200
-      expect(response["events"]).to be
-      expect(response["events"].size).to eq(2)
-      expect(response["events"].first).to be_an_event_representation
-    end
-  end
-
-  get "/v1/events/:id" do
-    let(:id) { create(:event, owner: user).id }
-
-    parameter :token, "Authentication token", required: true
-
-    example_request "Shows detailed event information" do
-      expect(response_status).to eq 200
-      expect(response["event"]).to be_a_detailed_event_representation
     end
   end
 end

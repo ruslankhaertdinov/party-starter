@@ -1,21 +1,21 @@
 {
   "resources": [
     {
+      "name": "Owner Events",
+      "examples": [
+        {
+          "description": "Returns own events",
+          "link": "owner_events/returns_own_events.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
       "name": "Events",
       "examples": [
         {
-          "description": "Shows detailed event information",
-          "link": "events/shows_detailed_event_information.json",
-          "groups": "all"
-        },
-        {
-          "description": "Fetches own events",
-          "link": "events/fetches_own_events.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with valid params",
-          "link": "events/creates_event_with_valid_params.json",
+          "description": "Creates event with invalid params",
+          "link": "events/creates_event_with_invalid_params.json",
           "groups": "all"
         },
         {
@@ -24,18 +24,33 @@
           "groups": "all"
         },
         {
-          "description": "Creates event with invalid params",
-          "link": "events/creates_event_with_invalid_params.json",
+          "description": "Creates event with valid params",
+          "link": "events/creates_event_with_valid_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Shows detailed event information",
+          "link": "events/shows_detailed_event_information.json",
+          "groups": "all"
+        },
+        {
+          "description": "Returns events where user was added",
+          "link": "events/returns_events_where_user_was_added.json",
           "groups": "all"
         }
       ]
     },
     {
-      "name": "User Events",
+      "name": "Availabilities",
       "examples": [
         {
-          "description": "Returns events where user was added",
-          "link": "user_events/returns_events_where_user_was_added.json",
+          "description": "Creates availabilities",
+          "link": "availabilities/creates_availabilities.json",
+          "groups": "all"
+        },
+        {
+          "description": "Fetches user availabilities",
+          "link": "availabilities/fetches_user_availabilities.json",
           "groups": "all"
         }
       ]
@@ -44,13 +59,13 @@
       "name": "Sessions",
       "examples": [
         {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
+          "description": "Sign in with valid password",
+          "link": "sessions/sign_in_with_valid_password.json",
           "groups": "all"
         },
         {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
+          "description": "Sign in with invalid password",
+          "link": "sessions/sign_in_with_invalid_password.json",
           "groups": "all"
         }
       ]
@@ -61,21 +76,6 @@
         {
           "description": "Request to unexisting page",
           "link": "errors/request_to_unexisting_page.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Availabilities",
-      "examples": [
-        {
-          "description": "Fetches user availabilities",
-          "link": "availabilities/fetches_user_availabilities.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates availabilities",
-          "link": "availabilities/creates_availabilities.json",
           "groups": "all"
         }
       ]

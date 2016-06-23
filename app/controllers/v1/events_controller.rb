@@ -3,12 +3,12 @@ module V1
     before_action :ensure_user_found
 
     def index
-      respond_with(own_events)
+      respond_with(events)
     end
 
     def show
-      event = own_events.find(params[:id])
-      render json: event, serializer: DetailedEventSerializer
+      event = events.find(params[:id])
+      render json: event
     end
 
     def create
@@ -16,6 +16,7 @@ module V1
       event.owner = found_user
 
       if event.save
+        event.users << found_user
         respond_with(event)
       else
         render json: { error: event.errors.to_a }, status: :unprocessable_entity
@@ -28,8 +29,8 @@ module V1
       params.require(:event).permit(:name, :description)
     end
 
-    def own_events
-      found_user.own_events
+    def events
+      found_user.events
     end
   end
 end
