@@ -43,6 +43,7 @@ resource "Events" do
     parameter :token, "Authentication token", required: true
 
     example_request "Fetches own events" do
+      expect(response_status).to eq 200
       expect(response["events"]).to be
       expect(response["events"].size).to eq(2)
       expect(response["events"].first).to be_an_event_representation

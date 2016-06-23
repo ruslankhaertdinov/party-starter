@@ -16,6 +16,7 @@ resource "Availabilities" do
     parameter :token, "Authentication token", required: true
 
     example_request "Creates availabilities", token: "secret" do
+      expect(response_status).to eq 201
       expect(response["availabilities"]).to be
       expect(response["availabilities"].first).to be_an_availability_representation
     end
@@ -30,6 +31,7 @@ resource "Availabilities" do
     end
 
     example_request "Fetches user availabilities" do
+      expect(response_status).to eq 200
       expect(response["availabilities"]).to be
       expect(response["availabilities"].size).to eq(2)
       expect(response["availabilities"].first).to be_an_availability_representation

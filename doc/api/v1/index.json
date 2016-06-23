@@ -1,18 +1,23 @@
 {
   "resources": [
     {
-      "name": "Events",
+      "name": "Availabilities",
       "examples": [
         {
-          "description": "Fetches own events",
-          "link": "events/fetches_own_events.json",
+          "description": "Fetches user availabilities",
+          "link": "availabilities/fetches_user_availabilities.json",
           "groups": "all"
         },
         {
-          "description": "Creates event with invalid params",
-          "link": "events/creates_event_with_invalid_params.json",
+          "description": "Creates availabilities",
+          "link": "availabilities/creates_availabilities.json",
           "groups": "all"
-        },
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "examples": [
         {
           "description": "Creates event with invalid user token",
           "link": "events/creates_event_with_invalid_user_token.json",
@@ -21,6 +26,26 @@
         {
           "description": "Creates event with valid params",
           "link": "events/creates_event_with_valid_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Creates event with invalid params",
+          "link": "events/creates_event_with_invalid_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Fetches own events",
+          "link": "events/fetches_own_events.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "User Events",
+      "examples": [
+        {
+          "description": "Returns events where user was added",
+          "link": "user_events/returns_events_where_user_was_added.json",
           "groups": "all"
         }
       ]
@@ -46,21 +71,6 @@
         {
           "description": "Request to unexisting page",
           "link": "errors/request_to_unexisting_page.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Availabilities",
-      "examples": [
-        {
-          "description": "Creates availabilities",
-          "link": "availabilities/creates_availabilities.json",
-          "groups": "all"
-        },
-        {
-          "description": "Fetches user availabilities",
-          "link": "availabilities/fetches_user_availabilities.json",
           "groups": "all"
         }
       ]
