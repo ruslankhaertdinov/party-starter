@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 20160617121835) do
 
   create_table "availabilities", force: :cascade do |t|
     t.integer  "user_id",    null: false
-    t.datetime "start_time", null: false
-    t.datetime "end_time",   null: false
+    t.datetime "start_at", null: false
+    t.datetime "end_at",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,8 +38,8 @@ ActiveRecord::Schema.define(version: 20160617121835) do
     t.integer  "user_id",                  null: false
     t.string   "name",                     null: false
     t.string   "description", default: "", null: false
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.datetime "start_at"
+    t.datetime "end_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

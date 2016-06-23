@@ -1,8 +1,9 @@
-RSpec::Matchers.define :be_a_user_representation do |user|
+RSpec::Matchers.define :be_an_availability_representation do
   match do |json|
     response_attributes = %w(
       id
-      authentication_token
+      start_at
+      end_at
     )
 
     expect(json).to be

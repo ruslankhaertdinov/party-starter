@@ -1,0 +1,48 @@
+{
+  "resource": "Event Users",
+  "http_method": "DELETE",
+  "route": "/v1/event_users/:id",
+  "description": "Removes member from event",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "user_id",
+      "description": "User id"
+    },
+    {
+      "required": true,
+      "name": "event_id",
+      "description": "Event id"
+    },
+    {
+      "required": true,
+      "name": "token",
+      "description": "Authentication token"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/v1/event_users/:id",
+      "request_body": "user_id=14&event_id=6&token=N2ZXzwKacpZRw6ZfzzaK",
+      "request_headers": {
+        "Accept": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"event\":{\"id\":6,\"name\":\"Voluptatum qui accusantium assumenda iure quaerat autem.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[]}}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/event_users/:id\" -d 'user_id=14&event_id=6&token=N2ZXzwKacpZRw6ZfzzaK' -X DELETE \\\n\t-H \"Accept: application/json\""
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "resource": "Owner Events",
+  "http_method": "GET",
+  "route": "/v1/owner_events",
+  "description": "Returns own events",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "token",
+      "description": "Authentication token"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/owner_events?token=NxHHQyKbDayVGEzwifkK",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json"
+      },
+      "request_query_parameters": {
+        "token": "NxHHQyKbDayVGEzwifkK"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"events\":[{\"id\":8,\"name\":\"Et iusto occaecati sint aut optio autem vel.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[]}]}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/owner_events?token=NxHHQyKbDayVGEzwifkK\" -X GET \\\n\t-H \"Accept: application/json\""
+    }
+  ]
+}

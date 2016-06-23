@@ -14,7 +14,7 @@ class FetchIntersection
         overlaped = overlaped_availabilities(comparable_user, availability)
         intersections.delete(availability.id) and break if overlaped.empty? # check until first blank overlapping
 
-        intersections[availability.id] |= overlaped.map { |a| a.start_time..a.end_time }
+        intersections[availability.id] |= overlaped.map { |a| a.start_at..a.end_at }
         intersections[availability.id] |= range_for(availability)
       end
     end
@@ -35,10 +35,10 @@ class FetchIntersection
   def overlaped_availabilities(user, availability)
     user
       .availabilities
-      .where("('#{availability.start_time}', '#{availability.end_time}') OVERLAPS (start_time, end_time)")
+      .where("('#{availability.start_at}', '#{availability.end_at}') OVERLAPS (start_at, end_at)")
   end
 
   def range_for(availability)
-    [availability.start_time..availability.end_time]
+    [availability.start_at..availability.end_at]
   end
 end

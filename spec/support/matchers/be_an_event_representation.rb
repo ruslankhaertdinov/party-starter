@@ -1,8 +1,12 @@
-RSpec::Matchers.define :be_a_user_representation do |user|
+RSpec::Matchers.define :be_an_event_representation do
   match do |json|
     response_attributes = %w(
       id
-      authentication_token
+      name
+      description
+      start_at
+      end_at
+      users
     )
 
     expect(json).to be

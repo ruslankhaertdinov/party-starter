@@ -1,0 +1,44 @@
+{
+  "resource": "Availabilities",
+  "http_method": "POST",
+  "route": "/v1/availabilities",
+  "description": "Creates availabilities",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "availability",
+      "name": "intervals",
+      "description": "User availability intervals"
+    },
+    {
+      "required": true,
+      "name": "token",
+      "description": "Authentication token"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/v1/availabilities",
+      "request_body": "availability[intervals][][start_at]=1466625300&availability[intervals][][end_at]=1466625400&token=secret",
+      "request_headers": {
+        "Accept": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"availabilities\":[{\"id\":4,\"start_at\":1466625300,\"end_at\":1466625400}]}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/availabilities\" -d 'availability[intervals][][start_at]=1466625300&availability[intervals][][end_at]=1466625400&token=secret' -X POST \\\n\t-H \"Accept: application/json\""
+    }
+  ]
+}
