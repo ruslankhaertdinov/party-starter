@@ -3,12 +3,12 @@ module V1
     before_action :ensure_user_found, only: :create
 
     def index
-      render json: found_user.availabilities, each_serializer: AvailabilitySerializer
+      respond_with(found_user.availabilities)
     end
 
     def create
       availabilities = ReplaceAvailabilities.new(intervals, found_user).call
-      render json: availabilities, each_serializer: AvailabilitySerializer
+      respond_with(availabilities)
     end
 
     private

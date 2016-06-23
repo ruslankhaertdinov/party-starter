@@ -1,6 +1,10 @@
 module V1
   class EventsController < ApplicationController
-    before_action :ensure_user_found, only: :create
+    before_action :ensure_user_found
+
+    def index
+      respond_with(found_user.own_events)
+    end
 
     def create
       event = Event.new(event_params)

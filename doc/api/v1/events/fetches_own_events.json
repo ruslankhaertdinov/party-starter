@@ -1,8 +1,8 @@
 {
-  "resource": "Availabilities",
+  "resource": "Events",
   "http_method": "GET",
-  "route": "/v1/availabilities",
-  "description": "Fetches user availabilities",
+  "route": "/v1/events",
+  "description": "Fetches own events",
   "explanation": null,
   "parameters": [
     {
@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/availabilities?token=secret",
+      "request_path": "/v1/events?token=eJz6MpzKAzKLe6yuGDnB",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "token": "secret"
+        "token": "eJz6MpzKAzKLe6yuGDnB"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"availabilities\":[{\"id\":2,\"start_at\":1466680888,\"end_at\":1466681188},{\"id\":3,\"start_at\":1466680888,\"end_at\":1466681188}]}",
+      "response_body": "{\"events\":[{\"id\":1,\"name\":\"Quia repudiandae quo aut reiciendis molestiae eos voluptates.\",\"description\":\"\",\"start_at\":0,\"end_at\":0},{\"id\":2,\"name\":\"Harum quae optio qui debitis.\",\"description\":\"\",\"start_at\":0,\"end_at\":0}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/availabilities?token=secret\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events?token=eJz6MpzKAzKLe6yuGDnB\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

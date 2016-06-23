@@ -15,6 +15,11 @@
       "scope": "event",
       "name": "description",
       "description": "POST /v1/events"
+    },
+    {
+      "required": true,
+      "name": "token",
+      "description": "Authentication token"
     }
   ],
   "response_fields": [
@@ -24,7 +29,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[name]=&event[description]=&token=J6Xa5ZD5cPAJs5xwH_Fu",
+      "request_body": "event[name]=&event[description]=&token=yWUXWiMnm9EkNEZZTkzF",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -38,7 +43,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=&event[description]=&token=J6Xa5ZD5cPAJs5xwH_Fu' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=&event[description]=&token=yWUXWiMnm9EkNEZZTkzF' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
