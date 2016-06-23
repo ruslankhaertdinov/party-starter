@@ -1,6 +1,21 @@
 {
   "resources": [
     {
+      "name": "Sessions",
+      "examples": [
+        {
+          "description": "Sign in with invalid password",
+          "link": "sessions/sign_in_with_invalid_password.json",
+          "groups": "all"
+        },
+        {
+          "description": "Sign in with valid password",
+          "link": "sessions/sign_in_with_valid_password.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
       "name": "Errors",
       "examples": [
         {
@@ -19,8 +34,8 @@
           "groups": "all"
         },
         {
-          "description": "Shows detailed event information",
-          "link": "events/shows_detailed_event_information.json",
+          "description": "Creates event with invalid user token",
+          "link": "events/creates_event_with_invalid_user_token.json",
           "groups": "all"
         },
         {
@@ -29,23 +44,13 @@
           "groups": "all"
         },
         {
-          "description": "Creates event with invalid user token",
-          "link": "events/creates_event_with_invalid_user_token.json",
-          "groups": "all"
-        },
-        {
           "description": "Creates event with valid params",
           "link": "events/creates_event_with_valid_params.json",
           "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Event Users",
-      "examples": [
+        },
         {
-          "description": "Returns events where user was added",
-          "link": "event_users/returns_events_where_user_was_added.json",
+          "description": "Shows detailed event information",
+          "link": "events/shows_detailed_event_information.json",
           "groups": "all"
         }
       ]
@@ -61,21 +66,6 @@
       ]
     },
     {
-      "name": "Sessions",
-      "examples": [
-        {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
-          "groups": "all"
-        },
-        {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
       "name": "Availabilities",
       "examples": [
         {
@@ -86,6 +76,21 @@
         {
           "description": "Fetches user availabilities",
           "link": "availabilities/fetches_user_availabilities.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Event Users",
+      "examples": [
+        {
+          "description": "Adds new member to event",
+          "link": "event_users/adds_new_member_to_event.json",
+          "groups": "all"
+        },
+        {
+          "description": "Removes member from event",
+          "link": "event_users/removes_member_from_event.json",
           "groups": "all"
         }
       ]

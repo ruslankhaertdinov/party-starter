@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events?token=fGWNwd-yzQstSdFZUhJe",
+      "request_path": "/v1/events?token=RJ27gNLWXeib5XVqFj4t",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "token": "fGWNwd-yzQstSdFZUhJe"
+        "token": "RJ27gNLWXeib5XVqFj4t"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":1,\"name\":\"Pariatur recusandae voluptas quisquam atque deleniti rem qui earum.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[{\"id\":1}]},{\"id\":2,\"name\":\"Nesciunt vero dolorem iusto dolorum blanditiis est facilis consequatur.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[{\"id\":1}]}]}",
+      "response_body": "{\"events\":[{\"id\":1,\"name\":\"Aut est voluptatibus sunt voluptatem quia suscipit.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[{\"id\":3}]},{\"id\":2,\"name\":\"Nam vel nihil ullam omnis error maxime.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[{\"id\":3}]}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events?token=fGWNwd-yzQstSdFZUhJe\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events?token=RJ27gNLWXeib5XVqFj4t\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
