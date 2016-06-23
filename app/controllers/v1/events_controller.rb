@@ -3,7 +3,12 @@ module V1
     before_action :ensure_user_found
 
     def index
-      respond_with(found_user.own_events)
+      respond_with(own_events)
+    end
+
+    def show
+      event = own_events.find(params[:id])
+      render json: event, serializer: DetailedEventSerializer
     end
 
     def create
@@ -21,6 +26,10 @@ module V1
 
     def event_params
       params.require(:event).permit(:name, :description)
+    end
+
+    def own_events
+      found_user.own_events
     end
   end
 end

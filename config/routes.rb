@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     devise_scope :user do
       post "users/sign_in", to: 'sessions#create'
     end
-    resources :events, only: %i(index create)
+    resources :events, only: %i(index show create)
     resources :user_events, only: %i(index)
     resources :availabilities, only: %i(index create)
   end
