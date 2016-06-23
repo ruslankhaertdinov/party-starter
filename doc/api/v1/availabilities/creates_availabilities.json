@@ -10,6 +10,11 @@
       "scope": "availability",
       "name": "intervals",
       "description": "User availability intervals"
+    },
+    {
+      "required": true,
+      "name": "token",
+      "description": "Authentication token"
     }
   ],
   "response_fields": [
@@ -28,7 +33,7 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"availabilities\":[{\"id\":1,\"start_at\":1466625300,\"end_at\":1466625400}]}",
+      "response_body": "{\"availabilities\":[{\"id\":4,\"start_at\":1466625300,\"end_at\":1466625400}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },

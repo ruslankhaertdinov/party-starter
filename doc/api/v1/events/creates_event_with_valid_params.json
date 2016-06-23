@@ -24,7 +24,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[name]=Meeting&event[description]=Repetition&token=usb82RNkCrX3C4sVidD9",
+      "request_body": "event[name]=Meeting&event[description]=Repetition&token=TpidST5FSfTssWywWosL",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -38,7 +38,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=Meeting&event[description]=Repetition&token=usb82RNkCrX3C4sVidD9' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=Meeting&event[description]=Repetition&token=TpidST5FSfTssWywWosL' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
