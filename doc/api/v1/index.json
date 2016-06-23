@@ -1,16 +1,11 @@
 {
   "resources": [
     {
-      "name": "Sessions",
+      "name": "Availabilities",
       "examples": [
         {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
-          "groups": "all"
-        },
-        {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
+          "description": "Creates availabilities",
+          "link": "availabilities/creates_availabilities.json",
           "groups": "all"
         }
       ]
@@ -26,11 +21,26 @@
       ]
     },
     {
+      "name": "Sessions",
+      "examples": [
+        {
+          "description": "Sign in with invalid password",
+          "link": "sessions/sign_in_with_invalid_password.json",
+          "groups": "all"
+        },
+        {
+          "description": "Sign in with valid password",
+          "link": "sessions/sign_in_with_valid_password.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
       "name": "Events",
       "examples": [
         {
-          "description": "Creates event with invalid params",
-          "link": "events/creates_event_with_invalid_params.json",
+          "description": "Creates event with valid params",
+          "link": "events/creates_event_with_valid_params.json",
           "groups": "all"
         },
         {
@@ -39,8 +49,8 @@
           "groups": "all"
         },
         {
-          "description": "Creates event with valid params",
-          "link": "events/creates_event_with_valid_params.json",
+          "description": "Creates event with invalid params",
+          "link": "events/creates_event_with_invalid_params.json",
           "groups": "all"
         }
       ]

@@ -8,5 +8,6 @@ Rails.application.routes.draw do
       post "users/sign_in", to: 'sessions#create'
     end
     resources :events, only: %i(create)
+    resources :availabilities, only: %i(create)
   end
 end
