@@ -53,10 +53,9 @@ resource "Events" do
   get "/v1/events/:id" do
     let(:id) { create(:event, owner: user).id }
 
-    parameter :id, "event id", required: true
     parameter :token, "Authentication token", required: true
 
-    example_request "Shows event's detailed information" do
+    example_request "Shows detailed event information" do
       expect(response_status).to eq 200
       expect(response["event"]).to be_a_detailed_event_representation
     end
