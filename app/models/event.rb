@@ -5,4 +5,11 @@ class Event < ActiveRecord::Base
   has_many :availabilities, through: :users
 
   validates :name, presence: true
+
+  def add_member(user)
+    EventUser.where(
+      event_id: id,
+      user_id: user.id
+    ).first_or_create!
+  end
 end

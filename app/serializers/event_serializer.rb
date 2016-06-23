@@ -1,7 +1,7 @@
 class EventSerializer < ApplicationSerializer
   attributes :id, :name, :description, :start_at, :end_at
 
-  has_many :users, each_serializer: EventUserSerializer
+  has_many :users, serializer: EventUserSerializer
 
   def start_at
     object.start_at.to_i

@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events/5?token=ryXdL2AxrJg_bUG-o_Nr",
+      "request_path": "/v1/events/4?token=HXwbEFUhwgyxVSy2Wv-f",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "token": "ryXdL2AxrJg_bUG-o_Nr"
+        "token": "HXwbEFUhwgyxVSy2Wv-f"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":5,\"name\":\"Dolorum corporis sequi quod aut quaerat.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[{\"id\":7,\"authentication_token\":\"ryXdL2AxrJg_bUG-o_Nr\",\"email\":\"user7@example.com\"}]}}",
+      "response_body": "{\"event\":{\"id\":4,\"name\":\"Ducimus ullam quibusdam ea.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[{\"id\":5}]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/5?token=ryXdL2AxrJg_bUG-o_Nr\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/4?token=HXwbEFUhwgyxVSy2Wv-f\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

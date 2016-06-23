@@ -1,11 +1,11 @@
 {
   "resources": [
     {
-      "name": "Owner Events",
+      "name": "Errors",
       "examples": [
         {
-          "description": "Returns own events",
-          "link": "owner_events/returns_own_events.json",
+          "description": "Request to unexisting page",
+          "link": "errors/request_to_unexisting_page.json",
           "groups": "all"
         }
       ]
@@ -13,6 +13,16 @@
     {
       "name": "Events",
       "examples": [
+        {
+          "description": "Returns events where user was added",
+          "link": "events/returns_events_where_user_was_added.json",
+          "groups": "all"
+        },
+        {
+          "description": "Shows detailed event information",
+          "link": "events/shows_detailed_event_information.json",
+          "groups": "all"
+        },
         {
           "description": "Creates event with invalid params",
           "link": "events/creates_event_with_invalid_params.json",
@@ -27,15 +37,40 @@
           "description": "Creates event with valid params",
           "link": "events/creates_event_with_valid_params.json",
           "groups": "all"
-        },
+        }
+      ]
+    },
+    {
+      "name": "Event Users",
+      "examples": [
         {
-          "description": "Shows detailed event information",
-          "link": "events/shows_detailed_event_information.json",
+          "description": "Returns events where user was added",
+          "link": "event_users/returns_events_where_user_was_added.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Owner Events",
+      "examples": [
+        {
+          "description": "Returns own events",
+          "link": "owner_events/returns_own_events.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Sessions",
+      "examples": [
+        {
+          "description": "Sign in with invalid password",
+          "link": "sessions/sign_in_with_invalid_password.json",
           "groups": "all"
         },
         {
-          "description": "Returns events where user was added",
-          "link": "events/returns_events_where_user_was_added.json",
+          "description": "Sign in with valid password",
+          "link": "sessions/sign_in_with_valid_password.json",
           "groups": "all"
         }
       ]
@@ -51,31 +86,6 @@
         {
           "description": "Fetches user availabilities",
           "link": "availabilities/fetches_user_availabilities.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Sessions",
-      "examples": [
-        {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
-          "groups": "all"
-        },
-        {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Errors",
-      "examples": [
-        {
-          "description": "Request to unexisting page",
-          "link": "errors/request_to_unexisting_page.json",
           "groups": "all"
         }
       ]
