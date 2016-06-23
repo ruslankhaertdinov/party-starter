@@ -1,6 +1,6 @@
 module V1
   class AvailabilitiesController < ApplicationController
-    before_action :ensure_user_found, only: :create
+    before_action :ensure_user_found
 
     def index
       respond_with(found_user.availabilities)
@@ -13,12 +13,9 @@ module V1
 
     private
 
-    def availability_params
-      params.require(:availability).permit(intervals: [:start_at, :end_at])
-    end
-
     def intervals
-      availability_params[:intervals]
+      props = params.require(:availability).permit(intervals: [:start_at, :end_at])
+      props[:intervals]
     end
   end
 end

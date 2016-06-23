@@ -15,8 +15,8 @@ resource "Events" do
     let!(:event_3) { create(:event) }
 
     before do
-      event_1.users << user
-      event_2.users << user
+      event_1.add_member(user)
+      event_2.add_member(user)
     end
 
     parameter :token, "Authentication token", required: true
