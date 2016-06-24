@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events?token=3Z394HxpPdSiZNdsdAH8",
+      "request_path": "/v1/events?token=oFVVqDxspns9q-ybmupf",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "token": "3Z394HxpPdSiZNdsdAH8"
+        "token": "oFVVqDxspns9q-ybmupf"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":1,\"name\":\"Error voluptas aut sit consectetur hic.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[{\"id\":1}]},{\"id\":2,\"name\":\"Est et quae perspiciatis.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[{\"id\":1}]}]}",
+      "response_body": "{\"events\":[{\"id\":1,\"name\":\"Illo odit autem et libero.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[{\"id\":1}]},{\"id\":2,\"name\":\"Sunt exercitationem quia soluta.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[{\"id\":1}]}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events?token=3Z394HxpPdSiZNdsdAH8\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events?token=oFVVqDxspns9q-ybmupf\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

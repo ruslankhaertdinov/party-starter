@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events/5?token=88DDErey-Cy1boG1k2zd",
+      "request_path": "/v1/events/4?token=UMhR-vVg-6A9eY2AGDKx",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "token": "88DDErey-Cy1boG1k2zd"
+        "token": "UMhR-vVg-6A9eY2AGDKx"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":5,\"name\":\"Voluptatibus est aspernatur saepe odio fuga.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[{\"id\":8}]}}",
+      "response_body": "{\"event\":{\"id\":4,\"name\":\"Qui laudantium ipsam dolorum.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"users\":[{\"id\":5}]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/5?token=88DDErey-Cy1boG1k2zd\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/4?token=UMhR-vVg-6A9eY2AGDKx\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

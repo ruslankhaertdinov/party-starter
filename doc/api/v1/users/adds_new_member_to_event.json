@@ -7,8 +7,8 @@
   "parameters": [
     {
       "required": true,
-      "name": "id",
-      "description": "User oauth id"
+      "name": "uid",
+      "description": "User oauth uid"
     }
   ],
   "response_fields": [
@@ -18,7 +18,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/users",
-      "request_body": "id=9a28b2eef443",
+      "request_body": "uid=941352ddfa8d",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -27,12 +27,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"user\":{\"id\":10,\"authentication_token\":\"1BEr35LeAmmBEj2sR4Ke\"}}",
+      "response_body": "{\"user\":{\"id\":17,\"authentication_token\":\"941352ddfa8d\",\"availability\":{}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/users\" -d 'id=9a28b2eef443' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/users\" -d 'uid=941352ddfa8d' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
