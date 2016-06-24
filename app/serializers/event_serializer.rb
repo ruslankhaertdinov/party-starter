@@ -1,5 +1,5 @@
 class EventSerializer < ApplicationSerializer
-  attributes :id, :name, :description, :start_at, :end_at
+  attributes :id, :name, :description, :start_at, :end_at, :intersections
 
   has_many :users, serializer: EventUserSerializer
 
@@ -9,5 +9,9 @@ class EventSerializer < ApplicationSerializer
 
   def end_at
     object.end_at.to_i
+  end
+
+  def intersections
+    FetchIntersection.new(object.users).call
   end
 end
