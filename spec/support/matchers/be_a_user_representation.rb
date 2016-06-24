@@ -3,6 +3,7 @@ RSpec::Matchers.define :be_a_user_representation do |user|
     response_attributes = %w(
       id
       authentication_token
+      availability
     )
 
     expect(json).to be

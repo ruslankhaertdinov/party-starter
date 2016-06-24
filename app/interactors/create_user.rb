@@ -1,11 +1,11 @@
 class CreateUser
-  attr_reader :token
-  private :token
+  attr_reader :uid
+  private :uid
 
   DEFAULT_EMAIL = "user@example.com"
 
-  def initialize(token)
-    @token = token
+  def initialize(uid)
+    @uid = uid
   end
 
   def call
@@ -18,7 +18,7 @@ class CreateUser
     {
       email: email,
       password: password,
-      authentication_token: token
+      authentication_token: uid
     }
   end
 
@@ -29,5 +29,4 @@ class CreateUser
   def password
     @password ||= SecureRandom.hex(10)
   end
-
 end

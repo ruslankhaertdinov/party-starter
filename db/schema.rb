@@ -16,16 +16,6 @@ ActiveRecord::Schema.define(version: 20160617121835) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "availabilities", force: :cascade do |t|
-    t.integer  "user_id",    null: false
-    t.datetime "start_at", null: false
-    t.datetime "end_at",   null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "availabilities", ["user_id"], name: "index_availabilities_on_user_id", using: :btree
-
   create_table "event_users", force: :cascade do |t|
     t.integer "user_id",  null: false
     t.integer "event_id", null: false
@@ -71,6 +61,7 @@ ActiveRecord::Schema.define(version: 20160617121835) do
     t.string   "authentication_token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.jsonb    "availability",           default: {}, null: false
   end
 
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", unique: true, using: :btree
