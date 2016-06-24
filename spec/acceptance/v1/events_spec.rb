@@ -6,7 +6,7 @@ resource "Events" do
 
   subject(:response) { json_response_body }
 
-  let!(:user) { create :user }
+  let!(:user) { create :user, :with_availability }
   let(:token) { user.authentication_token }
 
   get "/v1/events" do
@@ -39,6 +39,7 @@ resource "Events" do
     parameter :token, "Authentication token", required: true
 
     example_request "Shows detailed event information" do
+      puts response
       expect(response_status).to eq 200
       expect(response["event"]).to be_an_event_representation
     end

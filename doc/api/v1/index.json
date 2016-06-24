@@ -4,13 +4,8 @@
       "name": "Events",
       "examples": [
         {
-          "description": "Returns events where user was added",
-          "link": "events/returns_events_where_user_was_added.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with valid params",
-          "link": "events/creates_event_with_valid_params.json",
+          "description": "Shows detailed event information",
+          "link": "events/shows_detailed_event_information.json",
           "groups": "all"
         },
         {
@@ -24,18 +19,13 @@
           "groups": "all"
         },
         {
-          "description": "Shows detailed event information",
-          "link": "events/shows_detailed_event_information.json",
+          "description": "Creates event with valid params",
+          "link": "events/creates_event_with_valid_params.json",
           "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Users",
-      "examples": [
+        },
         {
-          "description": "Adds new member to event",
-          "link": "users/adds_new_member_to_event.json",
+          "description": "Returns events where user was added",
+          "link": "events/returns_events_where_user_was_added.json",
           "groups": "all"
         }
       ]
@@ -56,16 +46,26 @@
       ]
     },
     {
-      "name": "Event Users",
+      "name": "Users",
       "examples": [
         {
-          "description": "Removes member from event",
-          "link": "event_users/removes_member_from_event.json",
+          "description": "Updates availability",
+          "link": "users/updates_availability.json",
           "groups": "all"
         },
         {
           "description": "Adds new member to event",
-          "link": "event_users/adds_new_member_to_event.json",
+          "link": "users/adds_new_member_to_event.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Owner Events",
+      "examples": [
+        {
+          "description": "Returns own events",
+          "link": "owner_events/returns_own_events.json",
           "groups": "all"
         }
       ]
@@ -81,26 +81,16 @@
       ]
     },
     {
-      "name": "Availabilities",
+      "name": "Event Users",
       "examples": [
         {
-          "description": "Fetches user availabilities",
-          "link": "availabilities/fetches_user_availabilities.json",
+          "description": "Adds new member to event",
+          "link": "event_users/adds_new_member_to_event.json",
           "groups": "all"
         },
         {
-          "description": "Creates availabilities",
-          "link": "availabilities/creates_availabilities.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Owner Events",
-      "examples": [
-        {
-          "description": "Returns own events",
-          "link": "owner_events/returns_own_events.json",
+          "description": "Removes member from event",
+          "link": "event_users/removes_member_from_event.json",
           "groups": "all"
         }
       ]

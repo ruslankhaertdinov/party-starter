@@ -29,7 +29,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[name]=Meeting&event[description]=Repetition&token=CpyLV5MqkHfsCm2Yrt7D",
+      "request_body": "event[name]=Meeting&event[description]=Repetition&token=-XznxbWi9UEmy45xzwX5",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -38,12 +38,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"event\":{\"id\":4,\"name\":\"Meeting\",\"description\":\"Repetition\",\"start_at\":0,\"end_at\":0,\"users\":[{\"id\":5}]}}",
+      "response_body": "{\"event\":{\"id\":2,\"name\":\"Meeting\",\"description\":\"Repetition\",\"start_at\":0,\"end_at\":0,\"intersections\":{\"monday\":[{\"start_at\":\"11\",\"end_at\":\"12\"},{\"start_at\":\"15\",\"end_at\":\"17\"}]},\"users\":[{\"id\":5}]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=Meeting&event[description]=Repetition&token=CpyLV5MqkHfsCm2Yrt7D' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=Meeting&event[description]=Repetition&token=-XznxbWi9UEmy45xzwX5' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

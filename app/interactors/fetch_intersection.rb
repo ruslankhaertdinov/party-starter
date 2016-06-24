@@ -7,38 +7,60 @@ class FetchIntersection
   end
 
   def call
-    intersections = Hash.new([])
+    intersections = {}
+    sorted_availabilities.each do |day_name, intervals|
+      counter = 0
+      intersections[day_name.to_sym] ||= []
+      first = intervals.first["start_at"]
+      last = intervals.last["end_at"]
 
-    user.availabilities.each do |availability|
-      comparable_users.each do |comparable_user|
-        overlaped = overlaped_availabilities(comparable_user, availability)
-        intersections.delete(availability.id) and break if overlaped.empty? # check until first blank overlapping
-
-        intersections[availability.id] |= overlaped.map { |a| a.start_at..a.end_at }
-        intersections[availability.id] |= range_for(availability)
+      (first..last).each do |n|
+        prev = counter
+        counter += intervals.select { |a| a["start_at"] == n }.size
+        counter -= intervals.select { |a| a["end_at"] == n }.size
+        if prev == users_count && counter != users_count
+          intersections[day_name.to_sym].last[:end_at] = n
+        end
+        if prev != users_count && counter == users_count
+          intersections[day_name.to_sym] << { start_at: n }
+        end
       end
     end
 
-    intersections.values.map(&:intersection)
+    intersections
   end
 
   private
 
-  def user
-    users.first
+  def joined_availabilities
+    @joined_availabilities ||=
+      {}.tap do |h|
+        users.each do |user|
+          day_names.each do |day_name|
+            day_availabilities = user.availability[day_name]
+            if day_availabilities
+              h[day_name] ||= []
+              h[day_name] += day_availabilities
+            end
+          end
+        end
+      end
   end
 
-  def comparable_users
-    User.where.not(id: user.id)
+  def sorted_availabilities
+    @sorted_availabilities ||=
+      {}.tap do |h|
+        joined_availabilities.each do |k, v|
+          h[k] = v.sort_by { |interval| interval["start_at"]  }
+        end
+      end
   end
 
-  def overlaped_availabilities(user, availability)
-    user
-      .availabilities
-      .where("('#{availability.start_at}', '#{availability.end_at}') OVERLAPS (start_at, end_at)")
+  def day_names
+    Date::DAYNAMES.map(&:downcase)
   end
 
-  def range_for(availability)
-    [availability.start_at..availability.end_at]
+  def users_count
+    users.size
   end
 end

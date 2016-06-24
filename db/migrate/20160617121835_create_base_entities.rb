@@ -21,11 +21,6 @@ class CreateBaseEntities < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :availabilities do |t|
-      t.belongs_to :user,      index: true, null: false
-      t.datetime   :start_at,               null: false
-      t.datetime   :end_at,                 null: false
-      t.timestamps
-    end
+    add_column :users, :availability, :jsonb, null: false, default: {}
   end
 end

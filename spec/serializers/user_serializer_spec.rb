@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe UserSerializer do
-  let(:user) { build :user, id: 1, authentication_token: "token" }
+  let(:user) { build :user }
   let(:json) { ActiveModel::SerializableResource.serialize(user).to_json }
   let(:user_json) { parse_json(json)["user"] }
 
