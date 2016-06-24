@@ -10,7 +10,7 @@ class FetchIntersection
     intersections = {}
     sorted_availabilities.each do |day_name, intervals|
       counter = 0
-      intersections[day_name] ||= []
+      intersections[day_name.to_sym] ||= []
       first = intervals.first["start_at"]
       last = intervals.last["end_at"]
 
@@ -18,11 +18,11 @@ class FetchIntersection
         prev = counter
         counter += intervals.select { |a| a["start_at"] == n }.size
         counter -= intervals.select { |a| a["end_at"] == n }.size
-        if prev == 3 && counter != 3
-          intersections[day_name] << { end_at: n }
+        if prev == users_count && counter != users_count
+          intersections[day_name.to_sym].last[:end_at] = n
         end
-        if prev != 3 && counter == 3
-          intersections[day_name] << { start_at: n }
+        if prev != users_count && counter == users_count
+          intersections[day_name.to_sym] << { start_at: n }
         end
       end
     end
@@ -58,5 +58,9 @@ class FetchIntersection
 
   def day_names
     Date::DAYNAMES.map(&:downcase)
+  end
+
+  def users_count
+    users.size
   end
 end
