@@ -39,7 +39,6 @@ resource "Events" do
     parameter :token, "Authentication token", required: true
 
     example_request "Shows detailed event information" do
-      puts response
       expect(response_status).to eq 200
       expect(response["event"]).to be_an_event_representation
     end

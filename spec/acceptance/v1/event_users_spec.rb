@@ -18,7 +18,7 @@ resource "Event Users" do
     parameter :event_id, "Event id", required: true
     parameter :token, "Authentication token", required: true
 
-    example_request "Adds new member to event" do
+    example_request "Adding new member to event" do
       expect(response_status).to eq 201
       expect(response["event"]).to be_an_event_representation
       expect(response["event"]["users"].first).to be_an_event_user_representation

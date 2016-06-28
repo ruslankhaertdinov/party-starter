@@ -2,7 +2,7 @@
   "resource": "Event Users",
   "http_method": "POST",
   "route": "/v1/event_users",
-  "description": "Adds new member to event",
+  "description": "Adding new member to event",
   "explanation": null,
   "parameters": [
     {
@@ -28,7 +28,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/event_users",
-      "request_body": "user_id=18&event_id=9&token=BKBBxumNWyE6K9m9whuf",
+      "request_body": "user_id=4&event_id=1&token=1445xtZCdzsNTkgrxxgs",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -37,12 +37,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"event\":{\"id\":9,\"name\":\"Distinctio et quisquam error omnis.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"intersections\":{},\"users\":[{\"id\":18}]}}",
+      "response_body": "{\"event\":{\"id\":1,\"name\":\"Asperiores consequuntur est neque officia voluptates quas quia ea.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"intersections\":{},\"users\":[{\"id\":4}]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/event_users\" -d 'user_id=18&event_id=9&token=BKBBxumNWyE6K9m9whuf' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/event_users\" -d 'user_id=4&event_id=1&token=1445xtZCdzsNTkgrxxgs' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

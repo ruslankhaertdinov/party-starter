@@ -2,7 +2,7 @@
   "resource": "Users",
   "http_method": "POST",
   "route": "/v1/users",
-  "description": "Adds new member to event",
+  "description": "Creating new user",
   "explanation": null,
   "parameters": [
     {
@@ -18,7 +18,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/users",
-      "request_body": "uid=0c8f4e68a202",
+      "request_body": "uid=6dc74869867b",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -27,12 +27,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"user\":{\"id\":13,\"authentication_token\":\"0c8f4e68a202\",\"availability\":{}}}",
+      "response_body": "{\"user\":{\"id\":1,\"authentication_token\":\"6dc74869867b\",\"availability\":{}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/users\" -d 'uid=0c8f4e68a202' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/users\" -d 'uid=6dc74869867b' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

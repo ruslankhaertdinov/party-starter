@@ -11,7 +11,7 @@ resource "Users" do
   post "/v1/users" do
     parameter :uid, "User oauth uid", required: true
 
-    example_request "Adds new member to event" do
+    example_request "Creating new user" do
       expect(response_status).to eq 201
       expect(response["user"]).to be_a_user_representation
       expect(response["user"]["authentication_token"]).to be

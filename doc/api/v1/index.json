@@ -1,8 +1,53 @@
 {
   "resources": [
     {
+      "name": "Errors",
+      "examples": [
+        {
+          "description": "Request to unexisting page",
+          "link": "errors/request_to_unexisting_page.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "examples": [
+        {
+          "description": "Creating new user",
+          "link": "users/creating_new_user.json",
+          "groups": "all"
+        },
+        {
+          "description": "Updates availability",
+          "link": "users/updates_availability.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Event Users",
+      "examples": [
+        {
+          "description": "Adding new member to event",
+          "link": "event_users/adding_new_member_to_event.json",
+          "groups": "all"
+        },
+        {
+          "description": "Removes member from event",
+          "link": "event_users/removes_member_from_event.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
       "name": "Events",
       "examples": [
+        {
+          "description": "Returns events where user was added",
+          "link": "events/returns_events_where_user_was_added.json",
+          "groups": "all"
+        },
         {
           "description": "Shows detailed event information",
           "link": "events/shows_detailed_event_information.json",
@@ -21,11 +66,6 @@
         {
           "description": "Creates event with valid params",
           "link": "events/creates_event_with_valid_params.json",
-          "groups": "all"
-        },
-        {
-          "description": "Returns events where user was added",
-          "link": "events/returns_events_where_user_was_added.json",
           "groups": "all"
         }
       ]
@@ -46,51 +86,11 @@
       ]
     },
     {
-      "name": "Users",
-      "examples": [
-        {
-          "description": "Updates availability",
-          "link": "users/updates_availability.json",
-          "groups": "all"
-        },
-        {
-          "description": "Adds new member to event",
-          "link": "users/adds_new_member_to_event.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
       "name": "Owner Events",
       "examples": [
         {
           "description": "Returns own events",
           "link": "owner_events/returns_own_events.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Errors",
-      "examples": [
-        {
-          "description": "Request to unexisting page",
-          "link": "errors/request_to_unexisting_page.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Event Users",
-      "examples": [
-        {
-          "description": "Adds new member to event",
-          "link": "event_users/adds_new_member_to_event.json",
-          "groups": "all"
-        },
-        {
-          "description": "Removes member from event",
-          "link": "event_users/removes_member_from_event.json",
           "groups": "all"
         }
       ]

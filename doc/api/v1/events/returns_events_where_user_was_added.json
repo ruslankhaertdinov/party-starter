@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events?token=6Q3SJMM4C8iCXG-A4G-7",
+      "request_path": "/v1/events?token=jFAYLb1b4Ni_HAXDqWAA",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "token": "6Q3SJMM4C8iCXG-A4G-7"
+        "token": "jFAYLb1b4Ni_HAXDqWAA"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":3,\"name\":\"Repellendus quia assumenda adipisci.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"intersections\":{\"monday\":[{\"start_at\":\"11\",\"end_at\":\"12\"},{\"start_at\":\"15\",\"end_at\":\"17\"}]},\"users\":[{\"id\":6}]},{\"id\":4,\"name\":\"Voluptate vel quam occaecati quidem est a voluptatibus sed.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"intersections\":{\"monday\":[{\"start_at\":\"11\",\"end_at\":\"12\"},{\"start_at\":\"15\",\"end_at\":\"17\"}]},\"users\":[{\"id\":6}]}]}",
+      "response_body": "{\"events\":[{\"id\":3,\"name\":\"Aut rerum necessitatibus nihil.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"intersections\":{\"monday\":[{\"start_at\":\"11\",\"end_at\":\"12\"},{\"start_at\":\"15\",\"end_at\":\"17\"}]},\"users\":[{\"id\":7}]},{\"id\":4,\"name\":\"Rem repellat vel molestiae dolor dignissimos.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"intersections\":{\"monday\":[{\"start_at\":\"11\",\"end_at\":\"12\"},{\"start_at\":\"15\",\"end_at\":\"17\"}]},\"users\":[{\"id\":7}]}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events?token=6Q3SJMM4C8iCXG-A4G-7\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events?token=jFAYLb1b4Ni_HAXDqWAA\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
