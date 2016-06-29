@@ -1,6 +1,7 @@
 module V1
   class UsersController < ApplicationController
     before_action :ensure_user_found, only: %i(update)
+    before_action :key_valid?, only: %i(create)
 
     def create
       user = CreateUser.new(params[:uid]).call
@@ -24,6 +25,10 @@ module V1
           h[day_name.downcase.to_sym] = %i(start_at end_at)
         end
       end
+    end
+
+    def key_valid?
+      params[:key] == ENV.fetch("APP_KEY")
     end
   end
 end

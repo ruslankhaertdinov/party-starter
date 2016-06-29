@@ -13,8 +13,8 @@
     },
     {
       "required": true,
-      "name": "token",
-      "description": "Authentication token"
+      "name": "uid",
+      "description": "User oauth uid"
     }
   ],
   "response_fields": [
@@ -24,7 +24,7 @@
     {
       "request_method": "PUT",
       "request_path": "/v1/users/:id",
-      "request_body": "user[availability][monday][][start_at]=11&user[availability][monday][][end_at]=12&user[availability][monday][][start_at]=15&user[availability][monday][][end_at]=17&user[availability][tuesday][][start_at]=9&user[availability][tuesday][][end_at]=10&user[availability][tuesday][][start_at]=18&user[availability][tuesday][][end_at]=19&token=secret",
+      "request_body": "user[availability][monday][][start_at]=11&user[availability][monday][][end_at]=12&user[availability][monday][][start_at]=15&user[availability][monday][][end_at]=17&user[availability][tuesday][][start_at]=9&user[availability][tuesday][][end_at]=10&user[availability][tuesday][][start_at]=18&user[availability][tuesday][][end_at]=19&uid=secret",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -33,12 +33,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"user\":{\"id\":2,\"authentication_token\":\"secret\",\"availability\":{\"monday\":[{\"end_at\":\"12\",\"start_at\":\"11\"},{\"end_at\":\"17\",\"start_at\":\"15\"}],\"tuesday\":[{\"end_at\":\"10\",\"start_at\":\"9\"},{\"end_at\":\"19\",\"start_at\":\"18\"}]}}}",
+      "response_body": "{\"user\":{\"id\":15,\"availability\":{\"monday\":[{\"end_at\":\"12\",\"start_at\":\"11\"},{\"end_at\":\"17\",\"start_at\":\"15\"}],\"tuesday\":[{\"end_at\":\"10\",\"start_at\":\"9\"},{\"end_at\":\"19\",\"start_at\":\"18\"}]},\"uid\":\"secret\"}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/users/:id\" -d 'user[availability][monday][][start_at]=11&user[availability][monday][][end_at]=12&user[availability][monday][][start_at]=15&user[availability][monday][][end_at]=17&user[availability][tuesday][][start_at]=9&user[availability][tuesday][][end_at]=10&user[availability][tuesday][][start_at]=18&user[availability][tuesday][][end_at]=19&token=secret' -X PUT \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/users/:id\" -d 'user[availability][monday][][start_at]=11&user[availability][monday][][end_at]=12&user[availability][monday][][start_at]=15&user[availability][monday][][end_at]=17&user[availability][tuesday][][start_at]=9&user[availability][tuesday][][end_at]=10&user[availability][tuesday][][start_at]=18&user[availability][tuesday][][end_at]=19&uid=secret' -X PUT \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

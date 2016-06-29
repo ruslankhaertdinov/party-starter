@@ -3,7 +3,7 @@ module V1
     before_action :ensure_user_found
 
     def index
-      respond_with(events)
+      render json: events, each_serializer: BriefEventSerializer
     end
 
     def show
@@ -17,7 +17,7 @@ module V1
 
       if event.save
         event.users << found_user
-        respond_with(event)
+        render json: event, serializer: BriefEventSerializer
       else
         render json: { error: event.errors.to_a }, status: :unprocessable_entity
       end

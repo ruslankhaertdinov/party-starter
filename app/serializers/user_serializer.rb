@@ -1,3 +1,7 @@
 class UserSerializer < ApplicationSerializer
-  attributes :id, :authentication_token, :availability
+  attributes :id, :availability, :uid
+
+  def uid
+    object.authentication_token
+  end
 end
