@@ -1,11 +1,11 @@
-RSpec::Matchers.define :be_an_event_representation do
+RSpec::Matchers.define :be_a_brief_event_representation do
   match do |json|
     response_attributes = %w(
       id
       name
       description
-      start_at
-      end_at
+      owner
+      is_weekly
     )
 
     expect(json).to be

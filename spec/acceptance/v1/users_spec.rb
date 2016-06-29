@@ -7,14 +7,16 @@ resource "Users" do
   subject(:response) { json_response_body }
 
   let(:uid) { SecureRandom.hex(6) }
+  let(:key) { ENV.fetch("APP_KEY") }
 
   post "/v1/users" do
     parameter :uid, "User oauth uid", required: true
+    parameter :key, "App secret key", required: true
 
     example_request "Creating new user" do
       expect(response_status).to eq 201
       expect(response["user"]).to be_a_user_representation
-      expect(response["user"]["authentication_token"]).to be
+      expect(response["user"]["uid"]).to be
     end
   end
 
@@ -29,9 +31,9 @@ resource "Users" do
     end
 
     parameter :availability, "User weekly availability", required: true, scope: :user
-    parameter :token, "Authentication token", required: true
+    parameter :uid, "User oauth uid", required: true
 
-    example_request "Updates availability", token: "secret" do
+    example_request "Updates availability", uid: "secret" do
       expect(response_status).to eq 200
       expect(response["user"]).to be_a_user_representation
     end

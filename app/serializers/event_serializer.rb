@@ -1,6 +1,8 @@
 class EventSerializer < ApplicationSerializer
   attributes :id, :name, :description, :start_at, :end_at, :intersections
 
+  belongs_to :owner, serializer: UserSerializer
+
   has_many :users, serializer: EventUserSerializer
 
   def start_at

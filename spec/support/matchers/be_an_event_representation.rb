@@ -8,6 +8,7 @@ RSpec::Matchers.define :be_an_event_representation do
       end_at
       users
       intersections
+      owner
     )
 
     expect(json).to be

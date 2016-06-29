@@ -18,8 +18,8 @@
     },
     {
       "required": true,
-      "name": "token",
-      "description": "Authentication token"
+      "name": "uid",
+      "description": "User uid"
     }
   ],
   "response_fields": [
@@ -29,7 +29,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[name]=Meeting&event[description]=Repetition&token=wrong_token",
+      "request_body": "event[name]=Meeting&event[description]=Repetition&uid=wrong_uid",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -43,7 +43,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=Meeting&event[description]=Repetition&token=wrong_token' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=Meeting&event[description]=Repetition&uid=wrong_uid' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

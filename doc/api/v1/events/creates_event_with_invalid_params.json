@@ -18,8 +18,8 @@
     },
     {
       "required": true,
-      "name": "token",
-      "description": "Authentication token"
+      "name": "uid",
+      "description": "User uid"
     }
   ],
   "response_fields": [
@@ -29,7 +29,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[name]=&event[description]=&token=LGXGY8y1pnZqq28spx26",
+      "request_body": "event[name]=&event[description]=&uid=BkBYpFsx1bA6rgKaxSmx",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -43,7 +43,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=&event[description]=&token=LGXGY8y1pnZqq28spx26' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=&event[description]=&uid=BkBYpFsx1bA6rgKaxSmx' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

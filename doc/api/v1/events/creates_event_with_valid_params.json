@@ -18,8 +18,8 @@
     },
     {
       "required": true,
-      "name": "token",
-      "description": "Authentication token"
+      "name": "uid",
+      "description": "User uid"
     }
   ],
   "response_fields": [
@@ -29,21 +29,21 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[name]=Meeting&event[description]=Repetition&token=RoksiM42E6J14eeLxy17",
+      "request_body": "event[name]=Meeting&event[description]=Repetition&uid=c2f6ERXHvHzDmizKYU2E",
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
-      "response_status": 201,
-      "response_status_text": "Created",
-      "response_body": "{\"event\":{\"id\":7,\"name\":\"Meeting\",\"description\":\"Repetition\",\"start_at\":0,\"end_at\":0,\"intersections\":{\"monday\":[{\"start_at\":\"11\",\"end_at\":\"12\"},{\"start_at\":\"15\",\"end_at\":\"17\"}]},\"users\":[{\"id\":15}]}}",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"event\":{\"id\":4,\"name\":\"Meeting\",\"description\":\"Repetition\",\"is_weekly\":true,\"owner\":{\"id\":7,\"availability\":{\"monday\":[{\"end_at\":\"12\",\"start_at\":\"11\"},{\"end_at\":\"17\",\"start_at\":\"15\"}]},\"uid\":\"c2f6ERXHvHzDmizKYU2E\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=Meeting&event[description]=Repetition&token=RoksiM42E6J14eeLxy17' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=Meeting&event[description]=Repetition&uid=c2f6ERXHvHzDmizKYU2E' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

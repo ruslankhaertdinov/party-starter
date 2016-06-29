@@ -15,10 +15,10 @@ module V1
     private
 
     def event
-      events.find(event_user_params[:event_id])
+      own_events.find(event_user_params[:event_id])
     end
 
-    def events
+    def own_events
       found_user.own_events
     end
 

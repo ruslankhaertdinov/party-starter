@@ -14,6 +14,6 @@ class ApplicationController < ActionController::API
   end
 
   def found_user
-    @found_user = User.find_by(authentication_token: params[:token])
+    @found_user = User.find_by(authentication_token: params[:uid])
   end
 end

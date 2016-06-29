@@ -7,7 +7,7 @@ resource "Events" do
   subject(:response) { json_response_body }
 
   let!(:user) { create :user, :with_availability }
-  let(:token) { user.authentication_token }
+  let(:uid) { user.authentication_token }
 
   get "/v1/events" do
     let!(:event_1) { create(:event) }
@@ -19,12 +19,12 @@ resource "Events" do
       event_2.add_member(user)
     end
 
-    parameter :token, "Authentication token", required: true
+    parameter :uid, "User uid", required: true
 
     example_request "Returns events where user was added" do
       expect(response_status).to eq 200
       expect(response["events"].size).to eq(2)
-      expect(response["events"].first).to be_an_event_representation
+      expect(response["events"].first).to be_a_brief_event_representation
     end
   end
 
@@ -36,7 +36,7 @@ resource "Events" do
       event.users << user
     end
 
-    parameter :token, "Authentication token", required: true
+    parameter :uid, "User uid", required: true
 
     example_request "Shows detailed event information" do
       expect(response_status).to eq 200
@@ -50,13 +50,13 @@ resource "Events" do
 
     parameter :name, name, required: true, scope: :event
     parameter :description, description, scope: :event
-    parameter :token, "Authentication token", required: true
+    parameter :uid, "User uid", required: true
 
     example_request "Creates event with valid params" do
-      expect(response["event"]).to be_an_event_representation
+      expect(response["event"]).to be_a_brief_event_representation
     end
 
-    example_request "Creates event with invalid user token", token: "wrong_token" do
+    example_request "Creates event with invalid user token", uid: "wrong_uid" do
       expect(response_status).to eq 401
       expect(response["error"]).to eq("Unauthorized")
     end

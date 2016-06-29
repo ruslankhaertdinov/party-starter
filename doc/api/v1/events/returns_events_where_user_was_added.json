@@ -7,8 +7,8 @@
   "parameters": [
     {
       "required": true,
-      "name": "token",
-      "description": "Authentication token"
+      "name": "uid",
+      "description": "User uid"
     }
   ],
   "response_fields": [
@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events?token=jFAYLb1b4Ni_HAXDqWAA",
+      "request_path": "/v1/events?uid=SzBtA42F4r16A_Zzs81x",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "token": "jFAYLb1b4Ni_HAXDqWAA"
+        "uid": "SzBtA42F4r16A_Zzs81x"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":3,\"name\":\"Aut rerum necessitatibus nihil.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"intersections\":{\"monday\":[{\"start_at\":\"11\",\"end_at\":\"12\"},{\"start_at\":\"15\",\"end_at\":\"17\"}]},\"users\":[{\"id\":7}]},{\"id\":4,\"name\":\"Rem repellat vel molestiae dolor dignissimos.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"intersections\":{\"monday\":[{\"start_at\":\"11\",\"end_at\":\"12\"},{\"start_at\":\"15\",\"end_at\":\"17\"}]},\"users\":[{\"id\":7}]}]}",
+      "response_body": "{\"events\":[{\"id\":5,\"name\":\"Impedit non quas totam repellendus debitis.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"id\":11,\"availability\":{},\"uid\":\"VLPd2QNYsLXtwTVa-1_9\"}},{\"id\":6,\"name\":\"Assumenda in iste suscipit possimus velit quibusdam.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"id\":12,\"availability\":{},\"uid\":\"Jy3p8tQuN5mNnd-1Kao-\"}}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events?token=jFAYLb1b4Ni_HAXDqWAA\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events?uid=SzBtA42F4r16A_Zzs81x\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
