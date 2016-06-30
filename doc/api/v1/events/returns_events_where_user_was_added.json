@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events?uid=WT3kfpsxwdJQhsuEbHjw",
+      "request_path": "/v1/events?uid=t4PtcaWGnbPgNSt8EByc",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "WT3kfpsxwdJQhsuEbHjw"
+        "uid": "t4PtcaWGnbPgNSt8EByc"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":1,\"name\":\"Laudantium aut perferendis excepturi.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"cS-YB7S7WvzsU88U1KLN\"}},{\"id\":2,\"name\":\"Aspernatur qui aut impedit quod quia dolor.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"P6s_No8qhdE1cTnyJGUN\"}}]}",
+      "response_body": "{\"events\":[{\"id\":3,\"name\":\"Et ea est autem doloribus aliquid quidem.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"2crzkjUExaPoUuwxEJHa\"}},{\"id\":4,\"name\":\"Blanditiis aut esse et consequatur.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"Fnzmwf2jAzJ9hys45v4-\"}}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events?uid=WT3kfpsxwdJQhsuEbHjw\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events?uid=t4PtcaWGnbPgNSt8EByc\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

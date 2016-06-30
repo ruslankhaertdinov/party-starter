@@ -1,16 +1,26 @@
 {
   "resources": [
     {
-      "name": "Events",
+      "name": "Sessions",
       "examples": [
         {
-          "description": "Returns events where user was added",
-          "link": "events/returns_events_where_user_was_added.json",
+          "description": "Sign in with valid password",
+          "link": "sessions/sign_in_with_valid_password.json",
           "groups": "all"
         },
         {
-          "description": "Shows detailed event information",
-          "link": "events/shows_detailed_event_information.json",
+          "description": "Sign in with invalid password",
+          "link": "sessions/sign_in_with_invalid_password.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "examples": [
+        {
+          "description": "Creates event with invalid user token",
+          "link": "events/creates_event_with_invalid_user_token.json",
           "groups": "all"
         },
         {
@@ -24,8 +34,13 @@
           "groups": "all"
         },
         {
-          "description": "Creates event with invalid user token",
-          "link": "events/creates_event_with_invalid_user_token.json",
+          "description": "Shows detailed event information",
+          "link": "events/shows_detailed_event_information.json",
+          "groups": "all"
+        },
+        {
+          "description": "Returns events where user was added",
+          "link": "events/returns_events_where_user_was_added.json",
           "groups": "all"
         }
       ]
@@ -46,16 +61,11 @@
       ]
     },
     {
-      "name": "Sessions",
+      "name": "Users",
       "examples": [
         {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
-          "groups": "all"
-        },
-        {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
+          "description": "Creating new user",
+          "link": "users/creating_new_user.json",
           "groups": "all"
         }
       ]
@@ -66,16 +76,6 @@
         {
           "description": "Request to unexisting page",
           "link": "errors/request_to_unexisting_page.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Users",
-      "examples": [
-        {
-          "description": "Creating new user",
-          "link": "users/creating_new_user.json",
           "groups": "all"
         }
       ]

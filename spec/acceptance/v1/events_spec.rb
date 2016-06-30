@@ -45,11 +45,15 @@ resource "Events" do
   end
 
   post "/v1/events" do
+    let(:user_1) { create(:user) }
+    let(:user_2) { create(:user) }
     let(:name) { "Meeting" }
     let(:description) { "Repetition" }
+    let(:user_ids) { [user_1.authentication_token, user_2.authentication_token] }
 
     parameter :name, name, required: true, scope: :event
     parameter :description, description, scope: :event
+    parameter :user_ids, "Participants of event", scope: :event
     parameter :uid, "User uid", required: true
 
     example_request "Creates event with valid params" do
