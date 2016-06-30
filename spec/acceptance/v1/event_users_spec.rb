@@ -21,7 +21,7 @@ resource "Event Users" do
     example_request "Adding new member to event" do
       expect(response_status).to eq 201
       expect(response["event"]).to be_an_event_representation
-      expect(response["event"]["users"].first).to be_an_event_user_representation
+      expect(response["event"]["participants"].first).to be_an_event_user_representation
     end
   end
 
@@ -37,7 +37,7 @@ resource "Event Users" do
     example_request "Removes member from event" do
       expect(response_status).to eq 200
       expect(response["event"]).to be_an_event_representation
-      expect(response["event"]["users"]).to be_empty
+      expect(response["event"]["participants"]).to be_empty
     end
   end
 end

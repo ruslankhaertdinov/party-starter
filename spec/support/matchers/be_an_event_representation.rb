@@ -6,9 +6,9 @@ RSpec::Matchers.define :be_an_event_representation do
       description
       start_at
       end_at
-      users
-      intersections
       owner
+      participants
+      checked_participants
     )
 
     expect(json).to be

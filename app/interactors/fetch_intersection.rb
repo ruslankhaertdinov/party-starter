@@ -1,9 +1,9 @@
 class FetchIntersection
-  attr_reader :users
-  private :users
+  attr_reader :event
+  private :event
 
-  def initialize(users)
-    @users = users
+  def initialize(event)
+    @event = event
   end
 
   def call
@@ -37,7 +37,7 @@ class FetchIntersection
       {}.tap do |h|
         users.each do |user|
           day_names.each do |day_name|
-            day_availabilities = user.availability[day_name]
+            day_availabilities = user.availabilities.where(event_id: event.id).first.intervals[day_name]
             if day_availabilities
               h[day_name] ||= []
               h[day_name] += day_availabilities
@@ -62,5 +62,9 @@ class FetchIntersection
 
   def users_count
     users.size
+  end
+
+  def users
+    event.users
   end
 end

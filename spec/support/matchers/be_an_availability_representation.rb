@@ -2,8 +2,7 @@ RSpec::Matchers.define :be_an_availability_representation do
   match do |json|
     response_attributes = %w(
       id
-      start_at
-      end_at
+      intervals
     )
 
     expect(json).to be

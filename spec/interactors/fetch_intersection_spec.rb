@@ -2,9 +2,12 @@ require "rails_helper"
 
 describe FetchIntersection do
   let(:event) { create(:event) }
+  let(:user_1) { create(:user) }
+  let(:user_2) { create(:user) }
+  let(:user_3) { create(:user) }
 
-  let(:user_1) do
-    create(:user, availability: {
+  let!(:availability_1) do
+    create(:availability, user: user_1, event: event, intervals: {
       monday: [
         { start_at: 0, end_at: 24 }
       ],
@@ -15,8 +18,8 @@ describe FetchIntersection do
     })
   end
 
-  let(:user_2) do
-    create(:user, availability: {
+  let!(:availability_2) do
+    create(:availability, user: user_2, event: event, intervals: {
       monday: [
         { start_at: 3, end_at: 12 },
         { start_at: 14, end_at: 16 },
@@ -28,8 +31,8 @@ describe FetchIntersection do
     })
   end
 
-  let(:user_3) do
-    create(:user, availability: {
+  let!(:availability_3) do
+    create(:availability, user: user_3, event: event, intervals: {
       monday: [
         { start_at: 5, end_at: 15 },
         { start_at: 20, end_at: 22 }
@@ -40,7 +43,7 @@ describe FetchIntersection do
       ]
     })
   end
-  let(:service) { described_class.new(event.users) }
+  let(:service) { described_class.new(event) }
 
   let(:expected_intersections) do
     {
