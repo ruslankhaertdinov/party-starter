@@ -16,7 +16,7 @@ module V1
       event.owner = found_user
 
       if event.save
-        event.users << found_user
+        assign_members(event)
         render json: event, serializer: BriefEventSerializer
       else
         render json: { error: event.errors.to_a }, status: :unprocessable_entity
@@ -31,6 +31,15 @@ module V1
 
     def events
       found_user.events
+    end
+
+    def participants
+      users = User.where(authentication_token: params[:event][:user_ids])
+      users << found_user
+    end
+
+    def assign_members(event)
+      participants.each { |user| event.add_member(user) }
     end
   end
 end
