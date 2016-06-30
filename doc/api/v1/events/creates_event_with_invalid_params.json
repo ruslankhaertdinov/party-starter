@@ -17,6 +17,11 @@
       "description": "POST /v1/events"
     },
     {
+      "scope": "event",
+      "name": "user_ids",
+      "description": "Participants of event"
+    },
+    {
       "required": true,
       "name": "uid",
       "description": "User uid"
@@ -29,7 +34,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[name]=&event[description]=&uid=uCHqC442B38usHLMuw7T",
+      "request_body": "event[name]=&event[description]=&event[user_ids][]=rNCHqhn-ZYzoEzypfqQA&event[user_ids][]=KHS9eYYUxyBXyho7twKD&uid=xRimx3VnSCAoMXwcH_fu",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -43,7 +48,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=&event[description]=&uid=uCHqC442B38usHLMuw7T' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=&event[description]=&event[user_ids][]=rNCHqhn-ZYzoEzypfqQA&event[user_ids][]=KHS9eYYUxyBXyho7twKD&uid=xRimx3VnSCAoMXwcH_fu' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
