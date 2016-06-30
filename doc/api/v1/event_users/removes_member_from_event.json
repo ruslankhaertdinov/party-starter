@@ -28,7 +28,7 @@
     {
       "request_method": "DELETE",
       "request_path": "/v1/event_users/:id",
-      "request_body": "user_id=4&event_id=2&uid=Ky8AzWJunM-JsC6odDRG",
+      "request_body": "user_id=5&event_id=2&uid=dzvSbxmwvgd544fm-6tH",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -37,12 +37,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":2,\"name\":\"Eligendi voluptas voluptas et cumque hic.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"intersections\":{},\"owner\":{\"id\":3,\"availability\":{},\"uid\":\"Ky8AzWJunM-JsC6odDRG\"},\"users\":[]}}",
+      "response_body": "{\"event\":{\"id\":2,\"name\":\"Tenetur corporis alias delectus dolor magnam aspernatur.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"owner\":{\"uid\":\"dzvSbxmwvgd544fm-6tH\"},\"participants\":[],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/event_users/:id\" -d 'user_id=4&event_id=2&uid=Ky8AzWJunM-JsC6odDRG' -X DELETE \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/event_users/:id\" -d 'user_id=5&event_id=2&uid=dzvSbxmwvgd544fm-6tH' -X DELETE \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

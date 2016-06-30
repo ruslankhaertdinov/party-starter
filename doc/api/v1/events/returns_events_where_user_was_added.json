@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events?uid=SzBtA42F4r16A_Zzs81x",
+      "request_path": "/v1/events?uid=nvQNdBHcz-_xs_2Po4iy",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "SzBtA42F4r16A_Zzs81x"
+        "uid": "nvQNdBHcz-_xs_2Po4iy"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":5,\"name\":\"Impedit non quas totam repellendus debitis.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"id\":11,\"availability\":{},\"uid\":\"VLPd2QNYsLXtwTVa-1_9\"}},{\"id\":6,\"name\":\"Assumenda in iste suscipit possimus velit quibusdam.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"id\":12,\"availability\":{},\"uid\":\"Jy3p8tQuN5mNnd-1Kao-\"}}]}",
+      "response_body": "{\"events\":[{\"id\":5,\"name\":\"Minima placeat et aut totam dignissimos porro fuga.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"uBdiiu5vem1CgyxADht2\"}},{\"id\":6,\"name\":\"Quae est corporis repellat vitae.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"U9WzyaSxH4oxFs4vs2K5\"}}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events?uid=SzBtA42F4r16A_Zzs81x\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events?uid=nvQNdBHcz-_xs_2Po4iy\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

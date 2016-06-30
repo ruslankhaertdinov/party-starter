@@ -7,6 +7,7 @@
   "parameters": [
     {
       "required": true,
+      "scope": "user",
       "name": "uid",
       "description": "User oauth uid"
     },
@@ -23,21 +24,21 @@
     {
       "request_method": "POST",
       "request_path": "/v1/users",
-      "request_body": "uid=98391e04dd4f&key=0c8f4e68a202",
+      "request_body": "user[uid]=8e34a8cd2c67&key=0c8f4e68a202",
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
-      "response_status": 201,
-      "response_status_text": "Created",
-      "response_body": "{\"user\":{\"id\":14,\"availability\":{},\"uid\":\"98391e04dd4f\"}}",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"user\":{\"uid\":\"dejzfm1K-zoVag6vzRzH\"}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/users\" -d 'uid=98391e04dd4f&key=0c8f4e68a202' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/users\" -d 'user[uid]=8e34a8cd2c67&key=0c8f4e68a202' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

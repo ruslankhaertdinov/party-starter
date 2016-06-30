@@ -1,6 +1,16 @@
 {
   "resources": [
     {
+      "name": "Users",
+      "examples": [
+        {
+          "description": "Creating new user",
+          "link": "users/creating_new_user.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
       "name": "Event Users",
       "examples": [
         {
@@ -16,56 +26,11 @@
       ]
     },
     {
-      "name": "Events",
+      "name": "Availabilities",
       "examples": [
         {
-          "description": "Shows detailed event information",
-          "link": "events/shows_detailed_event_information.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with valid params",
-          "link": "events/creates_event_with_valid_params.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with invalid params",
-          "link": "events/creates_event_with_invalid_params.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with invalid user token",
-          "link": "events/creates_event_with_invalid_user_token.json",
-          "groups": "all"
-        },
-        {
-          "description": "Returns events where user was added",
-          "link": "events/returns_events_where_user_was_added.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Errors",
-      "examples": [
-        {
-          "description": "Request to unexisting page",
-          "link": "errors/request_to_unexisting_page.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Users",
-      "examples": [
-        {
-          "description": "Creating new user",
-          "link": "users/creating_new_user.json",
-          "groups": "all"
-        },
-        {
-          "description": "Updates availability",
-          "link": "users/updates_availability.json",
+          "description": "Creating new availability or updating existing one",
+          "link": "availabilities/creating_new_availability_or_updating_existing_one.json",
           "groups": "all"
         }
       ]
@@ -81,6 +46,46 @@
         {
           "description": "Sign in with valid password",
           "link": "sessions/sign_in_with_valid_password.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Errors",
+      "examples": [
+        {
+          "description": "Request to unexisting page",
+          "link": "errors/request_to_unexisting_page.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "examples": [
+        {
+          "description": "Shows detailed event information",
+          "link": "events/shows_detailed_event_information.json",
+          "groups": "all"
+        },
+        {
+          "description": "Returns events where user was added",
+          "link": "events/returns_events_where_user_was_added.json",
+          "groups": "all"
+        },
+        {
+          "description": "Creates event with invalid params",
+          "link": "events/creates_event_with_invalid_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Creates event with invalid user token",
+          "link": "events/creates_event_with_invalid_user_token.json",
+          "groups": "all"
+        },
+        {
+          "description": "Creates event with valid params",
+          "link": "events/creates_event_with_valid_params.json",
           "groups": "all"
         }
       ]
