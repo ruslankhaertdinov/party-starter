@@ -1,3 +1,7 @@
 class EventUserSerializer < ApplicationSerializer
-  attributes :id
+  attributes :uid
+
+  def uid
+    object.authentication_token
+  end
 end

@@ -6,7 +6,7 @@ resource "Events" do
 
   subject(:response) { json_response_body }
 
-  let!(:user) { create :user, :with_availability }
+  let!(:user) { create :user }
   let(:uid) { user.authentication_token }
 
   get "/v1/events" do

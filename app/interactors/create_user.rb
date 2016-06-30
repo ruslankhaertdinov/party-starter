@@ -9,7 +9,7 @@ class CreateUser
   end
 
   def call
-    User.create!(default_params)
+    User.where(authentication_token: uid).first_or_create!(default_params)
   end
 
   private
@@ -17,8 +17,7 @@ class CreateUser
   def default_params
     {
       email: email,
-      password: password,
-      authentication_token: uid
+      password: password
     }
   end
 

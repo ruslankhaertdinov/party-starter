@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160617121835) do
+ActiveRecord::Schema.define(version: 20160630090515) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "availabilities", force: :cascade do |t|
+    t.integer  "user_id",                 null: false
+    t.integer  "event_id",                null: false
+    t.jsonb    "intervals",  default: {}, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "availabilities", ["event_id"], name: "index_availabilities_on_event_id", using: :btree
+  add_index "availabilities", ["user_id"], name: "index_availabilities_on_user_id", using: :btree
 
   create_table "event_users", force: :cascade do |t|
     t.integer "user_id",  null: false
@@ -36,17 +47,6 @@ ActiveRecord::Schema.define(version: 20160617121835) do
 
   add_index "events", ["user_id"], name: "index_events_on_user_id", using: :btree
 
-  create_table "invitations", force: :cascade do |t|
-    t.integer  "event_id",                null: false
-    t.integer  "user_id",                 null: false
-    t.string   "token",      default: "", null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "invitations", ["event_id"], name: "index_invitations_on_event_id", using: :btree
-  add_index "invitations", ["user_id"], name: "index_invitations_on_user_id", using: :btree
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -61,7 +61,6 @@ ActiveRecord::Schema.define(version: 20160617121835) do
     t.string   "authentication_token"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.jsonb    "availability",           default: {}, null: false
   end
 
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", unique: true, using: :btree
