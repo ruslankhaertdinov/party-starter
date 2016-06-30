@@ -23,7 +23,7 @@ module V1
     end
 
     def user
-      User.find(event_user_params[:user_id])
+      User.find_by(authentication_token: event_user_params[:user_id])
     end
 
     def event_user_params

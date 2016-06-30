@@ -10,7 +10,7 @@ resource "Event Users" do
   let(:user) { create(:user) }
   let(:event) { create(:event, owner: owner) }
   let(:uid) { owner.authentication_token }
-  let(:user_id) { user.id }
+  let(:user_id) { user.authentication_token }
   let(:event_id) { event.id }
 
   post "/v1/event_users" do
