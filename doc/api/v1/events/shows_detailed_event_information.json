@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events/4?uid=CzUB8JugS4yTcx93PSPZ",
+      "request_path": "/v1/events/4?uid=Q1Gu13yG5zJnrWPrfnt8",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "CzUB8JugS4yTcx93PSPZ"
+        "uid": "Q1Gu13yG5zJnrWPrfnt8"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":4,\"name\":\"Et error repellat magnam occaecati voluptatem.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"owner\":{\"uid\":\"ULisgx8R_xChGNsfquZz\"},\"participants\":[{\"uid\":\"CzUB8JugS4yTcx93PSPZ\"}],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":4,\"name\":\"Possimus unde facere a.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"owner\":{\"uid\":\"rf97Sn8xfEGrwGswgyzV\"},\"participants\":[{\"uid\":\"Q1Gu13yG5zJnrWPrfnt8\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/4?uid=CzUB8JugS4yTcx93PSPZ\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/4?uid=Q1Gu13yG5zJnrWPrfnt8\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

@@ -1,11 +1,31 @@
 {
   "resources": [
     {
-      "name": "Users",
+      "name": "Events",
       "examples": [
         {
-          "description": "Creating new user",
-          "link": "users/creating_new_user.json",
+          "description": "Returns events where user was added",
+          "link": "events/returns_events_where_user_was_added.json",
+          "groups": "all"
+        },
+        {
+          "description": "Shows detailed event information",
+          "link": "events/shows_detailed_event_information.json",
+          "groups": "all"
+        },
+        {
+          "description": "Creates event with invalid params",
+          "link": "events/creates_event_with_invalid_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Creates event with valid params",
+          "link": "events/creates_event_with_valid_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Creates event with invalid user token",
+          "link": "events/creates_event_with_invalid_user_token.json",
           "groups": "all"
         }
       ]
@@ -14,23 +34,13 @@
       "name": "Event Users",
       "examples": [
         {
-          "description": "Adding new member to event",
-          "link": "event_users/adding_new_member_to_event.json",
-          "groups": "all"
-        },
-        {
           "description": "Removes member from event",
           "link": "event_users/removes_member_from_event.json",
           "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Availabilities",
-      "examples": [
+        },
         {
-          "description": "Creating new availability or updating existing one",
-          "link": "availabilities/creating_new_availability_or_updating_existing_one.json",
+          "description": "Adding new member to event",
+          "link": "event_users/adding_new_member_to_event.json",
           "groups": "all"
         }
       ]
@@ -61,31 +71,21 @@
       ]
     },
     {
-      "name": "Events",
+      "name": "Users",
       "examples": [
         {
-          "description": "Shows detailed event information",
-          "link": "events/shows_detailed_event_information.json",
+          "description": "Creating new user",
+          "link": "users/creating_new_user.json",
           "groups": "all"
-        },
+        }
+      ]
+    },
+    {
+      "name": "Availabilities",
+      "examples": [
         {
-          "description": "Returns events where user was added",
-          "link": "events/returns_events_where_user_was_added.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with invalid params",
-          "link": "events/creates_event_with_invalid_params.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with invalid user token",
-          "link": "events/creates_event_with_invalid_user_token.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with valid params",
-          "link": "events/creates_event_with_valid_params.json",
+          "description": "Creating new availability or updating existing one",
+          "link": "availabilities/creating_new_availability_or_updating_existing_one.json",
           "groups": "all"
         }
       ]
