@@ -9,6 +9,7 @@ RSpec::Matchers.define :be_an_event_representation do
       owner
       participants
       checked_participants
+      is_weekly
     )
 
     expect(json).to be

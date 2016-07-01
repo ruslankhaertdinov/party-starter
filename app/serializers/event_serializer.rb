@@ -1,5 +1,5 @@
 class EventSerializer < ApplicationSerializer
-  attributes :id, :name, :description, :start_at, :end_at
+  attributes :id, :name, :description, :start_at, :end_at, :is_weekly
 
   belongs_to :owner, serializer: UserSerializer
 
@@ -22,5 +22,9 @@ class EventSerializer < ApplicationSerializer
     # TODO: need refactoring
     user_ids = Availability.where(event_id: object.id).pluck(:user_id)
     User.where(id: user_ids)
+  end
+
+  def is_weekly
+    true # stub
   end
 end
