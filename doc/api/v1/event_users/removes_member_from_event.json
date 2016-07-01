@@ -28,7 +28,7 @@
     {
       "request_method": "DELETE",
       "request_path": "/v1/event_users/:id",
-      "request_body": "user_id=_Hzt3Hb_AxYCzsDdYxtb&event_id=6&uid=bRTQ7Ri2LKPrfpgRp7VX",
+      "request_body": "user_id=647uRrm6bSFjo8_xxn4y&event_id=3&uid=uhXV4pq-5pBoN_TtmdPM",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -37,12 +37,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":6,\"name\":\"Hic laborum provident quaerat iusto quo iure.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"owner\":{\"uid\":\"bRTQ7Ri2LKPrfpgRp7VX\"},\"participants\":[],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":3,\"name\":\"Iste id eius sit deleniti quis saepe.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"owner\":{\"uid\":\"uhXV4pq-5pBoN_TtmdPM\"},\"participants\":[],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/event_users/:id\" -d 'user_id=_Hzt3Hb_AxYCzsDdYxtb&event_id=6&uid=bRTQ7Ri2LKPrfpgRp7VX' -X DELETE \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/event_users/:id\" -d 'user_id=647uRrm6bSFjo8_xxn4y&event_id=3&uid=uhXV4pq-5pBoN_TtmdPM' -X DELETE \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
