@@ -34,7 +34,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[name]=Meeting&event[description]=Repetition&event[user_ids][]=PHLiPp9baeJp2FMi3Rzw&event[user_ids][]=YTWxsU6xMAmX8ZxkxqBu&uid=zrXgMWELjcLzzDiRwKoF",
+      "request_body": "event[name]=Meeting&event[description]=Repetition&event[user_ids][]=zsQWTNGT-kcMBjudLdAH&event[user_ids][]=JXEK4WjJh1bbe6vp6Pk7&uid=WNVDzYfUByJdqyKzq-Cy",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -43,12 +43,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":1,\"name\":\"Meeting\",\"description\":\"Repetition\",\"is_weekly\":true,\"owner\":{\"uid\":\"zrXgMWELjcLzzDiRwKoF\"}}}",
+      "response_body": "{\"event\":{\"id\":8,\"name\":\"Meeting\",\"description\":\"Repetition\",\"is_weekly\":true,\"owner\":{\"uid\":\"WNVDzYfUByJdqyKzq-Cy\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=Meeting&event[description]=Repetition&event[user_ids][]=PHLiPp9baeJp2FMi3Rzw&event[user_ids][]=YTWxsU6xMAmX8ZxkxqBu&uid=zrXgMWELjcLzzDiRwKoF' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=Meeting&event[description]=Repetition&event[user_ids][]=zsQWTNGT-kcMBjudLdAH&event[user_ids][]=JXEK4WjJh1bbe6vp6Pk7&uid=WNVDzYfUByJdqyKzq-Cy' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

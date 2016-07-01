@@ -28,7 +28,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/event_users",
-      "request_body": "user_id=AE7uBvbuHkkgFkVG-geR&event_id=7&uid=tBpboLsTDCVmTzfS7g7d",
+      "request_body": "user_id=AAsv44WrGXij4Lbhyvss&event_id=2&uid=egByoEDTzeYktuxLFbJU",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -37,12 +37,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"event\":{\"id\":7,\"name\":\"Voluptatem ut non laborum mollitia numquam earum aut molestiae.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"owner\":{\"uid\":\"tBpboLsTDCVmTzfS7g7d\"},\"participants\":[{\"uid\":\"AE7uBvbuHkkgFkVG-geR\"}],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":2,\"name\":\"Voluptas sed expedita hic sed.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"owner\":{\"uid\":\"egByoEDTzeYktuxLFbJU\"},\"participants\":[{\"uid\":\"AAsv44WrGXij4Lbhyvss\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/event_users\" -d 'user_id=AE7uBvbuHkkgFkVG-geR&event_id=7&uid=tBpboLsTDCVmTzfS7g7d' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/event_users\" -d 'user_id=AAsv44WrGXij4Lbhyvss&event_id=2&uid=egByoEDTzeYktuxLFbJU' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

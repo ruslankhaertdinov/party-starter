@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events?uid=t4PtcaWGnbPgNSt8EByc",
+      "request_path": "/v1/events?uid=sscboFt5xgGow9eq38xm",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "t4PtcaWGnbPgNSt8EByc"
+        "uid": "sscboFt5xgGow9eq38xm"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":3,\"name\":\"Et ea est autem doloribus aliquid quidem.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"2crzkjUExaPoUuwxEJHa\"}},{\"id\":4,\"name\":\"Blanditiis aut esse et consequatur.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"Fnzmwf2jAzJ9hys45v4-\"}}]}",
+      "response_body": "{\"events\":[{\"id\":5,\"name\":\"Exercitationem sit harum error ex tempora pariatur aut et.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"eikN8mMSiqtC-x33Ay_m\"}},{\"id\":6,\"name\":\"Blanditiis et eligendi numquam error voluptatem aut tenetur.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"BmuHdV7VP-Q9NsgxWRzx\"}}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events?uid=t4PtcaWGnbPgNSt8EByc\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events?uid=sscboFt5xgGow9eq38xm\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
