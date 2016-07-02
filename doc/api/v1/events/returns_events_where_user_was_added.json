@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events?uid=sscboFt5xgGow9eq38xm",
+      "request_path": "/v1/events?uid=jH6KZb2YBAWBWQqMSxCn",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "sscboFt5xgGow9eq38xm"
+        "uid": "jH6KZb2YBAWBWQqMSxCn"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":5,\"name\":\"Exercitationem sit harum error ex tempora pariatur aut et.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"eikN8mMSiqtC-x33Ay_m\"}},{\"id\":6,\"name\":\"Blanditiis et eligendi numquam error voluptatem aut tenetur.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"BmuHdV7VP-Q9NsgxWRzx\"}}]}",
+      "response_body": "{\"events\":[{\"id\":4,\"name\":\"Quo quidem eligendi officia maiores ea sed.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"-k3UxK5mvwhhsQeiUx4X\"}},{\"id\":5,\"name\":\"Ipsam quasi rerum qui.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"QhTmhREWiwUwb_MwPzY6\"}}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events?uid=sscboFt5xgGow9eq38xm\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events?uid=jH6KZb2YBAWBWQqMSxCn\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
