@@ -1,0 +1,38 @@
+{
+  "resource": "Events",
+  "http_method": "DELETE",
+  "route": "/v1/events/:id",
+  "description": "Returns deleted resource document",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "uid",
+      "description": "User uid"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/v1/events/7",
+      "request_body": "uid=sCDjQaddwshACjs6yMTf",
+      "request_headers": {
+        "Accept": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"event\":{\"id\":7,\"name\":\"Magni incidunt explicabo ad.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"xyzGcssCoVUzsHoRdaDp\"}}}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/events/7\" -d 'uid=sCDjQaddwshACjs6yMTf' -X DELETE \\\n\t-H \"Accept: application/json\""
+    }
+  ]
+}
