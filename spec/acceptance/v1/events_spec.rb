@@ -72,4 +72,20 @@ resource "Events" do
       expect(response["error"]).to eq(["Name can't be blank"])
     end
   end
+
+  delete "/v1/events/:id" do
+    let(:event) { create(:event) }
+    let(:id) { event.id }
+
+    before do
+      event.users << user
+    end
+
+    parameter :uid, "User uid", required: true
+
+    example_request "Returns deleted resource document" do
+      expect(response_status).to eq 200
+      expect(response["event"]).to be_a_brief_event_representation
+    end
+  end
 end

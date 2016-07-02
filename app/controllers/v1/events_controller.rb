@@ -23,6 +23,12 @@ module V1
       end
     end
 
+    def destroy
+      event = events.find(params[:id])
+      status = event.destroy ? :ok : :unprocessable_entity
+      render json: event, serializer: BriefEventSerializer, status: status
+    end
+
     private
 
     def event_params
