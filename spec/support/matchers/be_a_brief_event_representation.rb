@@ -6,6 +6,7 @@ RSpec::Matchers.define :be_a_brief_event_representation do
       description
       owner
       is_weekly
+      created_at
     )
 
     expect(json).to be

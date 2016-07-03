@@ -2,13 +2,13 @@
   "resource": "Event Users",
   "http_method": "POST",
   "route": "/v1/event_users",
-  "description": "Adding new member to event",
+  "description": "Adding new members to event",
   "explanation": null,
   "parameters": [
     {
       "required": true,
-      "name": "user_id",
-      "description": "User id"
+      "name": "user_ids",
+      "description": "User ids"
     },
     {
       "required": true,
@@ -28,7 +28,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/event_users",
-      "request_body": "user_id=Ev5CJYysqxzuqfTFj6hn&event_id=2&uid=wHrwDp8uZzGzy1he7Nx7",
+      "request_body": "user_ids[]=jaPAvXCWJLXzNMuCPTiY&event_id=2&uid=Gf7RM-shzRymCe3TwCL6",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -37,12 +37,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"event\":{\"id\":2,\"name\":\"Earum accusamus velit iusto laboriosam et.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"owner\":{\"uid\":\"wHrwDp8uZzGzy1he7Nx7\"},\"participants\":[{\"uid\":\"Ev5CJYysqxzuqfTFj6hn\"}],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":2,\"name\":\"Fugit mollitia reprehenderit sint.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"owner\":{\"uid\":\"Gf7RM-shzRymCe3TwCL6\"},\"participants\":[{\"uid\":\"jaPAvXCWJLXzNMuCPTiY\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/event_users\" -d 'user_id=Ev5CJYysqxzuqfTFj6hn&event_id=2&uid=wHrwDp8uZzGzy1he7Nx7' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/event_users\" -d 'user_ids[]=jaPAvXCWJLXzNMuCPTiY&event_id=2&uid=Gf7RM-shzRymCe3TwCL6' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

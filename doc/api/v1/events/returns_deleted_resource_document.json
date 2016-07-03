@@ -17,8 +17,8 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/v1/events/7",
-      "request_body": "uid=sCDjQaddwshACjs6yMTf",
+      "request_path": "/v1/events/5",
+      "request_body": "uid=Q12Lt1siMD-Rsr3xt_3b",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -27,12 +27,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":7,\"name\":\"Magni incidunt explicabo ad.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"xyzGcssCoVUzsHoRdaDp\"}}}",
+      "response_body": "{\"event\":{\"id\":5,\"name\":\"Nesciunt eos delectus nulla voluptatem et voluptatem porro beatae.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"As8dLpTMsYa1gyNCNze5\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/7\" -d 'uid=sCDjQaddwshACjs6yMTf' -X DELETE \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/5\" -d 'uid=Q12Lt1siMD-Rsr3xt_3b' -X DELETE \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

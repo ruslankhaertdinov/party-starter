@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events/8?uid=zrYmpBhhzE8HzTz_YDyq",
+      "request_path": "/v1/events/4?uid=XZ6bA6bKW-_mrstMxtfb",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "zrYmpBhhzE8HzTz_YDyq"
+        "uid": "XZ6bA6bKW-_mrstMxtfb"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":8,\"name\":\"Molestiae sed molestias enim perferendis quisquam provident qui laboriosam.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"owner\":{\"uid\":\"GeGqywXtZztYnQhS_3Ny\"},\"participants\":[{\"uid\":\"zrYmpBhhzE8HzTz_YDyq\"}],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":4,\"name\":\"Reiciendis expedita perspiciatis est nihil odio quas sunt.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"owner\":{\"uid\":\"yKEnjdKkPVz_8nrTxrBy\"},\"participants\":[{\"uid\":\"XZ6bA6bKW-_mrstMxtfb\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/8?uid=zrYmpBhhzE8HzTz_YDyq\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/4?uid=XZ6bA6bKW-_mrstMxtfb\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

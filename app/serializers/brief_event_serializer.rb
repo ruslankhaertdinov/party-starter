@@ -1,5 +1,5 @@
 class BriefEventSerializer < ApplicationSerializer
-  attributes :id, :name, :description, :is_weekly
+  attributes :id, :name, :description, :is_weekly, :created_at
 
   belongs_to :owner, serializer: UserSerializer
 
