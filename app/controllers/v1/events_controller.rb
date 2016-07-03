@@ -39,13 +39,10 @@ module V1
       found_user.events
     end
 
-    def participants
-      users = User.where(authentication_token: params[:event][:user_ids])
-      users << found_user
-    end
-
     def assign_members(event)
-      participants.each { |user| event.add_member(user) }
+      user_ids = params[:event][:user_ids] || []
+      user_ids << found_user.authentication_token
+      AssignMembers.new(event, user_ids).call
     end
   end
 end
