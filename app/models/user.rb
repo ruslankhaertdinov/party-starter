@@ -8,4 +8,6 @@ class User < ActiveRecord::Base
   has_many :event_users, dependent: :destroy
   has_many :events, through: :event_users
   has_many :availabilities, dependent: :destroy
+
+  scope :by_uid, -> (uids) { where(authentication_token: uids) }
 end
