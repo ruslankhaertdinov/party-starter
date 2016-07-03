@@ -1,11 +1,51 @@
 {
   "resources": [
     {
-      "name": "Availabilities",
+      "name": "Event Users",
       "examples": [
         {
-          "description": "Creating new availability or updating existing one",
-          "link": "availabilities/creating_new_availability_or_updating_existing_one.json",
+          "description": "Removes member from event",
+          "link": "event_users/removes_member_from_event.json",
+          "groups": "all"
+        },
+        {
+          "description": "Adding new members to event",
+          "link": "event_users/adding_new_members_to_event.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "examples": [
+        {
+          "description": "Creates event with invalid user token",
+          "link": "events/creates_event_with_invalid_user_token.json",
+          "groups": "all"
+        },
+        {
+          "description": "Creates event with invalid params",
+          "link": "events/creates_event_with_invalid_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Creates event with valid params",
+          "link": "events/creates_event_with_valid_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Shows detailed event information",
+          "link": "events/shows_detailed_event_information.json",
+          "groups": "all"
+        },
+        {
+          "description": "Returns deleted resource document",
+          "link": "events/returns_deleted_resource_document.json",
+          "groups": "all"
+        },
+        {
+          "description": "Returns events where user was added",
+          "link": "events/returns_events_where_user_was_added.json",
           "groups": "all"
         }
       ]
@@ -26,16 +66,11 @@
       ]
     },
     {
-      "name": "Event Users",
+      "name": "Availabilities",
       "examples": [
         {
-          "description": "Adding new member to event",
-          "link": "event_users/adding_new_member_to_event.json",
-          "groups": "all"
-        },
-        {
-          "description": "Removes member from event",
-          "link": "event_users/removes_member_from_event.json",
+          "description": "Creating new availability or updating existing one",
+          "link": "availabilities/creating_new_availability_or_updating_existing_one.json",
           "groups": "all"
         }
       ]
@@ -46,41 +81,6 @@
         {
           "description": "Creating new user",
           "link": "users/creating_new_user.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Events",
-      "examples": [
-        {
-          "description": "Returns events where user was added",
-          "link": "events/returns_events_where_user_was_added.json",
-          "groups": "all"
-        },
-        {
-          "description": "Returns deleted resource document",
-          "link": "events/returns_deleted_resource_document.json",
-          "groups": "all"
-        },
-        {
-          "description": "Shows detailed event information",
-          "link": "events/shows_detailed_event_information.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with valid params",
-          "link": "events/creates_event_with_valid_params.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with invalid user token",
-          "link": "events/creates_event_with_invalid_user_token.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with invalid params",
-          "link": "events/creates_event_with_invalid_params.json",
           "groups": "all"
         }
       ]

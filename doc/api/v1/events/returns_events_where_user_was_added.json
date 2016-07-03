@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events?uid=jH6KZb2YBAWBWQqMSxCn",
+      "request_path": "/v1/events?uid=qTjUGz2LP1NyLzg8CytS",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "jH6KZb2YBAWBWQqMSxCn"
+        "uid": "qTjUGz2LP1NyLzg8CytS"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":4,\"name\":\"Quo quidem eligendi officia maiores ea sed.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"-k3UxK5mvwhhsQeiUx4X\"}},{\"id\":5,\"name\":\"Ipsam quasi rerum qui.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"QhTmhREWiwUwb_MwPzY6\"}}]}",
+      "response_body": "{\"events\":[{\"id\":6,\"name\":\"Sed reiciendis culpa et sed et porro nobis odio.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"bxKGaE-RdRA57skyS51g\"}},{\"id\":7,\"name\":\"Sit eaque alias dicta voluptate.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"wG-waG9jMwQZyyDwtxaf\"}}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events?uid=jH6KZb2YBAWBWQqMSxCn\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events?uid=qTjUGz2LP1NyLzg8CytS\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

@@ -3,7 +3,7 @@ module V1
     before_action :ensure_user_found
 
     def create
-      event.add_member(user)
+      AssignMembers.new(event, params[:user_ids]).call
       respond_with(event)
     end
 
