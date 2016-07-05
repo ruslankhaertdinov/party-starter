@@ -7,30 +7,28 @@ class FetchIntersection
   end
 
   def call
-    intersections = {}
+    week_intersections = {}
     sorted_availabilities.each do |day_name, intervals|
       current_count = 0
-      day_intervals = []
-      first_time = intervals.first["start_at"]
-      last_time = intervals.last["end_at"]
+      day_intersections = []
 
-      (first_time..last_time).each do |time|
+      (intervals.first["start_at"]..intervals.last["end_at"]).each do |time|
         previous_count = current_count
         current_count += opened_intervals_count(intervals, time)
         current_count -= closed_intervals_count(intervals, time)
 
-        if interval_opened?(previous_count, current_count)
-          day_intervals << { start_at: time }
+        if interval_started?(previous_count, current_count)
+          day_intersections << { start_at: time }
         end
-        if interval_closed?(previous_count, current_count)
-          day_intervals.last[:end_at] = time
+        if interval_finished?(previous_count, current_count)
+          day_intersections.last[:end_at] = time
         end
       end
 
-      intersections[day_name.to_sym] = day_intervals if day_intervals.any?
+      week_intersections[day_name.to_sym] = day_intersections if day_intersections.any?
     end
 
-    intersections
+    week_intersections
   end
 
   private
@@ -74,11 +72,11 @@ class FetchIntersection
     checked_users.count
   end
 
-  def interval_closed?(previous_count, current_count)
+  def interval_finished?(previous_count, current_count)
     previous_count == checked_users_count && current_count != checked_users_count
   end
 
-  def interval_opened?(previous_count, current_count)
+  def interval_started?(previous_count, current_count)
     previous_count != checked_users_count && current_count == checked_users_count
   end
 
