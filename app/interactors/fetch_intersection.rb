@@ -18,10 +18,10 @@ class FetchIntersection
         prev = counter
         counter += intervals.select { |a| a["start_at"] == n }.size
         counter -= intervals.select { |a| a["end_at"] == n }.size
-        if prev == users_count && counter != users_count
+        if prev == checked_users_count && counter != checked_users_count
           intersections[day_name.to_sym].last[:end_at] = n
         end
-        if prev != users_count && counter == users_count
+        if prev != checked_users_count && counter == checked_users_count
           intersections[day_name.to_sym] << { start_at: n }
         end
       end
@@ -35,9 +35,9 @@ class FetchIntersection
   def joined_availabilities
     @joined_availabilities ||=
       {}.tap do |h|
-        users.each do |user|
+        checked_users.each do |user|
           day_names.each do |day_name|
-            day_availabilities = user.availabilities.where(event_id: event.id).first.intervals[day_name]
+            day_availabilities = user.availabilities.for_event(event).first.intervals[day_name]
             if day_availabilities
               h[day_name] ||= []
               h[day_name] += day_availabilities
@@ -60,11 +60,11 @@ class FetchIntersection
     Date::DAYNAMES.map(&:downcase)
   end
 
-  def users_count
-    users.size
+  def checked_users
+    @checked_users ||= event.users.joins(:availabilities).where(availabilities: { event_id: event.id })
   end
 
-  def users
-    event.users
+  def checked_users_count
+    checked_users.count
   end
 end

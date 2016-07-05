@@ -1,5 +1,5 @@
 class EventSerializer < ApplicationSerializer
-  attributes :id, :name, :description, :start_at, :end_at, :is_weekly
+  attributes :id, :name, :description, :start_at, :end_at, :is_weekly, :intersections
 
   belongs_to :owner, serializer: UserSerializer
 
@@ -19,12 +19,14 @@ class EventSerializer < ApplicationSerializer
   end
 
   def checked_participants
-    # TODO: need refactoring
-    user_ids = Availability.where(event_id: object.id).pluck(:user_id)
-    User.where(id: user_ids)
+    object.users.joins(:availabilities).where(availabilities: { event_id: object.id })
   end
 
   def is_weekly
     true # stub
+  end
+
+  def intersections
+    FetchIntersection.new(object).call
   end
 end
