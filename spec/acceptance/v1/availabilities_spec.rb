@@ -26,7 +26,7 @@ resource "Availabilities" do
     parameter :uid, "User oauth uid", required: true
 
     before do
-      create(:availability, event: event, user: user)
+      create(:availability, event: event, user: user, intervals: intervals)
     end
 
     example_request "Getting availability details for given event" do

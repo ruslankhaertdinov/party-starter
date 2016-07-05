@@ -23,26 +23,26 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/availability?availability[event_id]=2&uid=UNowkQEvUtG9H4ZaBy-y",
+      "request_path": "/v1/availability?availability[event_id]=7&uid=ZcxzwS1yQcdpMJ2NT9uq",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
         "availability": {
-          "event_id": "2"
+          "event_id": "7"
         },
-        "uid": "UNowkQEvUtG9H4ZaBy-y"
+        "uid": "ZcxzwS1yQcdpMJ2NT9uq"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"availability\":{\"id\":2,\"intervals\":{}}}",
+      "response_body": "{\"availability\":{\"id\":1,\"intervals\":{\"monday\":[{\"end_at\":\"12\",\"start_at\":\"11\"},{\"end_at\":\"17\",\"start_at\":\"15\"}],\"tuesday\":[{\"end_at\":\"10\",\"start_at\":\"9\"},{\"end_at\":\"19\",\"start_at\":\"18\"}]}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/availability?availability[event_id]=2&uid=UNowkQEvUtG9H4ZaBy-y\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/availability?availability[event_id]=7&uid=ZcxzwS1yQcdpMJ2NT9uq\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
