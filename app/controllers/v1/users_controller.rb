@@ -3,7 +3,7 @@ module V1
     before_action :key_valid?, only: %i(create)
 
     def create
-      user = CreateUser.new(params[:uid]).call
+      user = EnsureUserExistence.new(params[:uid]).call
       render json: user, status: 200
     end
 

@@ -1,4 +1,4 @@
-class CreateUser
+class EnsureUserExistence
   attr_reader :uid
   private :uid
 
