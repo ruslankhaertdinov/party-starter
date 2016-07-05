@@ -9,22 +9,25 @@ class FetchIntersection
   def call
     intersections = {}
     sorted_availabilities.each do |day_name, intervals|
-      counter = 0
-      intersections[day_name.to_sym] ||= []
-      first = intervals.first["start_at"]
-      last = intervals.last["end_at"]
+      current_count = 0
+      day_intervals = []
+      first_time = intervals.first["start_at"]
+      last_time = intervals.last["end_at"]
 
-      (first..last).each do |n|
-        prev = counter
-        counter += intervals.select { |a| a["start_at"] == n }.size
-        counter -= intervals.select { |a| a["end_at"] == n }.size
-        if prev == checked_users_count && counter != checked_users_count
-          intersections[day_name.to_sym].last[:end_at] = n
+      (first_time..last_time).each do |time|
+        previous_count = current_count
+        current_count += opened_intervals_count(intervals, time)
+        current_count -= closed_intervals_count(intervals, time)
+
+        if interval_opened?(previous_count, current_count)
+          day_intervals << { start_at: time }
         end
-        if prev != checked_users_count && counter == checked_users_count
-          intersections[day_name.to_sym] << { start_at: n }
+        if interval_closed?(previous_count, current_count)
+          day_intervals.last[:end_at] = time
         end
       end
+
+      intersections[day_name.to_sym] = day_intervals if day_intervals.any?
     end
 
     intersections
@@ -32,26 +35,29 @@ class FetchIntersection
 
   private
 
-  def joined_availabilities
-    @joined_availabilities ||=
+  def sorted_availabilities
+    @sorted_availabilities ||=
       {}.tap do |h|
-        checked_users.each do |user|
-          day_names.each do |day_name|
-            day_availabilities = user.availability_for_event(event).intervals[day_name]
-            if day_availabilities
-              h[day_name] ||= []
-              h[day_name] += day_availabilities
-            end
-          end
+        availabilities.each do |k, v|
+          h[k] = v.sort_by { |interval| interval["start_at"]  }
         end
       end
   end
 
-  def sorted_availabilities
-    @sorted_availabilities ||=
+  def availabilities
+    @availabilities ||=
       {}.tap do |h|
-        joined_availabilities.each do |k, v|
-          h[k] = v.sort_by { |interval| interval["start_at"]  }
+        checked_users.each do |user|
+          day_names.each do |day_name|
+            availability = user.availability_for_event(event)
+            next unless availability
+
+            intervals = availability.intervals[day_name]
+            if intervals
+              h[day_name] ||= []
+              h[day_name] += intervals
+            end
+          end
         end
       end
   end
@@ -66,5 +72,21 @@ class FetchIntersection
 
   def checked_users_count
     checked_users.count
+  end
+
+  def interval_closed?(previous_count, current_count)
+    previous_count == checked_users_count && current_count != checked_users_count
+  end
+
+  def interval_opened?(previous_count, current_count)
+    previous_count != checked_users_count && current_count == checked_users_count
+  end
+
+  def opened_intervals_count(intervals, time)
+    intervals.select { |a| a["start_at"] == time }.size
+  end
+
+  def closed_intervals_count(intervals, time)
+    intervals.select { |a| a["end_at"] == time }.size
   end
 end
