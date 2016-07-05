@@ -1,4 +1,10 @@
 class NullAvailability
+  include ActiveModel::Serialization
+
+  def self.model_name
+    "Availability"
+  end
+
   def id
   end
 

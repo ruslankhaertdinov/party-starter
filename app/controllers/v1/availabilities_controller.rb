@@ -4,7 +4,7 @@ module V1
 
     def show
       availability = found_user.availability_for_event(event) || NullAvailability.new
-      respond_with(availability)
+      render json: availability, serializer: AvailabilitySerializer
     end
 
     def create
