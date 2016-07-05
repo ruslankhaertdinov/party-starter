@@ -37,7 +37,7 @@ class FetchIntersection
       {}.tap do |h|
         checked_users.each do |user|
           day_names.each do |day_name|
-            day_availabilities = user.availabilities.for_event(event).first.intervals[day_name]
+            day_availabilities = user.availability_for_event(event).intervals[day_name]
             if day_availabilities
               h[day_name] ||= []
               h[day_name] += day_availabilities
