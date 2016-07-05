@@ -34,7 +34,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[name]=Meeting&event[description]=Repetition&event[user_ids][]=Nxs-FwyfaFHxPzsVzAN9&event[user_ids][]=RsJBtdyVmuSwetZ2kgSj&uid=NVsjUH7-WEgKmeG1Sx_K",
+      "request_body": "event[name]=Meeting&event[description]=Repetition&event[user_ids][]=h31vxymN4RTpg1jmVYox&event[user_ids][]=h8a-z4MeyBCPb2HpCffL&uid=6s3PVVWGBWJaKM5Y3UKK",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -43,12 +43,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":10,\"name\":\"Meeting\",\"description\":\"Repetition\",\"is_weekly\":true,\"created_at\":\"2016-07-05T16:44:36.289Z\",\"owner\":{\"uid\":\"NVsjUH7-WEgKmeG1Sx_K\"}}}",
+      "response_body": "{\"event\":{\"id\":5,\"name\":\"Meeting\",\"description\":\"Repetition\",\"is_weekly\":true,\"created_at\":\"2016-07-05T16:56:27.090Z\",\"owner\":{\"uid\":\"6s3PVVWGBWJaKM5Y3UKK\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=Meeting&event[description]=Repetition&event[user_ids][]=Nxs-FwyfaFHxPzsVzAN9&event[user_ids][]=RsJBtdyVmuSwetZ2kgSj&uid=NVsjUH7-WEgKmeG1Sx_K' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=Meeting&event[description]=Repetition&event[user_ids][]=h31vxymN4RTpg1jmVYox&event[user_ids][]=h8a-z4MeyBCPb2HpCffL&uid=6s3PVVWGBWJaKM5Y3UKK' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

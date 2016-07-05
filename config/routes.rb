@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     resources :event_users, only: %i(create destroy)
     resources :users, only: %i(create)
     resources :availabilities, only: %i(create)
-    get "/availabilities/:event_id", to: 'availabilities#show'
+    get "/availability", to: 'availabilities#show'
   end
 end

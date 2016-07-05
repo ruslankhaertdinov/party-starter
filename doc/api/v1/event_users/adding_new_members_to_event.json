@@ -28,7 +28,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/event_users",
-      "request_body": "user_ids[]=y5JTaTyZhhkavD_Ltf-k&event_id=1&uid=jivS8iSFmUjHXfHaxbAg",
+      "request_body": "user_ids[]=yAC8zsWaV55QWNTdg1f3&event_id=4&uid=8N_6WeP6z1ZEUgmHuvz3",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -37,12 +37,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"event\":{\"id\":1,\"name\":\"Ut a nihil aspernatur cumque.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"jivS8iSFmUjHXfHaxbAg\"},\"participants\":[{\"uid\":\"y5JTaTyZhhkavD_Ltf-k\"}],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":4,\"name\":\"Et autem neque laboriosam adipisci.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"8N_6WeP6z1ZEUgmHuvz3\"},\"participants\":[{\"uid\":\"yAC8zsWaV55QWNTdg1f3\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/event_users\" -d 'user_ids[]=y5JTaTyZhhkavD_Ltf-k&event_id=1&uid=jivS8iSFmUjHXfHaxbAg' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/event_users\" -d 'user_ids[]=yAC8zsWaV55QWNTdg1f3&event_id=4&uid=8N_6WeP6z1ZEUgmHuvz3' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
