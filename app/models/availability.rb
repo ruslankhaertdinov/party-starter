@@ -4,4 +4,6 @@ class Availability < ActiveRecord::Base
 
   validates :event, :user, presence: true
   validates :event, uniqueness: { scope: :user }
+
+  scope :for_event, -> (event) { where(event_id: event.id) }
 end

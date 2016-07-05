@@ -10,6 +10,7 @@ RSpec::Matchers.define :be_an_event_representation do
       participants
       checked_participants
       is_weekly
+      intersections
     )
 
     expect(json).to be

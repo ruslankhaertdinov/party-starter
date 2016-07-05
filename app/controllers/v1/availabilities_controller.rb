@@ -2,6 +2,11 @@ module V1
   class AvailabilitiesController < ApplicationController
     before_action :ensure_user_found
 
+    def show
+      availability = found_user.availability_for_event(event)
+      respond_with(availability)
+    end
+
     def create
       availability = UpdateAvailability.new(event, found_user, availability_params[:intervals]).call
       respond_with(availability)
