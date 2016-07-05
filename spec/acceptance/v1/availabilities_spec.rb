@@ -21,8 +21,8 @@ resource "Availabilities" do
     event.users << user
   end
 
-  get "/v1/availabilities/:id" do
-    parameter :event_id, "Event id", required: true, scope: :availability
+  get "/v1/availabilities/:event_id" do
+    parameter :event_id, "Event id", required: true
     parameter :uid, "User oauth uid", required: true
 
     before do
@@ -36,8 +36,8 @@ resource "Availabilities" do
   end
 
   post "/v1/availabilities" do
-    parameter :event_id, "Event id", required: true, scope: :availability
-    parameter :intervals, "Available intervals", required: true, scope: :availability
+    parameter :event_id, "Event id", required: true
+    parameter :intervals, "Available intervals", required: true
 
     parameter :uid, "User oauth uid", required: true
 

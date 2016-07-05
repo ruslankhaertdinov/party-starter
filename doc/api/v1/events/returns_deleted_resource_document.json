@@ -17,8 +17,8 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/v1/events/6",
-      "request_body": "uid=34sQPxeQQrrj78AnUAzq",
+      "request_path": "/v1/events/9",
+      "request_body": "uid=uz1a3kzMBzMBBFAw9h5K",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -27,12 +27,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":6,\"name\":\"Aut maiores reprehenderit ut architecto tenetur.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-07-05T08:37:02.706Z\",\"owner\":{\"uid\":\"M9X1ss3Ch2UfY6MA5Ms8\"}}}",
+      "response_body": "{\"event\":{\"id\":9,\"name\":\"Quaerat assumenda commodi distinctio quos voluptatem et ut.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-07-05T16:44:36.243Z\",\"owner\":{\"uid\":\"y3Dtz7HrJiJHXXxpTtwQ\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/6\" -d 'uid=34sQPxeQQrrj78AnUAzq' -X DELETE \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/9\" -d 'uid=uz1a3kzMBzMBBFAw9h5K' -X DELETE \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

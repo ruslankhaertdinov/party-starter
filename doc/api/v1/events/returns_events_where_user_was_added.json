@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events?uid=ryxnRn9hphPPiU9uEhn-",
+      "request_path": "/v1/events?uid=5zyha9KWuJeo9oisBie7",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "ryxnRn9hphPPiU9uEhn-"
+        "uid": "5zyha9KWuJeo9oisBie7"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":3,\"name\":\"Magnam dignissimos corporis deserunt qui numquam.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-07-05T08:37:02.614Z\",\"owner\":{\"uid\":\"fhTUDo-D5nHV_2Q9VHwS\"}},{\"id\":4,\"name\":\"Non esse impedit est velit fugit ut quae iure.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-07-05T08:37:02.626Z\",\"owner\":{\"uid\":\"tmTAcWswQx1vVysAzE6q\"}}]}",
+      "response_body": "{\"events\":[{\"id\":6,\"name\":\"Quo qui aliquam veritatis est omnis omnis odio officiis.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-07-05T16:44:36.185Z\",\"owner\":{\"uid\":\"W1JuahKUWssR48QWzzPe\"}},{\"id\":7,\"name\":\"Quaerat cum illum optio veniam ducimus quia.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-07-05T16:44:36.192Z\",\"owner\":{\"uid\":\"xpVMxXn6ZUsxHs7Dx6_z\"}}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events?uid=ryxnRn9hphPPiU9uEhn-\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events?uid=5zyha9KWuJeo9oisBie7\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
