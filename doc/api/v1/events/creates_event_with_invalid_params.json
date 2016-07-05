@@ -34,7 +34,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[name]=&event[description]=&event[user_ids][]=uzjdZTeLR-WReyq2ynQB&event[user_ids][]=5-8Lrw9_8-iqBi45xcoP&uid=Vhu9rAoRbquTEHqxE6Uv",
+      "request_body": "event[name]=&event[description]=&event[user_ids][]=zAWs_-4RyzSGqWqYPE5e&event[user_ids][]=zVAEsFx56baay9HFnSwQ&uid=KKu1YCSUp5gqZNFg2SSx",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -48,7 +48,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=&event[description]=&event[user_ids][]=uzjdZTeLR-WReyq2ynQB&event[user_ids][]=5-8Lrw9_8-iqBi45xcoP&uid=Vhu9rAoRbquTEHqxE6Uv' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=&event[description]=&event[user_ids][]=zAWs_-4RyzSGqWqYPE5e&event[user_ids][]=zVAEsFx56baay9HFnSwQ&uid=KKu1YCSUp5gqZNFg2SSx' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

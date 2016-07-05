@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events/4?uid=nU9v8recsLTQ8X7nbujk",
+      "request_path": "/v1/events/6?uid=RSSeESuHtMozw4FF6zvs",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "nU9v8recsLTQ8X7nbujk"
+        "uid": "RSSeESuHtMozw4FF6zvs"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":4,\"name\":\"Illum aut officia accusantium.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"gc4y7K99zmN8T2QWHDka\"},\"participants\":[{\"uid\":\"nU9v8recsLTQ8X7nbujk\"}],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":6,\"name\":\"Quia dolorem impedit ex maxime soluta corrupti amet facere.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"gfJy4p7Ui6zPhf4J8DRA\"},\"participants\":[{\"uid\":\"RSSeESuHtMozw4FF6zvs\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/4?uid=nU9v8recsLTQ8X7nbujk\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/6?uid=RSSeESuHtMozw4FF6zvs\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

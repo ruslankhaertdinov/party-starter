@@ -25,6 +25,10 @@ resource "Availabilities" do
     parameter :event_id, "Event id", required: true, scope: :availability
     parameter :uid, "User oauth uid", required: true
 
+    before do
+      create(:availability, :with_intervals, event: event, user: user)
+    end
+
     example_request "Getting availability details for given event" do
       expect(response_status).to eq 200
       expect(response["availability"]).to be_an_availability_representation

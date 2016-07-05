@@ -34,7 +34,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[name]=Meeting&event[description]=Repetition&event[user_ids][]=kxRMByNtkncrmHzvwJhL&event[user_ids][]=kWinesbv26uEJPUYAkzP&uid=wrong_uid",
+      "request_body": "event[name]=Meeting&event[description]=Repetition&event[user_ids][]=MHS7y26f_zWrBXTYxZpy&event[user_ids][]=ymWjxDsnd5RVwq4mdZ4o&uid=wrong_uid",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -48,7 +48,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=Meeting&event[description]=Repetition&event[user_ids][]=kxRMByNtkncrmHzvwJhL&event[user_ids][]=kWinesbv26uEJPUYAkzP&uid=wrong_uid' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=Meeting&event[description]=Repetition&event[user_ids][]=MHS7y26f_zWrBXTYxZpy&event[user_ids][]=ymWjxDsnd5RVwq4mdZ4o&uid=wrong_uid' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
