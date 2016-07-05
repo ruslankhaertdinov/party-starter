@@ -3,7 +3,7 @@ module V1
     before_action :ensure_user_found
 
     def show
-      availability = found_user.availability_for_event(event)
+      availability = found_user.availability_for_event(event) || NullAvailability.new
       respond_with(availability)
     end
 
