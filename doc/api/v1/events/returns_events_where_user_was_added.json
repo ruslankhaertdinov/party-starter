@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events?uid=qTjUGz2LP1NyLzg8CytS",
+      "request_path": "/v1/events?uid=ryxnRn9hphPPiU9uEhn-",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "qTjUGz2LP1NyLzg8CytS"
+        "uid": "ryxnRn9hphPPiU9uEhn-"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":6,\"name\":\"Sed reiciendis culpa et sed et porro nobis odio.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"bxKGaE-RdRA57skyS51g\"}},{\"id\":7,\"name\":\"Sit eaque alias dicta voluptate.\",\"description\":\"\",\"is_weekly\":true,\"owner\":{\"uid\":\"wG-waG9jMwQZyyDwtxaf\"}}]}",
+      "response_body": "{\"events\":[{\"id\":3,\"name\":\"Magnam dignissimos corporis deserunt qui numquam.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-07-05T08:37:02.614Z\",\"owner\":{\"uid\":\"fhTUDo-D5nHV_2Q9VHwS\"}},{\"id\":4,\"name\":\"Non esse impedit est velit fugit ut quae iure.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-07-05T08:37:02.626Z\",\"owner\":{\"uid\":\"tmTAcWswQx1vVysAzE6q\"}}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events?uid=qTjUGz2LP1NyLzg8CytS\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events?uid=ryxnRn9hphPPiU9uEhn-\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

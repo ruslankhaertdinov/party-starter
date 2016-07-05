@@ -1,0 +1,48 @@
+{
+  "resource": "Availabilities",
+  "http_method": "GET",
+  "route": "/v1/availabilities/:id",
+  "description": "Getting availability details for given event",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "availability",
+      "name": "event_id",
+      "description": "Event id"
+    },
+    {
+      "required": true,
+      "name": "uid",
+      "description": "User oauth uid"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/availabilities/:id?availability[event_id]=1&uid=bDsQC_yk-YmpxzWwfCsb",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json"
+      },
+      "request_query_parameters": {
+        "availability": {
+          "event_id": "1"
+        },
+        "uid": "bDsQC_yk-YmpxzWwfCsb"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"availability\":{\"id\":1,\"intervals\":{}}}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/availabilities/:id?availability[event_id]=1&uid=bDsQC_yk-YmpxzWwfCsb\" -X GET \\\n\t-H \"Accept: application/json\""
+    }
+  ]
+}

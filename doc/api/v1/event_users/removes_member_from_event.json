@@ -28,7 +28,7 @@
     {
       "request_method": "DELETE",
       "request_path": "/v1/event_users/:id",
-      "request_body": "user_id=7zL2PS2EzPsmXUjJccww&event_id=1&uid=kM6Go6K3hBAyr13_H_6g",
+      "request_body": "user_id=h66gz4n4J7FKMw8jvqFt&event_id=9&uid=-siNvVWY_ZsMhYZsd6xM",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -37,12 +37,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":1,\"name\":\"Laboriosam reprehenderit numquam necessitatibus ad.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"owner\":{\"uid\":\"kM6Go6K3hBAyr13_H_6g\"},\"participants\":[],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":9,\"name\":\"Dolores vitae dolorem qui.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"-siNvVWY_ZsMhYZsd6xM\"},\"participants\":[],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/event_users/:id\" -d 'user_id=7zL2PS2EzPsmXUjJccww&event_id=1&uid=kM6Go6K3hBAyr13_H_6g' -X DELETE \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/event_users/:id\" -d 'user_id=h66gz4n4J7FKMw8jvqFt&event_id=9&uid=-siNvVWY_ZsMhYZsd6xM' -X DELETE \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
