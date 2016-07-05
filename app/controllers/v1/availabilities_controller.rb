@@ -19,7 +19,7 @@ module V1
     end
 
     def availability_params
-      params.permit(:event_id, intervals: intervals_hash)
+      params.require(:availability).permit(:event_id, intervals: intervals_hash)
     end
 
     def intervals_hash
