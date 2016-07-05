@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events?uid=5zyha9KWuJeo9oisBie7",
+      "request_path": "/v1/events?uid=BwWLB26XBiCxBtnsZs3n",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "5zyha9KWuJeo9oisBie7"
+        "uid": "BwWLB26XBiCxBtnsZs3n"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":6,\"name\":\"Quo qui aliquam veritatis est omnis omnis odio officiis.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-07-05T16:44:36.185Z\",\"owner\":{\"uid\":\"W1JuahKUWssR48QWzzPe\"}},{\"id\":7,\"name\":\"Quaerat cum illum optio veniam ducimus quia.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-07-05T16:44:36.192Z\",\"owner\":{\"uid\":\"xpVMxXn6ZUsxHs7Dx6_z\"}}]}",
+      "response_body": "{\"events\":[{\"id\":8,\"name\":\"Nostrum est deserunt debitis iure beatae sunt nihil ipsa.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-07-05T16:56:27.219Z\",\"owner\":{\"uid\":\"CEjt7L-ZMzdWRf6aYQp2\"}},{\"id\":9,\"name\":\"Molestiae eveniet inventore quia quidem.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-07-05T16:56:27.226Z\",\"owner\":{\"uid\":\"wK_xFswW9NNztDRo1qJ-\"}}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events?uid=5zyha9KWuJeo9oisBie7\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events?uid=BwWLB26XBiCxBtnsZs3n\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

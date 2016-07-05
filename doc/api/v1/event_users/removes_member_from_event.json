@@ -28,7 +28,7 @@
     {
       "request_method": "DELETE",
       "request_path": "/v1/event_users/:id",
-      "request_body": "user_id=wkTnJp5eYSwEZ5_Pxvy7&event_id=2&uid=UTYGs4H2D9GaYUwvBFz_",
+      "request_body": "user_id=KGESyoydNsZL9xYAoS5f&event_id=3&uid=w7MRSAthypCi_6JoYHpy",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -37,12 +37,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":2,\"name\":\"Praesentium vero voluptatibus eum alias et unde quidem.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"UTYGs4H2D9GaYUwvBFz_\"},\"participants\":[],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":3,\"name\":\"Repudiandae quia incidunt deleniti et eos est.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"w7MRSAthypCi_6JoYHpy\"},\"participants\":[],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/event_users/:id\" -d 'user_id=wkTnJp5eYSwEZ5_Pxvy7&event_id=2&uid=UTYGs4H2D9GaYUwvBFz_' -X DELETE \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/event_users/:id\" -d 'user_id=KGESyoydNsZL9xYAoS5f&event_id=3&uid=w7MRSAthypCi_6JoYHpy' -X DELETE \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

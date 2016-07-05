@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events/5?uid=eLFJxZAtUeXf_WJqG3D5",
+      "request_path": "/v1/events/7?uid=8s76VydSyHherFhD2xBN",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "eLFJxZAtUeXf_WJqG3D5"
+        "uid": "8s76VydSyHherFhD2xBN"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":5,\"name\":\"Facilis non est esse consectetur.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"XoK5wL-DQcyiKfddhczn\"},\"participants\":[{\"uid\":\"eLFJxZAtUeXf_WJqG3D5\"}],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":7,\"name\":\"Voluptate cumque esse ipsum impedit voluptas voluptates voluptatem incidunt.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"NctnvkxRtMjvG63BzcyT\"},\"participants\":[{\"uid\":\"8s76VydSyHherFhD2xBN\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/5?uid=eLFJxZAtUeXf_WJqG3D5\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/7?uid=8s76VydSyHherFhD2xBN\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
