@@ -16,7 +16,7 @@ class AssignMembers
 
   def ensure_users_exist
     user_ids.each do |uid|
-      CreateUser.new(uid).call
+      EnsureUserExistence.new(uid).call
     end
   end
 
