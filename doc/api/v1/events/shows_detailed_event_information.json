@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events/8?uid=74AE5f3T5QRT8bDK55gZ",
+      "request_path": "/v1/events/5?uid=eLFJxZAtUeXf_WJqG3D5",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "74AE5f3T5QRT8bDK55gZ"
+        "uid": "eLFJxZAtUeXf_WJqG3D5"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":8,\"name\":\"Culpa necessitatibus quas et amet est et.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"qYx3zHiv8oMSGJ8ACb3G\"},\"participants\":[{\"uid\":\"74AE5f3T5QRT8bDK55gZ\"}],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":5,\"name\":\"Facilis non est esse consectetur.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"XoK5wL-DQcyiKfddhczn\"},\"participants\":[{\"uid\":\"eLFJxZAtUeXf_WJqG3D5\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/8?uid=74AE5f3T5QRT8bDK55gZ\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/5?uid=eLFJxZAtUeXf_WJqG3D5\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

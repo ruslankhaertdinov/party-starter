@@ -7,13 +7,11 @@
   "parameters": [
     {
       "required": true,
-      "scope": "availability",
       "name": "event_id",
       "description": "Event id"
     },
     {
       "required": true,
-      "scope": "availability",
       "name": "intervals",
       "description": "Available intervals"
     },
@@ -30,7 +28,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/availabilities",
-      "request_body": "availability[event_id]=2&availability[intervals][monday][][start_at]=11&availability[intervals][monday][][end_at]=12&availability[intervals][monday][][start_at]=15&availability[intervals][monday][][end_at]=17&availability[intervals][tuesday][][start_at]=9&availability[intervals][tuesday][][end_at]=10&availability[intervals][tuesday][][start_at]=18&availability[intervals][tuesday][][end_at]=19&uid=A-rB8AeQvMpF__z-1wRe",
+      "request_body": "event_id=4&intervals[monday][][start_at]=11&intervals[monday][][end_at]=12&intervals[monday][][start_at]=15&intervals[monday][][end_at]=17&intervals[tuesday][][start_at]=9&intervals[tuesday][][end_at]=10&intervals[tuesday][][start_at]=18&intervals[tuesday][][end_at]=19&uid=G2WNcAVSKePyKoVaKAPp",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -44,7 +42,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/availabilities\" -d 'availability[event_id]=2&availability[intervals][monday][][start_at]=11&availability[intervals][monday][][end_at]=12&availability[intervals][monday][][start_at]=15&availability[intervals][monday][][end_at]=17&availability[intervals][tuesday][][start_at]=9&availability[intervals][tuesday][][end_at]=10&availability[intervals][tuesday][][start_at]=18&availability[intervals][tuesday][][end_at]=19&uid=A-rB8AeQvMpF__z-1wRe' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/availabilities\" -d 'event_id=4&intervals[monday][][start_at]=11&intervals[monday][][end_at]=12&intervals[monday][][start_at]=15&intervals[monday][][end_at]=17&intervals[tuesday][][start_at]=9&intervals[tuesday][][end_at]=10&intervals[tuesday][][start_at]=18&intervals[tuesday][][end_at]=19&uid=G2WNcAVSKePyKoVaKAPp' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
