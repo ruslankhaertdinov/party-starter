@@ -1,4 +1,7 @@
 class NullAvailability
+  def id
+  end
+
   def intervals
     {}.tap do |h|
       Date::DAYNAMES.each do |day_name|
