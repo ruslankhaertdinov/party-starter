@@ -26,7 +26,7 @@ resource "Event Users" do
     end
   end
 
-  delete "/v1/event_users/:id" do
+  delete "/v1/event_users/leave" do
     let(:user_id) { user.authentication_token }
 
     parameter :user_id, "User id", required: true

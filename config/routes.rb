@@ -8,7 +8,9 @@ Rails.application.routes.draw do
       post "users/sign_in", to: 'sessions#create'
     end
     resources :events, only: %i(index show create destroy)
-    resources :event_users, only: %i(create destroy)
+    resources :event_users, only: %i(create) do
+      delete :leave, on: :collection
+    end
     resources :users, only: %i(create)
     resources :availabilities, only: %i(create)
     get "/availability", to: 'availabilities#show'
