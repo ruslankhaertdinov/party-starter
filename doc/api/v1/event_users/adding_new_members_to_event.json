@@ -28,7 +28,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/event_users",
-      "request_body": "user_ids[]=NRJJSBvCKLxnUpEX-EsT&event_id=1&uid=6BHzzN89x_stFwHwSMaX",
+      "request_body": "user_ids[]=9vjBNfeFpLjywtZFmFx_&event_id=8&uid=tB8qajf5vTbsPfmSs9sE",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -37,12 +37,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"event\":{\"id\":1,\"name\":\"Qui quam voluptatum amet quae ut quas.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"6BHzzN89x_stFwHwSMaX\"},\"participants\":[{\"uid\":\"NRJJSBvCKLxnUpEX-EsT\"}],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":8,\"name\":\"Molestias officiis totam aut quo vel.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"tB8qajf5vTbsPfmSs9sE\"},\"participants\":[{\"uid\":\"9vjBNfeFpLjywtZFmFx_\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/event_users\" -d 'user_ids[]=NRJJSBvCKLxnUpEX-EsT&event_id=1&uid=6BHzzN89x_stFwHwSMaX' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/event_users\" -d 'user_ids[]=9vjBNfeFpLjywtZFmFx_&event_id=8&uid=tB8qajf5vTbsPfmSs9sE' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
