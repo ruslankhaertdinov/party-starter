@@ -30,7 +30,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/availabilities",
-      "request_body": "availability[event_id]=8&availability[intervals][monday][][start_at]=11&availability[intervals][monday][][end_at]=12&availability[intervals][monday][][start_at]=15&availability[intervals][monday][][end_at]=17&availability[intervals][tuesday][][start_at]=9&availability[intervals][tuesday][][end_at]=10&availability[intervals][tuesday][][start_at]=18&availability[intervals][tuesday][][end_at]=19&uid=1BsB63eGnVp6xaA8J4br",
+      "request_body": "availability[event_id]=10&availability[intervals][monday][][start_at]=11&availability[intervals][monday][][end_at]=12&availability[intervals][monday][][start_at]=15&availability[intervals][monday][][end_at]=17&availability[intervals][tuesday][][start_at]=9&availability[intervals][tuesday][][end_at]=10&availability[intervals][tuesday][][start_at]=18&availability[intervals][tuesday][][end_at]=19&uid=4S1MMQ5EPERwcQSvWVrs",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -44,7 +44,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/availabilities\" -d 'availability[event_id]=8&availability[intervals][monday][][start_at]=11&availability[intervals][monday][][end_at]=12&availability[intervals][monday][][start_at]=15&availability[intervals][monday][][end_at]=17&availability[intervals][tuesday][][start_at]=9&availability[intervals][tuesday][][end_at]=10&availability[intervals][tuesday][][start_at]=18&availability[intervals][tuesday][][end_at]=19&uid=1BsB63eGnVp6xaA8J4br' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/availabilities\" -d 'availability[event_id]=10&availability[intervals][monday][][start_at]=11&availability[intervals][monday][][end_at]=12&availability[intervals][monday][][start_at]=15&availability[intervals][monday][][end_at]=17&availability[intervals][tuesday][][start_at]=9&availability[intervals][tuesday][][end_at]=10&availability[intervals][tuesday][][start_at]=18&availability[intervals][tuesday][][end_at]=19&uid=4S1MMQ5EPERwcQSvWVrs' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

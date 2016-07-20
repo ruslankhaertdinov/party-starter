@@ -1,7 +1,7 @@
 {
   "resource": "Event Users",
   "http_method": "DELETE",
-  "route": "/v1/event_users/:id",
+  "route": "/v1/event_users/leave",
   "description": "Removes member from event",
   "explanation": null,
   "parameters": [
@@ -27,8 +27,8 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/v1/event_users/:id",
-      "request_body": "user_id=zWyvXP4UL_X1UkxcdY8M&event_id=10&uid=ikupYmKYTxsCWH5WNogQ",
+      "request_path": "/v1/event_users/leave",
+      "request_body": "user_id=Rtf1cYfcQjM7Uqdst3GL&event_id=2&uid=sv3fFtYXSWj_hfy1nUWY",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -37,12 +37,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":10,\"name\":\"Reiciendis omnis delectus accusantium voluptate expedita ut.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"ikupYmKYTxsCWH5WNogQ\"},\"participants\":[],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":2,\"name\":\"Id quo hic voluptatem cumque minima eveniet.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"sv3fFtYXSWj_hfy1nUWY\"},\"participants\":[],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/event_users/:id\" -d 'user_id=zWyvXP4UL_X1UkxcdY8M&event_id=10&uid=ikupYmKYTxsCWH5WNogQ' -X DELETE \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/event_users/leave\" -d 'user_id=Rtf1cYfcQjM7Uqdst3GL&event_id=2&uid=sv3fFtYXSWj_hfy1nUWY' -X DELETE \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
