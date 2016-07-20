@@ -17,8 +17,8 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/v1/events/5",
-      "request_body": "uid=LvsrRsCaFEHAtczTxZ86",
+      "request_path": "/v1/events/4",
+      "request_body": "uid=vpKcnGupt8nyijzNgcAz",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -27,12 +27,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":5,\"name\":\"Et nam ut suscipit accusantium sapiente.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-07-05T20:11:21.149Z\",\"owner\":{\"uid\":\"9tx_RgXG9LWcnsaGR7z8\"}}}",
+      "response_body": "{\"event\":{\"id\":4,\"name\":\"Eligendi voluptatem autem amet eum dolorem veritatis.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-07-20T19:47:02.332Z\",\"owner\":{\"uid\":\"YgTyMDYupKYwoVtsqtTj\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/5\" -d 'uid=LvsrRsCaFEHAtczTxZ86' -X DELETE \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/4\" -d 'uid=vpKcnGupt8nyijzNgcAz' -X DELETE \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

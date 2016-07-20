@@ -1,66 +1,26 @@
 {
   "resources": [
     {
-      "name": "Events",
-      "examples": [
-        {
-          "description": "Returns events where user was added",
-          "link": "events/returns_events_where_user_was_added.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with valid params",
-          "link": "events/creates_event_with_valid_params.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with invalid params",
-          "link": "events/creates_event_with_invalid_params.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with invalid user token",
-          "link": "events/creates_event_with_invalid_user_token.json",
-          "groups": "all"
-        },
-        {
-          "description": "Returns deleted resource document",
-          "link": "events/returns_deleted_resource_document.json",
-          "groups": "all"
-        },
-        {
-          "description": "Shows detailed event information",
-          "link": "events/shows_detailed_event_information.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Availabilities",
-      "examples": [
-        {
-          "description": "Getting availability details for given event",
-          "link": "availabilities/getting_availability_details_for_given_event.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creating new availability or updating existing one",
-          "link": "availabilities/creating_new_availability_or_updating_existing_one.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
       "name": "Sessions",
       "examples": [
+        {
+          "description": "Sign in with valid password",
+          "link": "sessions/sign_in_with_valid_password.json",
+          "groups": "all"
+        },
         {
           "description": "Sign in with invalid password",
           "link": "sessions/sign_in_with_invalid_password.json",
           "groups": "all"
-        },
+        }
+      ]
+    },
+    {
+      "name": "Errors",
+      "examples": [
         {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
+          "description": "Request to unexisting page",
+          "link": "errors/request_to_unexisting_page.json",
           "groups": "all"
         }
       ]
@@ -91,11 +51,51 @@
       ]
     },
     {
-      "name": "Errors",
+      "name": "Events",
       "examples": [
         {
-          "description": "Request to unexisting page",
-          "link": "errors/request_to_unexisting_page.json",
+          "description": "Creates event with valid params",
+          "link": "events/creates_event_with_valid_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Creates event with invalid user token",
+          "link": "events/creates_event_with_invalid_user_token.json",
+          "groups": "all"
+        },
+        {
+          "description": "Creates event with invalid params",
+          "link": "events/creates_event_with_invalid_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Returns deleted resource document",
+          "link": "events/returns_deleted_resource_document.json",
+          "groups": "all"
+        },
+        {
+          "description": "Shows detailed event information",
+          "link": "events/shows_detailed_event_information.json",
+          "groups": "all"
+        },
+        {
+          "description": "Returns events where user was added",
+          "link": "events/returns_events_where_user_was_added.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Availabilities",
+      "examples": [
+        {
+          "description": "Getting availability details for given event",
+          "link": "availabilities/getting_availability_details_for_given_event.json",
+          "groups": "all"
+        },
+        {
+          "description": "Creating new availability or updating existing one",
+          "link": "availabilities/creating_new_availability_or_updating_existing_one.json",
           "groups": "all"
         }
       ]
