@@ -7,7 +7,7 @@ module V1
       respond_with(event)
     end
 
-    def leave
+    def destroy
       event.remove_member(user)
       respond_with(event)
     end
