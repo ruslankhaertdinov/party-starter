@@ -1,30 +1,25 @@
 {
   "resource": "Events",
-  "http_method": "POST",
-  "route": "/v1/events",
-  "description": "Creates event with invalid params",
+  "http_method": "PATCH",
+  "route": "/v1/events/:id",
+  "description": "Update event with invalid params",
   "explanation": null,
   "parameters": [
     {
       "required": true,
       "scope": "event",
       "name": "name",
-      "description": "Event name"
-    },
-    {
-      "scope": "event",
-      "name": "description",
-      "description": "Event description"
-    },
-    {
-      "scope": "event",
-      "name": "user_ids",
-      "description": "Participants of event"
+      "description": "Event title"
     },
     {
       "required": true,
       "name": "uid",
       "description": "Current user uid"
+    },
+    {
+      "scope": "event",
+      "name": "description",
+      "description": "Event description"
     }
   ],
   "response_fields": [
@@ -32,9 +27,9 @@
   ],
   "requests": [
     {
-      "request_method": "POST",
-      "request_path": "/v1/events",
-      "request_body": "event[user_ids][]=asJJ7odK7r2sx8KVa8qc&event[user_ids][]=zNjf7DKmQnrb6YVyH7Ws&event[name]=&uid=sm8vf2u8r6ubct4Rsqfp",
+      "request_method": "PATCH",
+      "request_path": "/v1/events/11",
+      "request_body": "uid=c6uux1xifqpZKVAcVr2D&name=",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -48,7 +43,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[user_ids][]=asJJ7odK7r2sx8KVa8qc&event[user_ids][]=zNjf7DKmQnrb6YVyH7Ws&event[name]=&uid=sm8vf2u8r6ubct4Rsqfp' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/11\" -d 'uid=c6uux1xifqpZKVAcVr2D&name=' -X PATCH \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

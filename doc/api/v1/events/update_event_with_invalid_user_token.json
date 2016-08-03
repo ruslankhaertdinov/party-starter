@@ -1,30 +1,25 @@
 {
   "resource": "Events",
-  "http_method": "POST",
-  "route": "/v1/events",
-  "description": "Creates event with invalid user token",
+  "http_method": "PATCH",
+  "route": "/v1/events/:id",
+  "description": "Update event with invalid user token",
   "explanation": null,
   "parameters": [
     {
       "required": true,
       "scope": "event",
       "name": "name",
-      "description": "Event name"
-    },
-    {
-      "scope": "event",
-      "name": "description",
-      "description": "Event description"
-    },
-    {
-      "scope": "event",
-      "name": "user_ids",
-      "description": "Participants of event"
+      "description": "Event title"
     },
     {
       "required": true,
       "name": "uid",
       "description": "Current user uid"
+    },
+    {
+      "scope": "event",
+      "name": "description",
+      "description": "Event description"
     }
   ],
   "response_fields": [
@@ -32,9 +27,9 @@
   ],
   "requests": [
     {
-      "request_method": "POST",
-      "request_path": "/v1/events",
-      "request_body": "event[user_ids][]=gkquHaHmTirAeyxhwAUR&event[user_ids][]=ihtVgcQneKF9i96GyH8e&uid=wrong_uid",
+      "request_method": "PATCH",
+      "request_path": "/v1/events/10",
+      "request_body": "uid=wrong_uid",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -48,7 +43,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[user_ids][]=gkquHaHmTirAeyxhwAUR&event[user_ids][]=ihtVgcQneKF9i96GyH8e&uid=wrong_uid' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/10\" -d 'uid=wrong_uid' -X PATCH \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

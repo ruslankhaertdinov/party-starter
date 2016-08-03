@@ -2,13 +2,13 @@
   "resource": "Events",
   "http_method": "DELETE",
   "route": "/v1/events/:id",
-  "description": "Returns deleted resource document",
+  "description": "Delete own event",
   "explanation": null,
   "parameters": [
     {
       "required": true,
       "name": "uid",
-      "description": "User uid"
+      "description": "Current user uid"
     }
   ],
   "response_fields": [
@@ -17,8 +17,8 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/v1/events/2",
-      "request_body": "uid=kG5Snw1yeHxX9j1qjnJK",
+      "request_path": "/v1/events/9",
+      "request_body": "uid=fUz5xgAQWRpA9KiZXHT6",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -27,12 +27,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":2,\"name\":\"Delectus earum a illo architecto doloremque.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-07-20T19:53:46.021Z\",\"owner\":{\"uid\":\"8A72hAq6_HkEx_JcJKZ-\"}}}",
+      "response_body": "{\"event\":{\"id\":9,\"name\":\"Non ab repellat corrupti cum sint.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-08-03T21:26:45.282Z\",\"owner\":{\"uid\":\"fUz5xgAQWRpA9KiZXHT6\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/2\" -d 'uid=kG5Snw1yeHxX9j1qjnJK' -X DELETE \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/9\" -d 'uid=fUz5xgAQWRpA9KiZXHT6' -X DELETE \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

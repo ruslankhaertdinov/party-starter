@@ -1,0 +1,49 @@
+{
+  "resource": "Events",
+  "http_method": "PATCH",
+  "route": "/v1/events/:id",
+  "description": "Update event with valid params",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "event",
+      "name": "name",
+      "description": "Event title"
+    },
+    {
+      "required": true,
+      "name": "uid",
+      "description": "Current user uid"
+    },
+    {
+      "scope": "event",
+      "name": "description",
+      "description": "Event description"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PATCH",
+      "request_path": "/v1/events/13",
+      "request_body": "uid=BGP4-oERfHPVEHgFiPZF&name=New+name",
+      "request_headers": {
+        "Accept": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"event\":{\"id\":13,\"name\":\"New name\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-08-03T21:26:45.412Z\",\"owner\":{\"uid\":\"BGP4-oERfHPVEHgFiPZF\"}}}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/events/13\" -d 'uid=BGP4-oERfHPVEHgFiPZF&name=New+name' -X PATCH \\\n\t-H \"Accept: application/json\""
+    }
+  ]
+}
