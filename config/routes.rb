@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     devise_scope :user do
       post "users/sign_in", to: 'sessions#create'
     end
-    resources :events, only: %i(index show create destroy)
+    resources :events, only: %i(index show create update destroy)
     resources :event_users, only: %i(create) do
       delete :destroy, on: :collection
     end

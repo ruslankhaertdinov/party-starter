@@ -88,4 +88,32 @@ resource "Events" do
       expect(response["event"]).to be_a_brief_event_representation
     end
   end
+
+  patch "/v1/events/:id" do
+    let(:event) { create(:event) }
+    let(:id) { event.id }
+
+    before do
+      event.users << user
+    end
+
+    parameter :name, "Event title", required: true, scope: :event
+    parameter :uid, "Current user uid", required: true
+    parameter :description, "Event description", scope: :event
+
+    example_request "Update event with valid params", name: "New name" do
+      expect(response["event"]).to be_a_brief_event_representation
+      expect(response["event"]["name"]).to eq("New name")
+    end
+
+    example_request "Update event with invalid user token", uid: "wrong_uid" do
+      expect(response_status).to eq 401
+      expect(response["error"]).to eq("Unauthorized")
+    end
+
+    example_request "Update event with invalid params", name: "" do
+      expect(response_status).to eq 422
+      expect(response["error"]).to eq(["Name can't be blank"])
+    end
+  end
 end
