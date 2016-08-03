@@ -2,7 +2,7 @@
   "resource": "Event Users",
   "http_method": "DELETE",
   "route": "/v1/event_users/",
-  "description": "Removes member from event",
+  "description": "Remove member from event",
   "explanation": null,
   "parameters": [
     {
@@ -28,7 +28,7 @@
     {
       "request_method": "DELETE",
       "request_path": "/v1/event_users/",
-      "request_body": "user_id=o6ab548PsCyCxMju2DYm&event_id=7&uid=TsBZFnx_nL32YD1DkFbA",
+      "request_body": "user_id=GTjy3fTcZE-rURapXPRm&event_id=13&uid=zh1D_sc5z-mv5tbUyrpJ",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -37,12 +37,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":7,\"name\":\"Rerum minima dolores labore aliquid nisi qui consequatur.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"TsBZFnx_nL32YD1DkFbA\"},\"participants\":[],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":13,\"name\":\"Explicabo id reiciendis ut autem consequatur.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"zh1D_sc5z-mv5tbUyrpJ\"},\"participants\":[],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/event_users/\" -d 'user_id=o6ab548PsCyCxMju2DYm&event_id=7&uid=TsBZFnx_nL32YD1DkFbA' -X DELETE \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/event_users/\" -d 'user_id=GTjy3fTcZE-rURapXPRm&event_id=13&uid=zh1D_sc5z-mv5tbUyrpJ' -X DELETE \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

@@ -9,12 +9,12 @@
       "required": true,
       "scope": "event",
       "name": "name",
-      "description": "RSpec::ExampleGroups::Events::POSTV1Events"
+      "description": "Event name"
     },
     {
       "scope": "event",
       "name": "description",
-      "description": "POST /v1/events"
+      "description": "Event description"
     },
     {
       "scope": "event",
@@ -24,7 +24,7 @@
     {
       "required": true,
       "name": "uid",
-      "description": "User uid"
+      "description": "Current user uid"
     }
   ],
   "response_fields": [
@@ -34,7 +34,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[name]=Meeting&event[description]=Repetition&event[user_ids][]=v4kBSBTieWJ-Q5D3d7F9&event[user_ids][]=kiU_jKZHUMVnY-4kzCTy&uid=xosxnm5jQwyhQcYpTBG6",
+      "request_body": "event[user_ids][]=L1gWUSL-ALcJ1FvW5FyB&event[user_ids][]=WrFPVHDhSHbkWH6s9xx5&event[name]=Meeting&uid=5Dse5sqEANt373o8K--n",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -43,12 +43,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":1,\"name\":\"Meeting\",\"description\":\"Repetition\",\"is_weekly\":true,\"created_at\":\"2016-07-20T19:53:45.892Z\",\"owner\":{\"uid\":\"xosxnm5jQwyhQcYpTBG6\"}}}",
+      "response_body": "{\"event\":{\"id\":12,\"name\":\"Meeting\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-08-03T21:20:08.281Z\",\"owner\":{\"uid\":\"5Dse5sqEANt373o8K--n\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[name]=Meeting&event[description]=Repetition&event[user_ids][]=v4kBSBTieWJ-Q5D3d7F9&event[user_ids][]=kiU_jKZHUMVnY-4kzCTy&uid=xosxnm5jQwyhQcYpTBG6' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[user_ids][]=L1gWUSL-ALcJ1FvW5FyB&event[user_ids][]=WrFPVHDhSHbkWH6s9xx5&event[name]=Meeting&uid=5Dse5sqEANt373o8K--n' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

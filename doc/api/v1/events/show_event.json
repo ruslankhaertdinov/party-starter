@@ -2,7 +2,7 @@
   "resource": "Events",
   "http_method": "GET",
   "route": "/v1/events/:id",
-  "description": "Shows detailed event information",
+  "description": "Show event",
   "explanation": null,
   "parameters": [
     {
@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events/6?uid=BSdSA2HBA88gyHEYAfKX",
+      "request_path": "/v1/events/3?uid=PBNvxNe1cxd9v2rZXeqx",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "BSdSA2HBA88gyHEYAfKX"
+        "uid": "PBNvxNe1cxd9v2rZXeqx"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":6,\"name\":\"Unde aut est et alias amet nisi.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"U7svuCMB2zjsRKc3Asx9\"},\"participants\":[{\"uid\":\"BSdSA2HBA88gyHEYAfKX\"}],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":3,\"name\":\"Officia omnis nisi minus.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"4u4tXpodEKxQTEtyaA1c\"},\"participants\":[{\"uid\":\"PBNvxNe1cxd9v2rZXeqx\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/6?uid=BSdSA2HBA88gyHEYAfKX\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/3?uid=PBNvxNe1cxd9v2rZXeqx\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

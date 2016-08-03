@@ -2,7 +2,7 @@
   "resource": "Availabilities",
   "http_method": "GET",
   "route": "/v1/availability",
-  "description": "Getting availability details for given event",
+  "description": "Get availability details for given event",
   "explanation": null,
   "parameters": [
     {
@@ -23,26 +23,26 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/availability?availability[event_id]=10&uid=C6jfWcynyUTrzKwgtyBc",
+      "request_path": "/v1/availability?availability[event_id]=1&uid=tm9xZRxZgtZdzXRSaYmi",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
         "availability": {
-          "event_id": "10"
+          "event_id": "1"
         },
-        "uid": "C6jfWcynyUTrzKwgtyBc"
+        "uid": "tm9xZRxZgtZdzXRSaYmi"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"availability\":{\"id\":2,\"intervals\":{\"tuesday\":[{\"end_at\":\"10\",\"start_at\":\"9\"},{\"end_at\":\"19\",\"start_at\":\"18\"}]}}}",
+      "response_body": "{\"availability\":{\"id\":1,\"intervals\":{\"tuesday\":[{\"end_at\":\"10\",\"start_at\":\"9\"},{\"end_at\":\"19\",\"start_at\":\"18\"}]}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/availability?availability[event_id]=10&uid=C6jfWcynyUTrzKwgtyBc\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/availability?availability[event_id]=1&uid=tm9xZRxZgtZdzXRSaYmi\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
