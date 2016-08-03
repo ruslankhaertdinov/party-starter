@@ -24,7 +24,7 @@ module V1
     end
 
     def update
-      event = events.find(params[:id])
+      event = own_events.find(params[:id])
 
       if event.update(event_params)
         render json: event, serializer: BriefEventSerializer
@@ -34,7 +34,7 @@ module V1
     end
 
     def destroy
-      event = found_user.own_events.find(params[:id])
+      event = own_events.find(params[:id])
       status = event.destroy ? :ok : :unprocessable_entity
       render json: event, serializer: BriefEventSerializer, status: status
     end
@@ -47,6 +47,10 @@ module V1
 
     def events
       found_user.events
+    end
+
+    def own_events
+      found_user.own_events
     end
 
     def assign_members(event)

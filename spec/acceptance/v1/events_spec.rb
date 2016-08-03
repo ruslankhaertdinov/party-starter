@@ -76,7 +76,6 @@ resource "Events" do
     let(:participant) { create(:user, authentication_token: "participant_token") }
 
     before do
-      event.users << user
       event.users << participant
     end
 
@@ -93,11 +92,12 @@ resource "Events" do
   end
 
   patch "/v1/events/:id" do
-    let(:event) { create(:event) }
+    let(:event) { create(:event, owner: user) }
     let(:id) { event.id }
+    let(:participant) { create(:user, authentication_token: "participant_token") }
 
     before do
-      event.users << user
+      event.users << participant
     end
 
     parameter :name, "Event title", required: true, scope: :event
@@ -117,6 +117,10 @@ resource "Events" do
     example_request "Update event with invalid params", name: "" do
       expect(response_status).to eq 422
       expect(response["error"]).to eq(["Name can't be blank"])
+    end
+
+    example_request "Delete not own event", uid: "participant_token" do
+      expect(response_status).to eq 404
     end
   end
 end
