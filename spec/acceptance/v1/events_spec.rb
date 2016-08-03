@@ -21,7 +21,7 @@ resource "Events" do
 
     parameter :uid, "User uid", required: true
 
-    example_request "Returns events where user was added" do
+    example_request "Get events where user participant" do
       expect(response_status).to eq 200
       expect(response["events"].size).to eq(2)
       expect(response["events"].first).to be_a_brief_event_representation
@@ -38,7 +38,7 @@ resource "Events" do
 
     parameter :uid, "User uid", required: true
 
-    example_request "Shows detailed event information" do
+    example_request "Show event" do
       expect(response_status).to eq 200
       expect(response["event"]).to be_an_event_representation
     end
@@ -47,16 +47,15 @@ resource "Events" do
   post "/v1/events" do
     let(:user_1) { create(:user) }
     let(:user_2) { create(:user) }
-    let(:name) { "Meeting" }
-    let(:description) { "Repetition" }
     let(:user_ids) { [user_1.authentication_token, user_2.authentication_token] }
 
-    parameter :name, name, required: true, scope: :event
-    parameter :description, description, scope: :event
+    parameter :name, "Event name", required: true, scope: :event
+    parameter :description, "Event description", scope: :event
     parameter :user_ids, "Participants of event", scope: :event
-    parameter :uid, "User uid", required: true
+    parameter :uid, "Current user uid", required: true
 
-    example_request "Creates event with valid params" do
+    example_request "Creates event with valid params", event: { name: "Meeting" } do
+      expect(response_status).to eq 200
       expect(response["event"]).to be_a_brief_event_representation
     end
 
@@ -65,27 +64,31 @@ resource "Events" do
       expect(response["error"]).to eq("Unauthorized")
     end
 
-    example "Creates event with invalid params" do
-      do_request(event: { name: "", description: "" })
-
+    example_request "Creates event with invalid params", event: { name: "" } do
       expect(response_status).to eq 422
       expect(response["error"]).to eq(["Name can't be blank"])
     end
   end
 
   delete "/v1/events/:id" do
-    let(:event) { create(:event) }
+    let(:event) { create(:event, owner: user) }
     let(:id) { event.id }
+    let(:participant) { create(:user, authentication_token: "participant_token") }
 
     before do
       event.users << user
+      event.users << participant
     end
 
-    parameter :uid, "User uid", required: true
+    parameter :uid, "Current user uid", required: true
 
-    example_request "Returns deleted resource document" do
+    example_request "Delete own event" do
       expect(response_status).to eq 200
       expect(response["event"]).to be_a_brief_event_representation
+    end
+
+    example_request "Delete not own event", uid: "participant_token" do
+      expect(response_status).to eq 404
     end
   end
 

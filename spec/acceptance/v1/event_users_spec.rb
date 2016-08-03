@@ -19,7 +19,7 @@ resource "Event Users" do
     parameter :event_id, "Event id", required: true
     parameter :uid, "User oauth uid", required: true
 
-    example_request "Adding new members to event" do
+    example_request "Add new members to event" do
       expect(response_status).to eq 201
       expect(response["event"]).to be_an_event_representation
       expect(response["event"]["participants"].first).to be_an_event_user_representation
@@ -37,7 +37,7 @@ resource "Event Users" do
       event.add_member(user)
     end
 
-    example_request "Removes member from event" do
+    example_request "Remove member from event" do
       expect(response_status).to eq 200
       expect(response["event"]).to be_an_event_representation
       expect(response["event"]["participants"]).to be_empty

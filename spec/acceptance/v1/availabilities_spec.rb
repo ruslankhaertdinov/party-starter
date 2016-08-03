@@ -29,7 +29,7 @@ resource "Availabilities" do
       create(:availability, :with_intervals, event: event, user: user)
     end
 
-    example_request "Getting availability details for given event" do
+    example_request "Get availability details for given event" do
       expect(response_status).to eq 200
       expect(response["availability"]).to be_an_availability_representation
     end
@@ -41,7 +41,7 @@ resource "Availabilities" do
 
     parameter :uid, "User oauth uid", required: true
 
-    example_request "Creating new availability or updating existing one" do
+    example_request "Create new availability or update existing one" do
       expect(response_status).to eq 201
       expect(response["availability"]).to be_an_availability_representation
     end
