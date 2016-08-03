@@ -1,14 +1,25 @@
 {
   "resource": "Events",
-  "http_method": "DELETE",
+  "http_method": "PATCH",
   "route": "/v1/events/:id",
   "description": "Delete not own event",
   "explanation": null,
   "parameters": [
     {
       "required": true,
+      "scope": "event",
+      "name": "name",
+      "description": "Event title"
+    },
+    {
+      "required": true,
       "name": "uid",
       "description": "Current user uid"
+    },
+    {
+      "scope": "event",
+      "name": "description",
+      "description": "Event description"
     }
   ],
   "response_fields": [
@@ -16,8 +27,8 @@
   ],
   "requests": [
     {
-      "request_method": "DELETE",
-      "request_path": "/v1/events/8",
+      "request_method": "PATCH",
+      "request_path": "/v1/events/12",
       "request_body": "uid=participant_token",
       "request_headers": {
         "Accept": "application/json"
@@ -27,12 +38,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 404,
       "response_status_text": "Not Found",
-      "response_body": "{\"error\":{\"id\":\"9c8533ad-a5e5-4ca1-a17e-8d4e713dcacc\",\"status\":404,\"error\":\"Not Found\",\"validations\":null}}",
+      "response_body": "{\"error\":{\"id\":\"c2902e43-bcee-41ac-88b6-4e59cc207dff\",\"status\":404,\"error\":\"Not Found\",\"validations\":null}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/8\" -d 'uid=participant_token' -X DELETE \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/12\" -d 'uid=participant_token' -X PATCH \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

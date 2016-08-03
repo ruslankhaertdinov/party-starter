@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events/3?uid=PBNvxNe1cxd9v2rZXeqx",
+      "request_path": "/v1/events/3?uid=Ux-uAX6jL54N72TnGhXr",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "PBNvxNe1cxd9v2rZXeqx"
+        "uid": "Ux-uAX6jL54N72TnGhXr"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":3,\"name\":\"Officia omnis nisi minus.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"4u4tXpodEKxQTEtyaA1c\"},\"participants\":[{\"uid\":\"PBNvxNe1cxd9v2rZXeqx\"}],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":3,\"name\":\"Nam placeat quisquam mollitia quasi dolores.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"xhHXwhjzXvjafy2Ynuay\"},\"participants\":[{\"uid\":\"Ux-uAX6jL54N72TnGhXr\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/3?uid=PBNvxNe1cxd9v2rZXeqx\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/3?uid=Ux-uAX6jL54N72TnGhXr\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

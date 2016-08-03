@@ -24,7 +24,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/users",
-      "request_body": "user[uid]=96cdd3e29b32&key=0c8f4e68a202",
+      "request_body": "user[uid]=8a989f58b540&key=0c8f4e68a202",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -33,12 +33,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"user\":{\"uid\":\"5fxPuL-VPcFc5p79WdBc\"}}",
+      "response_body": "{\"user\":{\"uid\":\"5Z8UdReh618X6WSkqTpR\"}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/users\" -d 'user[uid]=96cdd3e29b32&key=0c8f4e68a202' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/users\" -d 'user[uid]=8a989f58b540&key=0c8f4e68a202' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

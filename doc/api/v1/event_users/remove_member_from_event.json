@@ -28,7 +28,7 @@
     {
       "request_method": "DELETE",
       "request_path": "/v1/event_users/",
-      "request_body": "user_id=GTjy3fTcZE-rURapXPRm&event_id=13&uid=zh1D_sc5z-mv5tbUyrpJ",
+      "request_body": "user_id=4w3oF2RKWLyqWm7tnpqw&event_id=2&uid=pas8wS_Kr-_WwF2F_hDP",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -37,12 +37,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":13,\"name\":\"Explicabo id reiciendis ut autem consequatur.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"zh1D_sc5z-mv5tbUyrpJ\"},\"participants\":[],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":2,\"name\":\"Rerum ut possimus veritatis.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"pas8wS_Kr-_WwF2F_hDP\"},\"participants\":[],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/event_users/\" -d 'user_id=GTjy3fTcZE-rURapXPRm&event_id=13&uid=zh1D_sc5z-mv5tbUyrpJ' -X DELETE \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/event_users/\" -d 'user_id=4w3oF2RKWLyqWm7tnpqw&event_id=2&uid=pas8wS_Kr-_WwF2F_hDP' -X DELETE \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

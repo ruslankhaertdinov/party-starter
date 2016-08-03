@@ -17,23 +17,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events?uid=_a19jZMHs8sTNqyjvx-e",
+      "request_path": "/v1/events?uid=cMz527WyzeVLkyJJx7zN",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json"
       },
       "request_query_parameters": {
-        "uid": "_a19jZMHs8sTNqyjvx-e"
+        "uid": "cMz527WyzeVLkyJJx7zN"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":9,\"name\":\"Dolor voluptas ipsum aut aut ducimus esse.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-08-03T21:20:08.164Z\",\"owner\":{\"uid\":\"s9XQf7G7qMCyxja6Yjvr\"}},{\"id\":10,\"name\":\"Quisquam sequi est nesciunt deleniti sed culpa impedit.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-08-03T21:20:08.172Z\",\"owner\":{\"uid\":\"GKG31Hk2RsWad3J8i1QD\"}}]}",
+      "response_body": "{\"events\":[{\"id\":5,\"name\":\"Optio repellendus dolorem deleniti quidem vitae quaerat quia mollitia.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-08-03T21:26:45.192Z\",\"owner\":{\"uid\":\"whT2MhWxxxnkYV2KTzEb\"}},{\"id\":6,\"name\":\"Voluptatum quisquam reiciendis mollitia officia.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-08-03T21:26:45.209Z\",\"owner\":{\"uid\":\"zi75z8XsjGAFp8Apcx6V\"}}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events?uid=_a19jZMHs8sTNqyjvx-e\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events?uid=cMz527WyzeVLkyJJx7zN\" -X GET \\\n\t-H \"Accept: application/json\""
     }
   ]
 }
