@@ -46,4 +46,21 @@ resource "Availabilities" do
       expect(response["availability"]).to be_an_availability_representation
     end
   end
+
+  delete "/v1/availability" do
+    parameter :event_id, "Event id", required: true, scope: :availability
+    parameter :uid, "User oauth uid", required: true
+
+    before do
+      create(:availability, :with_intervals, event: event, user: user)
+    end
+
+    example_request "Destroy availability for given event" do
+      expect(response_status).to eq 200
+    end
+
+    example_request "Attempt do destroy availability with wrong event_id", availability: { event_id: "wrong_id" } do
+      expect(response_status).to eq 404
+    end
+  end
 end

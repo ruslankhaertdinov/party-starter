@@ -12,6 +12,12 @@ module V1
       respond_with(availability)
     end
 
+    def destroy
+      availability = found_user.availability_for_event(event)
+      status = availability.destroy ? :ok : :unprocessable_entity
+      render nothing: true, status: status
+    end
+
     private
 
     def event
