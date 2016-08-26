@@ -1,0 +1,44 @@
+{
+  "resource": "Availabilities",
+  "http_method": "DELETE",
+  "route": "/v1/availability",
+  "description": "Destroy availability for given event",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "availability",
+      "name": "event_id",
+      "description": "Event id"
+    },
+    {
+      "required": true,
+      "name": "uid",
+      "description": "User oauth uid"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/v1/availability",
+      "request_body": "availability[event_id]=1&uid=D3BVNyLew1RWRjymbniq",
+      "request_headers": {
+        "Accept": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": null,
+      "response_headers": {
+        "Content-Type": "text/plain; charset=utf-8"
+      },
+      "response_content_type": "text/plain; charset=utf-8",
+      "curl": "curl \"http://localhost:5000/v1/availability\" -d 'availability[event_id]=1&uid=D3BVNyLew1RWRjymbniq' -X DELETE \\\n\t-H \"Accept: application/json\""
+    }
+  ]
+}
