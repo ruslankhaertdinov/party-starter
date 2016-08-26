@@ -28,8 +28,8 @@
   "requests": [
     {
       "request_method": "PATCH",
-      "request_path": "/v1/events/13",
-      "request_body": "uid=BGP4-oERfHPVEHgFiPZF&name=New+name",
+      "request_path": "/v1/events/11",
+      "request_body": "uid=y_53HkxP2xeHM2Y5iqN6&name=New+name",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -38,12 +38,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":13,\"name\":\"New name\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-08-03T21:26:45.412Z\",\"owner\":{\"uid\":\"BGP4-oERfHPVEHgFiPZF\"}}}",
+      "response_body": "{\"event\":{\"id\":11,\"name\":\"New name\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-08-26T20:31:58.624Z\",\"owner\":{\"uid\":\"y_53HkxP2xeHM2Y5iqN6\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/13\" -d 'uid=BGP4-oERfHPVEHgFiPZF&name=New+name' -X PATCH \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/11\" -d 'uid=y_53HkxP2xeHM2Y5iqN6&name=New+name' -X PATCH \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

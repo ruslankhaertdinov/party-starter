@@ -1,31 +1,26 @@
 {
   "resources": [
     {
-      "name": "Event Users",
+      "name": "Availabilities",
       "examples": [
         {
-          "description": "Add new members to event",
-          "link": "event_users/add_new_members_to_event.json",
+          "description": "Destroy availability for given event",
+          "link": "availabilities/destroy_availability_for_given_event.json",
           "groups": "all"
         },
         {
-          "description": "Remove member from event",
-          "link": "event_users/remove_member_from_event.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Sessions",
-      "examples": [
-        {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
+          "description": "Attempt do destroy availability with wrong event_id",
+          "link": "availabilities/attempt_do_destroy_availability_with_wrong_event_id.json",
           "groups": "all"
         },
         {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
+          "description": "Get availability details for given event",
+          "link": "availabilities/get_availability_details_for_given_event.json",
+          "groups": "all"
+        },
+        {
+          "description": "Create new availability or update existing one",
+          "link": "availabilities/create_new_availability_or_update_existing_one.json",
           "groups": "all"
         }
       ]
@@ -39,13 +34,8 @@
           "groups": "all"
         },
         {
-          "description": "Creates event with valid params",
-          "link": "events/creates_event_with_valid_params.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with invalid user token",
-          "link": "events/creates_event_with_invalid_user_token.json",
+          "description": "Get events where user participant",
+          "link": "events/get_events_where_user_participant.json",
           "groups": "all"
         },
         {
@@ -54,23 +44,23 @@
           "groups": "all"
         },
         {
-          "description": "Get events where user participant",
-          "link": "events/get_events_where_user_participant.json",
+          "description": "Creates event with invalid user token",
+          "link": "events/creates_event_with_invalid_user_token.json",
           "groups": "all"
         },
         {
-          "description": "Delete not own event",
-          "link": "events/delete_not_own_event.json",
-          "groups": "all"
-        },
-        {
-          "description": "Delete own event",
-          "link": "events/delete_own_event.json",
+          "description": "Creates event with valid params",
+          "link": "events/creates_event_with_valid_params.json",
           "groups": "all"
         },
         {
           "description": "Update event with invalid user token",
           "link": "events/update_event_with_invalid_user_token.json",
+          "groups": "all"
+        },
+        {
+          "description": "Update event with valid params",
+          "link": "events/update_event_with_valid_params.json",
           "groups": "all"
         },
         {
@@ -84,8 +74,43 @@
           "groups": "all"
         },
         {
-          "description": "Update event with valid params",
-          "link": "events/update_event_with_valid_params.json",
+          "description": "Delete not own event",
+          "link": "events/delete_not_own_event.json",
+          "groups": "all"
+        },
+        {
+          "description": "Delete own event",
+          "link": "events/delete_own_event.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Sessions",
+      "examples": [
+        {
+          "description": "Sign in with invalid password",
+          "link": "sessions/sign_in_with_invalid_password.json",
+          "groups": "all"
+        },
+        {
+          "description": "Sign in with valid password",
+          "link": "sessions/sign_in_with_valid_password.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Event Users",
+      "examples": [
+        {
+          "description": "Remove member from event",
+          "link": "event_users/remove_member_from_event.json",
+          "groups": "all"
+        },
+        {
+          "description": "Add new members to event",
+          "link": "event_users/add_new_members_to_event.json",
           "groups": "all"
         }
       ]
@@ -106,21 +131,6 @@
         {
           "description": "Creating new user",
           "link": "users/creating_new_user.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Availabilities",
-      "examples": [
-        {
-          "description": "Get availability details for given event",
-          "link": "availabilities/get_availability_details_for_given_event.json",
-          "groups": "all"
-        },
-        {
-          "description": "Create new availability or update existing one",
-          "link": "availabilities/create_new_availability_or_update_existing_one.json",
           "groups": "all"
         }
       ]

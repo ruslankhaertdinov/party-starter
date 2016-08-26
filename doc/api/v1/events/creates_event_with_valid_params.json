@@ -34,7 +34,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[user_ids][]=aEzWr1ypQFXsANP8X9L7&event[user_ids][]=zx37GDzDzPyL34wZiW86&event[name]=Meeting&uid=5zBhQJuqjP4jfj13mLK_",
+      "request_body": "event[user_ids][]=osAQzgbic1hNxsv-t8AA&event[user_ids][]=UUQsfmWNXXyoJs47fLan&event[name]=Meeting&uid=son7w7HBFVdfTiSyRikc",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -43,12 +43,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":4,\"name\":\"Meeting\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-08-03T21:26:45.068Z\",\"owner\":{\"uid\":\"5zBhQJuqjP4jfj13mLK_\"}}}",
+      "response_body": "{\"event\":{\"id\":9,\"name\":\"Meeting\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-08-26T20:31:58.571Z\",\"owner\":{\"uid\":\"son7w7HBFVdfTiSyRikc\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[user_ids][]=aEzWr1ypQFXsANP8X9L7&event[user_ids][]=zx37GDzDzPyL34wZiW86&event[name]=Meeting&uid=5zBhQJuqjP4jfj13mLK_' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[user_ids][]=osAQzgbic1hNxsv-t8AA&event[user_ids][]=UUQsfmWNXXyoJs47fLan&event[name]=Meeting&uid=son7w7HBFVdfTiSyRikc' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   namespace :v1, defaults: { format: "json" } do
     devise_scope :user do
-      post "users/sign_in", to: 'sessions#create'
+      post "users/sign_in", to: "sessions#create"
     end
     resources :events, only: %i(index show create update destroy)
     resources :event_users, only: %i(create) do
@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     end
     resources :users, only: %i(create)
     resources :availabilities, only: %i(create)
-    get "/availability", to: 'availabilities#show'
+    get "/availability", to: "availabilities#show"
+    delete "/availability", to: "availabilities#destroy"
   end
 end
