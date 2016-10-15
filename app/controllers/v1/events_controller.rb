@@ -54,9 +54,9 @@ module V1
     end
 
     def assign_members(event)
-      user_ids = params[:event][:user_ids] || []
-      user_ids << current_user.authentication_token
-      AssignMembers.new(event, user_ids).call
+      uuids = params[:event][:uuids] || []
+      uuids << current_user.uuid
+      AssignMembers.new(event, uuids).call
     end
   end
 end

@@ -3,6 +3,7 @@ module V1
     before_action :authenticate_user!
 
     def create
+      # TODO: handle user_ids, because there are not uuids in this particular case
       AssignMembers.new(event, params[:user_ids]).call
       respond_with(event)
     end

@@ -46,11 +46,13 @@ resource "Events" do
   post "/v1/events" do
     let(:user_1) { create(:user) }
     let(:user_2) { create(:user) }
-    let(:user_ids) { [user_1.authentication_token, user_2.authentication_token] }
+    let(:uuids) { [user_1.uuid, user_2.uuid] }
 
-    parameter :name, "Event name", required: true, scope: :event
-    parameter :description, "Event description", scope: :event
-    parameter :user_ids, "Participants of event", scope: :event
+    with_options scope: :event do |s|
+      s.parameter :name, "Event name", required: true
+      s.parameter :description, "Event description"
+      s.parameter :uuids, "UUID of event participants"
+    end
 
     example_request "Creates event with valid params", event: { name: "Meeting" } do
       expect(response_status).to eq 200
@@ -66,7 +68,9 @@ resource "Events" do
   delete "/v1/events/:id" do
     let(:event) { create(:event, owner: user) }
     let(:id) { event.id }
-    let(:participant) { create(:user, authentication_token: "participant_token") }
+    let(:participant) { create(:user) }
+
+    parameter :id, "Event id", required: true
 
     before do
       event.users << participant
@@ -87,8 +91,12 @@ resource "Events" do
       event.users << participant
     end
 
-    parameter :name, "Event title", required: true, scope: :event
-    parameter :description, "Event description", scope: :event
+    with_options scope: :event do |s|
+      s.parameter :name, "Event title", required: true
+      s.parameter :description, "Event description"
+    end
+
+    parameter :id, "Event id", required: true
 
     example_request "Update event with valid params", name: "New name" do
       expect(response["event"]).to be_a_brief_event_representation
