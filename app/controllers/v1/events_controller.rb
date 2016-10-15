@@ -1,6 +1,6 @@
 module V1
   class EventsController < ApplicationController
-    before_action :ensure_user_found
+    before_action :authenticate_user!
 
     def index
       render json: events, each_serializer: BriefEventSerializer
@@ -13,7 +13,7 @@ module V1
 
     def create
       event = Event.new(event_params)
-      event.owner = found_user
+      event.owner = current_user
 
       if event.save
         assign_members(event)
@@ -46,16 +46,16 @@ module V1
     end
 
     def events
-      found_user.events
+      current_user.events
     end
 
     def own_events
-      found_user.own_events
+      current_user.own_events
     end
 
     def assign_members(event)
       user_ids = params[:event][:user_ids] || []
-      user_ids << found_user.authentication_token
+      user_ids << current_user.authentication_token
       AssignMembers.new(event, user_ids).call
     end
   end

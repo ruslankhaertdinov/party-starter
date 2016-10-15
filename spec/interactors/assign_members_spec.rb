@@ -2,8 +2,8 @@ require "rails_helper"
 
 describe AssignMembers do
   let!(:event) { create(:event) }
-  let(:user_1) { create(:user, authentication_token: "uid_1") }
-  let(:user_ids) { %w(uid_1 uid_2 uid_3) }
+  let(:user_1) { create(:user, uuid: "uuid_1") }
+  let(:user_ids) { %w(uuid_1 uuid_2 uuid_3) }
   let(:service) { described_class.new(event, user_ids) }
 
   before do

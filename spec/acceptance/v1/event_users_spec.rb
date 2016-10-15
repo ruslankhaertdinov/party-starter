@@ -9,15 +9,17 @@ resource "Event Users" do
   let!(:owner) { create(:user) }
   let(:user) { create(:user) }
   let(:event) { create(:event, owner: owner) }
-  let(:uid) { owner.authentication_token }
   let(:event_id) { event.id }
 
+  before do
+    header "X-AUTH-TOKEN", owner.authentication_token
+  end
+
   post "/v1/event_users" do
-    let(:user_ids) { [user.authentication_token] }
+    let(:user_ids) { [user.id] }
 
     parameter :user_ids, "User ids", required: true
     parameter :event_id, "Event id", required: true
-    parameter :uid, "User oauth uid", required: true
 
     example_request "Add new members to event" do
       expect(response_status).to eq 201
@@ -27,11 +29,10 @@ resource "Event Users" do
   end
 
   delete "/v1/event_users/" do
-    let(:user_id) { user.authentication_token }
+    let(:user_id) { user.id }
 
     parameter :user_id, "User id", required: true
     parameter :event_id, "Event id", required: true
-    parameter :uid, "User oauth uid", required: true
 
     before do
       event.add_member(user)

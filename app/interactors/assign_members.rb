@@ -1,10 +1,10 @@
 class AssignMembers
-  attr_reader :event, :user_ids
-  private :event, :user_ids
+  attr_reader :event, :uuids
+  private :event, :uuids
 
-  def initialize(event, user_ids)
+  def initialize(event, uuids)
     @event = event
-    @user_ids = user_ids
+    @uuids = uuids
   end
 
   def call
@@ -15,8 +15,8 @@ class AssignMembers
   private
 
   def ensure_users_exist
-    user_ids.each do |uid|
-      EnsureUserExistence.new(uid).call
+    uuids.each do |uuid|
+      EnsureUserExistence.new(uuid).call
     end
   end
 
@@ -25,6 +25,6 @@ class AssignMembers
   end
 
   def participants
-    User.by_uid(user_ids)
+    User.by_uuid(uuids)
   end
 end

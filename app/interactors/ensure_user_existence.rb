@@ -1,20 +1,20 @@
 class EnsureUserExistence
-  attr_reader :uid
-  private :uid
+  attr_reader :uuid
+  private :uuid
 
   DEFAULT_EMAIL = "user@example.com"
 
-  def initialize(uid)
-    @uid = uid
+  def initialize(uuid)
+    @uuid = uuid
   end
 
   def call
-    User.where(authentication_token: uid).first_or_create!(default_params)
+    User.where(uuid: uuid).first_or_create!(user_params)
   end
 
   private
 
-  def default_params
+  def user_params
     {
       email: email,
       password: password

@@ -3,14 +3,14 @@ module V1
     before_action :key_valid?, only: %i(create)
 
     def create
-      user = EnsureUserExistence.new(params[:uid]).call
-      render json: user, status: 200
+      user = EnsureUserExistence.new(user_params[:uuid]).call
+      respond_with user, serializer: SessionSerializer
     end
 
     private
 
     def user_params
-      params.require(:user).permit(:uid)
+      params.require(:user).permit(:uuid)
     end
 
     def key_valid?

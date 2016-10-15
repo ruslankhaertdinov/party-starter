@@ -1,6 +1,6 @@
 module V1
   class EventUsersController < ApplicationController
-    before_action :ensure_user_found
+    before_action :authenticate_user!
 
     def create
       AssignMembers.new(event, params[:user_ids]).call
@@ -19,11 +19,11 @@ module V1
     end
 
     def own_events
-      found_user.own_events
+      current_user.own_events
     end
 
     def user
-      User.find_by(authentication_token: event_user_params[:user_id])
+      User.find_by(id: event_user_params[:user_id])
     end
 
     def event_user_params

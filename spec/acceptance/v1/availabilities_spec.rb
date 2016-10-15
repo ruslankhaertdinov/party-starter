@@ -7,7 +7,6 @@ resource "Availabilities" do
   subject(:response) { json_response_body }
 
   let(:user) { create(:user) }
-  let(:uid) { user.authentication_token }
   let(:event) { create(:event) }
   let(:event_id) { event.id }
   let(:intervals) do
@@ -18,12 +17,12 @@ resource "Availabilities" do
   end
 
   before do
+    header "X-AUTH-TOKEN", user.authentication_token
     event.users << user
   end
 
   get "/v1/availability" do
     parameter :event_id, "Event id", required: true, scope: :availability
-    parameter :uid, "User oauth uid", required: true
 
     before do
       create(:availability, :with_intervals, event: event, user: user)
@@ -39,8 +38,6 @@ resource "Availabilities" do
     parameter :event_id, "Event id", required: true, scope: :availability
     parameter :intervals, "Available intervals", required: true, scope: :availability
 
-    parameter :uid, "User oauth uid", required: true
-
     example_request "Create new availability or update existing one" do
       expect(response_status).to eq 201
       expect(response["availability"]).to be_an_availability_representation
@@ -49,7 +46,6 @@ resource "Availabilities" do
 
   delete "/v1/availability" do
     parameter :event_id, "Event id", required: true, scope: :availability
-    parameter :uid, "User oauth uid", required: true
 
     before do
       create(:availability, :with_intervals, event: event, user: user)
