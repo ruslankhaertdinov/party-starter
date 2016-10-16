@@ -16,10 +16,12 @@ resource "Event Users" do
   end
 
   post "/v1/event_users" do
-    let(:user_ids) { [user.id] }
+    let(:uuids) { [user.uuid] }
 
-    parameter :user_ids, "User ids", required: true
-    parameter :event_id, "Event id", required: true
+    with_options required: true do |r|
+      r.parameter :uuids, "User uuids"
+      r.parameter :event_id, "Event id"
+    end
 
     example_request "Add new members to event" do
       expect(response_status).to eq 201
@@ -29,10 +31,12 @@ resource "Event Users" do
   end
 
   delete "/v1/event_users/" do
-    let(:user_id) { user.id }
+    let(:uuid) { user.uuid }
 
-    parameter :user_id, "User id", required: true
-    parameter :event_id, "Event id", required: true
+    with_options required: true do |r|
+      r.parameter :uuid, "User uuid"
+      r.parameter :event_id, "Event id"
+    end
 
     before do
       event.add_member(user)

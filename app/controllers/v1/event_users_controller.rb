@@ -3,8 +3,7 @@ module V1
     before_action :authenticate_user!
 
     def create
-      # TODO: handle user_ids, because there are not uuids in this particular case
-      AssignMembers.new(event, params[:user_ids]).call
+      AssignMembers.new(event, params[:uuids]).call
       respond_with(event)
     end
 
@@ -24,11 +23,11 @@ module V1
     end
 
     def user
-      User.find_by(id: event_user_params[:user_id])
+      User.find_by(uuid: event_user_params[:uuid])
     end
 
     def event_user_params
-      params.permit(:event_id, :user_id)
+      params.permit(:event_id, :uuid)
     end
   end
 end
