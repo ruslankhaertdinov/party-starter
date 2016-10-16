@@ -28,11 +28,11 @@
   "requests": [
     {
       "request_method": "PATCH",
-      "request_path": "/v1/events/12",
+      "request_path": "/v1/events/11",
       "request_body": "name=",
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "FiPyPL1_mr5E4jHnQRuU"
+        "X-Auth-Token": "-7qqjudMEkb-wz7u8YZf"
       },
       "request_query_parameters": {
       },
@@ -44,7 +44,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/12\" -d 'name=' -X PATCH \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: FiPyPL1_mr5E4jHnQRuU\""
+      "curl": "curl \"http://localhost:5000/v1/events/11\" -d 'name=' -X PATCH \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: -7qqjudMEkb-wz7u8YZf\""
     }
   ]
 }

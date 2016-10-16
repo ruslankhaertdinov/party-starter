@@ -23,22 +23,22 @@
     {
       "request_method": "POST",
       "request_path": "/v1/event_users",
-      "request_body": "uuids[]=a3eccf2c-d3a4-40d2-abd7-33cdc053d56c&event_id=2",
+      "request_body": "uuids[]=bfd72e0a-0a33-4556-ba90-8b36174443a2&event_id=6",
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "MJ_wxJ4kKWMfR3Rg2Dgu"
+        "X-Auth-Token": "y3wx5V-QwkbjxsynGpC9"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"event\":{\"id\":2,\"name\":\"Animi sunt illum nobis.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"11fd10aa-fe43-419f-8973-80fd797c205b\"},\"participants\":[{\"uuid\":\"a3eccf2c-d3a4-40d2-abd7-33cdc053d56c\"}],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":6,\"name\":\"Odio magni eaque molestiae velit.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"b9a71077-96e9-4d1a-8599-d305850ea549\"},\"participants\":[{\"uuid\":\"bfd72e0a-0a33-4556-ba90-8b36174443a2\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/event_users\" -d 'uuids[]=a3eccf2c-d3a4-40d2-abd7-33cdc053d56c&event_id=2' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: MJ_wxJ4kKWMfR3Rg2Dgu\""
+      "curl": "curl \"http://localhost:5000/v1/event_users\" -d 'uuids[]=bfd72e0a-0a33-4556-ba90-8b36174443a2&event_id=6' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: y3wx5V-QwkbjxsynGpC9\""
     }
   ]
 }

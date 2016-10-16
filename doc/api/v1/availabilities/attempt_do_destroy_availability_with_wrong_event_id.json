@@ -22,19 +22,19 @@
       "request_body": "availability[event_id]=wrong_id",
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "u9zXdbV58YurdzETesmT"
+        "X-Auth-Token": "BjPubKxxS7k16rM5HuBz"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 404,
       "response_status_text": "Not Found",
-      "response_body": "{\"error\":{\"id\":\"9b860392-30c2-4984-a37c-27f5deca93f2\",\"status\":404,\"error\":\"Not Found\",\"validations\":null}}",
+      "response_body": "{\"error\":{\"id\":\"2b37afb6-3776-4f4a-9b1c-e5f9de88926b\",\"status\":404,\"error\":\"Not Found\",\"validations\":null}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/availability\" -d 'availability[event_id]=wrong_id' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: u9zXdbV58YurdzETesmT\""
+      "curl": "curl \"http://localhost:5000/v1/availability\" -d 'availability[event_id]=wrong_id' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: BjPubKxxS7k16rM5HuBz\""
     }
   ]
 }

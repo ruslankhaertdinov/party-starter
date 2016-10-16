@@ -17,19 +17,19 @@
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "o2LYqKF-MCyPzrCYVysZ"
+        "X-Auth-Token": "dETWJsR8rDgv-amdx2A-"
       },
       "request_query_parameters": {
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":9,\"name\":\"Necessitatibus minus animi adipisci id.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-10-16T20:05:14.902Z\",\"owner\":{\"uuid\":\"33b7305a-2a2c-44a0-b370-6c27c39f4044\"}},{\"id\":10,\"name\":\"Ab est sapiente ut qui nesciunt et mollitia cumque.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-10-16T20:05:14.908Z\",\"owner\":{\"uuid\":\"738e3779-2ce6-4359-a489-c549d4ca87f2\"}}]}",
+      "response_body": "{\"events\":[{\"id\":8,\"name\":\"Laudantium corporis voluptas occaecati quo soluta dolor et ut.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"6cb779ef-8314-458b-81a8-c94ee7efbb9a\"},\"participants\":[{\"uuid\":\"438e472b-0e86-49f2-a387-749c07a17211\"}],\"checked_participants\":[]},{\"id\":9,\"name\":\"Ea est distinctio repudiandae aut iure ipsum autem ipsa.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"b8dfc07b-b023-4d88-af43-9aade9b93663\"},\"participants\":[{\"uuid\":\"438e472b-0e86-49f2-a387-749c07a17211\"}],\"checked_participants\":[]}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: o2LYqKF-MCyPzrCYVysZ\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: dETWJsR8rDgv-amdx2A-\""
     }
   ]
 }

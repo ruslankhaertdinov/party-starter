@@ -25,7 +25,7 @@ resource "Events" do
     example_request "Get events where user participant" do
       expect(response_status).to eq 200
       expect(response["events"].size).to eq(2)
-      expect(response["events"].first).to be_a_brief_event_representation
+      expect(response["events"].first).to be_an_event_representation
     end
   end
 
@@ -56,7 +56,7 @@ resource "Events" do
 
     example_request "Creates event with valid params", event: { name: "Meeting" } do
       expect(response_status).to eq 200
-      expect(response["event"]).to be_a_brief_event_representation
+      expect(response["event"]).to be_an_event_representation
     end
 
     example_request "Creates event with invalid params", event: { name: "" } do
@@ -78,7 +78,7 @@ resource "Events" do
 
     example_request "Delete own event" do
       expect(response_status).to eq 200
-      expect(response["event"]).to be_a_brief_event_representation
+      expect(response["event"]).to be_an_event_representation
     end
   end
 
@@ -99,7 +99,7 @@ resource "Events" do
     parameter :id, "Event id", required: true
 
     example_request "Update event with valid params", name: "New name" do
-      expect(response["event"]).to be_a_brief_event_representation
+      expect(response["event"]).to be_an_event_representation
       expect(response["event"]["name"]).to eq("New name")
     end
 
