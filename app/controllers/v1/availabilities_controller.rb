@@ -1,19 +1,19 @@
 module V1
   class AvailabilitiesController < ApplicationController
-    before_action :ensure_user_found
+    before_action :authenticate_user!
 
     def show
-      availability = found_user.availability_for_event(event) || NullAvailability.new
+      availability = current_user.availability_for_event(event) || NullAvailability.new
       render json: availability, serializer: AvailabilitySerializer
     end
 
     def create
-      availability = UpdateAvailability.new(event, found_user, availability_params[:intervals]).call
+      availability = UpdateAvailability.new(event, current_user, availability_params[:intervals]).call
       respond_with(availability)
     end
 
     def destroy
-      availability = found_user.availability_for_event(event)
+      availability = current_user.availability_for_event(event)
       status = availability.destroy ? :ok : :unprocessable_entity
       render nothing: true, status: status
     end
@@ -21,7 +21,7 @@ module V1
     private
 
     def event
-      found_user.events.find(availability_params[:event_id])
+      current_user.events.find(availability_params[:event_id])
     end
 
     def availability_params

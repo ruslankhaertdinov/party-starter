@@ -9,29 +9,34 @@ resource "Event Users" do
   let!(:owner) { create(:user) }
   let(:user) { create(:user) }
   let(:event) { create(:event, owner: owner) }
-  let(:uid) { owner.authentication_token }
   let(:event_id) { event.id }
 
-  post "/v1/event_users" do
-    let(:user_ids) { [user.authentication_token] }
+  before do
+    header "X-AUTH-TOKEN", owner.authentication_token
+  end
 
-    parameter :user_ids, "User ids", required: true
-    parameter :event_id, "Event id", required: true
-    parameter :uid, "User oauth uid", required: true
+  post "/v1/event_users" do
+    let(:uuids) { [user.uuid] }
+
+    with_options required: true do |r|
+      r.parameter :uuids, "User uuids"
+      r.parameter :event_id, "Event id"
+    end
 
     example_request "Add new members to event" do
       expect(response_status).to eq 201
       expect(response["event"]).to be_an_event_representation
-      expect(response["event"]["participants"].first).to be_an_event_user_representation
+      expect(response["event"]["participants"].first).to be_a_user_representation
     end
   end
 
   delete "/v1/event_users/" do
-    let(:user_id) { user.authentication_token }
+    let(:uuid) { user.uuid }
 
-    parameter :user_id, "User id", required: true
-    parameter :event_id, "Event id", required: true
-    parameter :uid, "User oauth uid", required: true
+    with_options required: true do |r|
+      r.parameter :uuid, "User uuid"
+      r.parameter :event_id, "Event id"
+    end
 
     before do
       event.add_member(user)

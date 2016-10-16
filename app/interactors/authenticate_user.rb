@@ -1,8 +1,6 @@
 class AuthenticateUser
   include Interactor
 
-  OPTIONS = { store: false, scope: :user }
-
   def call
     context.user = authenticated_user!
   end
@@ -10,7 +8,6 @@ class AuthenticateUser
   private
 
   def authenticated_user!
-    context.warden.request.env["devise.skip_trackable"] = false
-    context.warden.authenticate!(OPTIONS)
+    User.find_by(uuid: context.uuid)
   end
 end

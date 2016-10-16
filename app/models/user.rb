@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   has_many :events, through: :event_users
   has_many :availabilities, dependent: :destroy
 
-  scope :by_uid, -> (uids) { where(authentication_token: uids) }
+  scope :by_uuid, -> (uuids) { where(uuid: uuids) }
 
   def availability_for_event(event)
     availabilities.for_event(event).first

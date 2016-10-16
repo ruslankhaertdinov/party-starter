@@ -3,8 +3,8 @@ class EventSerializer < ApplicationSerializer
 
   belongs_to :owner, serializer: UserSerializer
 
-  has_many :participants, serializer: EventUserSerializer
-  has_many :checked_participants, serializer: EventUserSerializer
+  has_many :participants
+  has_many :checked_participants
 
   def start_at
     object.start_at.to_i

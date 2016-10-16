@@ -1,9 +1,9 @@
 module V1
   class EventUsersController < ApplicationController
-    before_action :ensure_user_found
+    before_action :authenticate_user!
 
     def create
-      AssignMembers.new(event, params[:user_ids]).call
+      AssignMembers.new(event, params[:uuids]).call
       respond_with(event)
     end
 
@@ -19,15 +19,15 @@ module V1
     end
 
     def own_events
-      found_user.own_events
+      current_user.own_events
     end
 
     def user
-      User.find_by(authentication_token: event_user_params[:user_id])
+      User.find_by(uuid: event_user_params[:uuid])
     end
 
     def event_user_params
-      params.permit(:event_id, :user_id)
+      params.permit(:event_id, :uuid)
     end
   end
 end

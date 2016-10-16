@@ -7,20 +7,18 @@ resource "Sessions" do
   subject(:response) { json_response_body }
 
   post "/v1/users/sign_in" do
-    let(:user) { create :user, password: "123456" }
+    let!(:user) { create :user, uuid: "secret" }
+    let(:uuid)  { user.uuid }
 
-    parameter :email, "Email", required: true
-    parameter :password, "Password", required: true
+    parameter :uuid, "UUID from social network", required: true
 
-    let(:email) { user.email }
-
-    example_request "Sign in with valid password", password: "123456" do
-      expect(response["user"]).to be_a_user_representation(user)
+    example_request "Sign in with valid uuid" do
+      expect(response["user"]).to be_a_session_representation(user)
     end
 
-    example_request "Sign in with invalid password", password: "" do
+    example_request "Sign in with invalid uuid", uuid: "" do
       expect(response_status).to eq 401
-      expect(response).to be_an_error_representation(:unauthorized, "Invalid email or password.")
+      expect(response).to be_an_error_representation(:unauthorized, "Invalid UUID.")
     end
   end
 end
