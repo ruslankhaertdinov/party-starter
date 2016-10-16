@@ -26,7 +26,7 @@ resource "Event Users" do
     example_request "Add new members to event" do
       expect(response_status).to eq 201
       expect(response["event"]).to be_an_event_representation
-      expect(response["event"]["participants"].first).to be_an_event_user_representation
+      expect(response["event"]["participants"].first).to be_a_user_representation
     end
   end
 
