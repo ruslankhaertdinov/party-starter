@@ -10,11 +10,6 @@
       "scope": "availability",
       "name": "event_id",
       "description": "Event id"
-    },
-    {
-      "required": true,
-      "name": "uid",
-      "description": "User oauth uid"
     }
   ],
   "response_fields": [
@@ -24,21 +19,22 @@
     {
       "request_method": "DELETE",
       "request_path": "/v1/availability",
-      "request_body": "availability[event_id]=wrong_id&uid=wbJpfdF7aPCAv_Fr79Cm",
+      "request_body": "availability[event_id]=wrong_id",
       "request_headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "X-Auth-Token": "u9zXdbV58YurdzETesmT"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 404,
       "response_status_text": "Not Found",
-      "response_body": "{\"error\":{\"id\":\"116c25d1-4315-4b28-a007-5acb77d71f41\",\"status\":404,\"error\":\"Not Found\",\"validations\":null}}",
+      "response_body": "{\"error\":{\"id\":\"9b860392-30c2-4984-a37c-27f5deca93f2\",\"status\":404,\"error\":\"Not Found\",\"validations\":null}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/availability\" -d 'availability[event_id]=wrong_id&uid=wbJpfdF7aPCAv_Fr79Cm' -X DELETE \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/availability\" -d 'availability[event_id]=wrong_id' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: u9zXdbV58YurdzETesmT\""
     }
   ]
 }

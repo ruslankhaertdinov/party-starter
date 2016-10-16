@@ -5,11 +5,7 @@
   "description": "Show event",
   "explanation": null,
   "parameters": [
-    {
-      "required": true,
-      "name": "uid",
-      "description": "User uid"
-    }
+
   ],
   "response_fields": [
 
@@ -17,23 +13,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events/5?uid=Ypwz9JEzXpS6Gsdu3dki",
+      "request_path": "/v1/events/8",
       "request_body": null,
       "request_headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "X-Auth-Token": "As1A5GEgG1Db-QfNpZ7o"
       },
       "request_query_parameters": {
-        "uid": "Ypwz9JEzXpS6Gsdu3dki"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":5,\"name\":\"Voluptas molestias in quas.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uid\":\"JK7ybAJcpzsTYg4SxSYz\"},\"participants\":[{\"uid\":\"Ypwz9JEzXpS6Gsdu3dki\"}],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":8,\"name\":\"Quis voluptatem labore rerum non.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"33dd0dac-5f68-4f97-a49f-61cd97536c38\"},\"participants\":[{\"uuid\":\"43fabd6d-0d1a-412f-9806-ea8b1019e236\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/5?uid=Ypwz9JEzXpS6Gsdu3dki\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/8\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: As1A5GEgG1Db-QfNpZ7o\""
     }
   ]
 }

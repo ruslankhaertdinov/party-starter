@@ -6,20 +6,20 @@
   "explanation": null,
   "parameters": [
     {
-      "required": true,
       "scope": "event",
+      "required": true,
       "name": "name",
       "description": "Event title"
-    },
-    {
-      "required": true,
-      "name": "uid",
-      "description": "Current user uid"
     },
     {
       "scope": "event",
       "name": "description",
       "description": "Event description"
+    },
+    {
+      "required": true,
+      "name": "id",
+      "description": "Event id"
     }
   ],
   "response_fields": [
@@ -28,22 +28,23 @@
   "requests": [
     {
       "request_method": "PATCH",
-      "request_path": "/v1/events/11",
-      "request_body": "uid=y_53HkxP2xeHM2Y5iqN6&name=New+name",
+      "request_path": "/v1/events/13",
+      "request_body": "name=New+name",
       "request_headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "X-Auth-Token": "f78yNQoG-eGRr6jusv7d"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":11,\"name\":\"New name\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-08-26T20:31:58.624Z\",\"owner\":{\"uid\":\"y_53HkxP2xeHM2Y5iqN6\"}}}",
+      "response_body": "{\"event\":{\"id\":13,\"name\":\"New name\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-10-16T20:05:14.997Z\",\"owner\":{\"uuid\":\"e117a183-900e-4a9b-b763-e7bb6437655a\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/11\" -d 'uid=y_53HkxP2xeHM2Y5iqN6&name=New+name' -X PATCH \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/13\" -d 'name=New+name' -X PATCH \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: f78yNQoG-eGRr6jusv7d\""
     }
   ]
 }

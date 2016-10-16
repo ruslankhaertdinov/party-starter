@@ -6,8 +6,8 @@
   "explanation": null,
   "parameters": [
     {
-      "required": true,
       "scope": "event",
+      "required": true,
       "name": "name",
       "description": "Event name"
     },
@@ -18,13 +18,8 @@
     },
     {
       "scope": "event",
-      "name": "user_ids",
-      "description": "Participants of event"
-    },
-    {
-      "required": true,
-      "name": "uid",
-      "description": "Current user uid"
+      "name": "uuids",
+      "description": "UUID of event participants"
     }
   ],
   "response_fields": [
@@ -34,9 +29,10 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[user_ids][]=zh73N8YiRzNsy4-zFxgx&event[user_ids][]=3Lj_yd7vEpUGDaujt-gt&event[name]=&uid=WxrmMviddauM8TgwgCxd",
+      "request_body": "event[uuids][]=0ec701be-e3ca-42ae-bf66-29802ea40b96&event[uuids][]=2a7545d1-476e-4562-96a2-5ba7a5e783ca&event[name]=",
       "request_headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "X-Auth-Token": "BstPeuf-E7rRakLpTjL8"
       },
       "request_query_parameters": {
       },
@@ -48,7 +44,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[user_ids][]=zh73N8YiRzNsy4-zFxgx&event[user_ids][]=3Lj_yd7vEpUGDaujt-gt&event[name]=&uid=WxrmMviddauM8TgwgCxd' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[uuids][]=0ec701be-e3ca-42ae-bf66-29802ea40b96&event[uuids][]=2a7545d1-476e-4562-96a2-5ba7a5e783ca&event[name]=' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: BstPeuf-E7rRakLpTjL8\""
     }
   ]
 }

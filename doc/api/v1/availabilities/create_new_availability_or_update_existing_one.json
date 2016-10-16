@@ -16,11 +16,6 @@
       "scope": "availability",
       "name": "intervals",
       "description": "Available intervals"
-    },
-    {
-      "required": true,
-      "name": "uid",
-      "description": "User oauth uid"
     }
   ],
   "response_fields": [
@@ -30,9 +25,10 @@
     {
       "request_method": "POST",
       "request_path": "/v1/availabilities",
-      "request_body": "availability[event_id]=4&availability[intervals][monday][][start_at]=11&availability[intervals][monday][][end_at]=12&availability[intervals][monday][][start_at]=15&availability[intervals][monday][][end_at]=17&availability[intervals][tuesday][][start_at]=9&availability[intervals][tuesday][][end_at]=10&availability[intervals][tuesday][][start_at]=18&availability[intervals][tuesday][][end_at]=19&uid=ykgGUzRzuTxsxXr_kh91",
+      "request_body": "availability[event_id]=6&availability[intervals][monday][][start_at]=11&availability[intervals][monday][][end_at]=12&availability[intervals][monday][][start_at]=15&availability[intervals][monday][][end_at]=17&availability[intervals][tuesday][][start_at]=9&availability[intervals][tuesday][][end_at]=10&availability[intervals][tuesday][][start_at]=18&availability[intervals][tuesday][][end_at]=19",
       "request_headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "X-Auth-Token": "8niaPF9DaWHf9a3mz9CJ"
       },
       "request_query_parameters": {
       },
@@ -44,7 +40,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/availabilities\" -d 'availability[event_id]=4&availability[intervals][monday][][start_at]=11&availability[intervals][monday][][end_at]=12&availability[intervals][monday][][start_at]=15&availability[intervals][monday][][end_at]=17&availability[intervals][tuesday][][start_at]=9&availability[intervals][tuesday][][end_at]=10&availability[intervals][tuesday][][start_at]=18&availability[intervals][tuesday][][end_at]=19&uid=ykgGUzRzuTxsxXr_kh91' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/availabilities\" -d 'availability[event_id]=6&availability[intervals][monday][][start_at]=11&availability[intervals][monday][][end_at]=12&availability[intervals][monday][][start_at]=15&availability[intervals][monday][][end_at]=17&availability[intervals][tuesday][][start_at]=9&availability[intervals][tuesday][][end_at]=10&availability[intervals][tuesday][][start_at]=18&availability[intervals][tuesday][][end_at]=19' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: 8niaPF9DaWHf9a3mz9CJ\""
     }
   ]
 }

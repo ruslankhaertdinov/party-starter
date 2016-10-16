@@ -2,18 +2,13 @@
   "resource": "Sessions",
   "http_method": "POST",
   "route": "/v1/users/sign_in",
-  "description": "Sign in with valid password",
+  "description": "Sign in with valid uuid",
   "explanation": null,
   "parameters": [
     {
       "required": true,
-      "name": "email",
-      "description": "Email"
-    },
-    {
-      "required": true,
-      "name": "password",
-      "description": "Password"
+      "name": "uuid",
+      "description": "UUID from social network"
     }
   ],
   "response_fields": [
@@ -23,7 +18,7 @@
     {
       "request_method": "POST",
       "request_path": "/v1/users/sign_in",
-      "request_body": "email=user37%40example.com&password=123456",
+      "request_body": "uuid=secret",
       "request_headers": {
         "Accept": "application/json"
       },
@@ -32,12 +27,12 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"user\":{\"uid\":\"kLAmjX1YDmeSbzKHcs_-\"}}",
+      "response_body": "{\"user\":{\"uuid\":\"secret\",\"authentication_token\":\"WWMykqAbems6PzpY_zxB\"}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/users/sign_in\" -d 'email=user37%40example.com&password=123456' -X POST \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/users/sign_in\" -d 'uuid=secret' -X POST \\\n\t-H \"Accept: application/json\""
     }
   ]
 }

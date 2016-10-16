@@ -10,11 +10,6 @@
       "scope": "availability",
       "name": "event_id",
       "description": "Event id"
-    },
-    {
-      "required": true,
-      "name": "uid",
-      "description": "User oauth uid"
     }
   ],
   "response_fields": [
@@ -24,9 +19,10 @@
     {
       "request_method": "DELETE",
       "request_path": "/v1/availability",
-      "request_body": "availability[event_id]=1&uid=D3BVNyLew1RWRjymbniq",
+      "request_body": "availability[event_id]=3",
       "request_headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "X-Auth-Token": "UzxdPhsVmpN17d-iPN6t"
       },
       "request_query_parameters": {
       },
@@ -38,7 +34,7 @@
         "Content-Type": "text/plain; charset=utf-8"
       },
       "response_content_type": "text/plain; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/availability\" -d 'availability[event_id]=1&uid=D3BVNyLew1RWRjymbniq' -X DELETE \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/availability\" -d 'availability[event_id]=3' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: UzxdPhsVmpN17d-iPN6t\""
     }
   ]
 }

@@ -5,11 +5,7 @@
   "description": "Get events where user participant",
   "explanation": null,
   "parameters": [
-    {
-      "required": true,
-      "name": "uid",
-      "description": "User uid"
-    }
+
   ],
   "response_fields": [
 
@@ -17,23 +13,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events?uid=kLyFrkbB6vBsys8YB_ZW",
+      "request_path": "/v1/events",
       "request_body": null,
       "request_headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "X-Auth-Token": "o2LYqKF-MCyPzrCYVysZ"
       },
       "request_query_parameters": {
-        "uid": "kLyFrkbB6vBsys8YB_ZW"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":6,\"name\":\"Veritatis accusantium assumenda facilis.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-08-26T20:31:58.439Z\",\"owner\":{\"uid\":\"7iA9wo_dti9koKXyzt9i\"}},{\"id\":7,\"name\":\"Voluptatem esse molestiae explicabo.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-08-26T20:31:58.449Z\",\"owner\":{\"uid\":\"sonNAuJeYjSo_ed-9pDx\"}}]}",
+      "response_body": "{\"events\":[{\"id\":9,\"name\":\"Necessitatibus minus animi adipisci id.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-10-16T20:05:14.902Z\",\"owner\":{\"uuid\":\"33b7305a-2a2c-44a0-b370-6c27c39f4044\"}},{\"id\":10,\"name\":\"Ab est sapiente ut qui nesciunt et mollitia cumque.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-10-16T20:05:14.908Z\",\"owner\":{\"uuid\":\"738e3779-2ce6-4359-a489-c549d4ca87f2\"}}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events?uid=kLyFrkbB6vBsys8YB_ZW\" -X GET \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: o2LYqKF-MCyPzrCYVysZ\""
     }
   ]
 }

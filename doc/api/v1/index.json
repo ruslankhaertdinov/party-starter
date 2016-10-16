@@ -1,6 +1,21 @@
 {
   "resources": [
     {
+      "name": "Event Users",
+      "examples": [
+        {
+          "description": "Remove member from event",
+          "link": "event_users/remove_member_from_event.json",
+          "groups": "all"
+        },
+        {
+          "description": "Add new members to event",
+          "link": "event_users/add_new_members_to_event.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
       "name": "Availabilities",
       "examples": [
         {
@@ -26,8 +41,23 @@
       ]
     },
     {
+      "name": "Users",
+      "examples": [
+        {
+          "description": "Creating new user",
+          "link": "users/creating_new_user.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
       "name": "Events",
       "examples": [
+        {
+          "description": "Delete own event",
+          "link": "events/delete_own_event.json",
+          "groups": "all"
+        },
         {
           "description": "Show event",
           "link": "events/show_event.json",
@@ -39,23 +69,8 @@
           "groups": "all"
         },
         {
-          "description": "Creates event with invalid params",
-          "link": "events/creates_event_with_invalid_params.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with invalid user token",
-          "link": "events/creates_event_with_invalid_user_token.json",
-          "groups": "all"
-        },
-        {
-          "description": "Creates event with valid params",
-          "link": "events/creates_event_with_valid_params.json",
-          "groups": "all"
-        },
-        {
-          "description": "Update event with invalid user token",
-          "link": "events/update_event_with_invalid_user_token.json",
+          "description": "Update event with invalid params",
+          "link": "events/update_event_with_invalid_params.json",
           "groups": "all"
         },
         {
@@ -64,23 +79,13 @@
           "groups": "all"
         },
         {
-          "description": "Update event with invalid params",
-          "link": "events/update_event_with_invalid_params.json",
+          "description": "Creates event with invalid params",
+          "link": "events/creates_event_with_invalid_params.json",
           "groups": "all"
         },
         {
-          "description": "Delete not own event",
-          "link": "events/delete_not_own_event.json",
-          "groups": "all"
-        },
-        {
-          "description": "Delete not own event",
-          "link": "events/delete_not_own_event.json",
-          "groups": "all"
-        },
-        {
-          "description": "Delete own event",
-          "link": "events/delete_own_event.json",
+          "description": "Creates event with valid params",
+          "link": "events/creates_event_with_valid_params.json",
           "groups": "all"
         }
       ]
@@ -89,28 +94,13 @@
       "name": "Sessions",
       "examples": [
         {
-          "description": "Sign in with invalid password",
-          "link": "sessions/sign_in_with_invalid_password.json",
+          "description": "Sign in with valid uuid",
+          "link": "sessions/sign_in_with_valid_uuid.json",
           "groups": "all"
         },
         {
-          "description": "Sign in with valid password",
-          "link": "sessions/sign_in_with_valid_password.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Event Users",
-      "examples": [
-        {
-          "description": "Remove member from event",
-          "link": "event_users/remove_member_from_event.json",
-          "groups": "all"
-        },
-        {
-          "description": "Add new members to event",
-          "link": "event_users/add_new_members_to_event.json",
+          "description": "Sign in with invalid uuid",
+          "link": "sessions/sign_in_with_invalid_uuid.json",
           "groups": "all"
         }
       ]
@@ -121,16 +111,6 @@
         {
           "description": "Request to unexisting page",
           "link": "errors/request_to_unexisting_page.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
-      "name": "Users",
-      "examples": [
-        {
-          "description": "Creating new user",
-          "link": "users/creating_new_user.json",
           "groups": "all"
         }
       ]

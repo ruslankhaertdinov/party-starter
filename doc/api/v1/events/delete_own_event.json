@@ -7,8 +7,8 @@
   "parameters": [
     {
       "required": true,
-      "name": "uid",
-      "description": "Current user uid"
+      "name": "id",
+      "description": "Event id"
     }
   ],
   "response_fields": [
@@ -17,22 +17,23 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/v1/events/15",
-      "request_body": "uid=U3ySrLLsKzuzKVEoioVY",
+      "request_path": "/v1/events/7",
+      "request_body": null,
       "request_headers": {
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "X-Auth-Token": "ZFReCzk51hyxp1fK2exe"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":15,\"name\":\"Enim debitis placeat est esse.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-08-26T20:31:58.763Z\",\"owner\":{\"uid\":\"U3ySrLLsKzuzKVEoioVY\"}}}",
+      "response_body": "{\"event\":{\"id\":7,\"name\":\"Sit est repudiandae qui ut ut et ad ea.\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-10-16T20:05:14.823Z\",\"owner\":{\"uuid\":\"5d295b34-1175-44be-b533-104455faa7a7\"}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/15\" -d 'uid=U3ySrLLsKzuzKVEoioVY' -X DELETE \\\n\t-H \"Accept: application/json\""
+      "curl": "curl \"http://localhost:5000/v1/events/7\" -d '' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: ZFReCzk51hyxp1fK2exe\""
     }
   ]
 }
