@@ -19,10 +19,10 @@
     {
       "request_method": "DELETE",
       "request_path": "/v1/availability",
-      "request_body": "availability[event_id]=3",
+      "request_body": "availability[event_id]=1",
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "UzxdPhsVmpN17d-iPN6t"
+        "X-Auth-Token": "eqPob1MAJtP-Qrn9zJvu"
       },
       "request_query_parameters": {
       },
@@ -34,7 +34,7 @@
         "Content-Type": "text/plain; charset=utf-8"
       },
       "response_content_type": "text/plain; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/availability\" -d 'availability[event_id]=3' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: UzxdPhsVmpN17d-iPN6t\""
+      "curl": "curl \"http://localhost:5000/v1/availability\" -d 'availability[event_id]=1' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: eqPob1MAJtP-Qrn9zJvu\""
     }
   ]
 }

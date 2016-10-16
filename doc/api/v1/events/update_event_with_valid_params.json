@@ -28,23 +28,23 @@
   "requests": [
     {
       "request_method": "PATCH",
-      "request_path": "/v1/events/13",
+      "request_path": "/v1/events/12",
       "request_body": "name=New+name",
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "f78yNQoG-eGRr6jusv7d"
+        "X-Auth-Token": "q8dbLNbqCxYvxPsXSr5U"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":13,\"name\":\"New name\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-10-16T20:05:14.997Z\",\"owner\":{\"uuid\":\"e117a183-900e-4a9b-b763-e7bb6437655a\"}}}",
+      "response_body": "{\"event\":{\"id\":12,\"name\":\"New name\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"449b8300-24d1-46d8-8143-b345b117bc13\"},\"participants\":[{\"uuid\":\"e2a11e65-2a80-491c-8860-5f8ea2311290\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/13\" -d 'name=New+name' -X PATCH \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: f78yNQoG-eGRr6jusv7d\""
+      "curl": "curl \"http://localhost:5000/v1/events/12\" -d 'name=New+name' -X PATCH \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: q8dbLNbqCxYvxPsXSr5U\""
     }
   ]
 }

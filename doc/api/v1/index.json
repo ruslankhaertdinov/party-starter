@@ -1,21 +1,6 @@
 {
   "resources": [
     {
-      "name": "Event Users",
-      "examples": [
-        {
-          "description": "Remove member from event",
-          "link": "event_users/remove_member_from_event.json",
-          "groups": "all"
-        },
-        {
-          "description": "Add new members to event",
-          "link": "event_users/add_new_members_to_event.json",
-          "groups": "all"
-        }
-      ]
-    },
-    {
       "name": "Availabilities",
       "examples": [
         {
@@ -41,11 +26,26 @@
       ]
     },
     {
-      "name": "Users",
+      "name": "Event Users",
       "examples": [
         {
-          "description": "Creating new user",
-          "link": "users/creating_new_user.json",
+          "description": "Remove member from event",
+          "link": "event_users/remove_member_from_event.json",
+          "groups": "all"
+        },
+        {
+          "description": "Add new members to event",
+          "link": "event_users/add_new_members_to_event.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Errors",
+      "examples": [
+        {
+          "description": "Request to unexisting page",
+          "link": "errors/request_to_unexisting_page.json",
           "groups": "all"
         }
       ]
@@ -56,11 +56,6 @@
         {
           "description": "Delete own event",
           "link": "events/delete_own_event.json",
-          "groups": "all"
-        },
-        {
-          "description": "Show event",
-          "link": "events/show_event.json",
           "groups": "all"
         },
         {
@@ -87,6 +82,11 @@
           "description": "Creates event with valid params",
           "link": "events/creates_event_with_valid_params.json",
           "groups": "all"
+        },
+        {
+          "description": "Show event",
+          "link": "events/show_event.json",
+          "groups": "all"
         }
       ]
     },
@@ -94,23 +94,23 @@
       "name": "Sessions",
       "examples": [
         {
-          "description": "Sign in with valid uuid",
-          "link": "sessions/sign_in_with_valid_uuid.json",
+          "description": "Sign in with invalid uuid",
+          "link": "sessions/sign_in_with_invalid_uuid.json",
           "groups": "all"
         },
         {
-          "description": "Sign in with invalid uuid",
-          "link": "sessions/sign_in_with_invalid_uuid.json",
+          "description": "Sign in with valid uuid",
+          "link": "sessions/sign_in_with_valid_uuid.json",
           "groups": "all"
         }
       ]
     },
     {
-      "name": "Errors",
+      "name": "Users",
       "examples": [
         {
-          "description": "Request to unexisting page",
-          "link": "errors/request_to_unexisting_page.json",
+          "description": "Creating new user",
+          "link": "users/creating_new_user.json",
           "groups": "all"
         }
       ]

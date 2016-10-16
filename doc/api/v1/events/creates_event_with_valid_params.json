@@ -29,22 +29,22 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[uuids][]=98551804-2eb1-4edb-87fa-58d319777ef0&event[uuids][]=38d46d6b-8411-49b9-8b01-1daa3dc6404a&event[name]=Meeting",
+      "request_body": "event[uuids][]=b386f077-d7a1-4a75-a437-cb7e1f1a030b&event[uuids][]=a0f604cf-b5b2-4aed-87bb-5b68aef61b9f&event[name]=Meeting",
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "gjkQGy2W5RrjY-yWrjXK"
+        "X-Auth-Token": "CXR74F2e7jb4oA8EXk_s"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":14,\"name\":\"Meeting\",\"description\":\"\",\"is_weekly\":true,\"created_at\":\"2016-10-16T20:05:15.090Z\",\"owner\":{\"uuid\":\"da5742b4-9766-498e-93fb-5b8bbabe367d\"}}}",
+      "response_body": "{\"event\":{\"id\":13,\"name\":\"Meeting\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"0e6d77fc-52c5-44db-ac48-0e2fa75b05c2\"},\"participants\":[{\"uuid\":\"b386f077-d7a1-4a75-a437-cb7e1f1a030b\"},{\"uuid\":\"a0f604cf-b5b2-4aed-87bb-5b68aef61b9f\"},{\"uuid\":\"0e6d77fc-52c5-44db-ac48-0e2fa75b05c2\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[uuids][]=98551804-2eb1-4edb-87fa-58d319777ef0&event[uuids][]=38d46d6b-8411-49b9-8b01-1daa3dc6404a&event[name]=Meeting' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: gjkQGy2W5RrjY-yWrjXK\""
+      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[uuids][]=b386f077-d7a1-4a75-a437-cb7e1f1a030b&event[uuids][]=a0f604cf-b5b2-4aed-87bb-5b68aef61b9f&event[name]=Meeting' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: CXR74F2e7jb4oA8EXk_s\""
     }
   ]
 }

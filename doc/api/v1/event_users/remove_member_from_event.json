@@ -23,22 +23,22 @@
     {
       "request_method": "DELETE",
       "request_path": "/v1/event_users/",
-      "request_body": "uuid=b5d6613f-9007-42ed-94be-6c827a195095&event_id=1",
+      "request_body": "uuid=4140f540-972c-4f29-9a2e-29f8b1b50651&event_id=5",
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "D26ZQX5Pa5RCgZu3fxR_"
+        "X-Auth-Token": "RfHMxZrhjFAXy4bRyyRS"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":1,\"name\":\"Quia enim beatae voluptate et et ea eveniet.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"29b7f745-f797-4c74-a56b-ca97dbd59e89\"},\"participants\":[],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":5,\"name\":\"Eveniet magnam architecto voluptates velit sapiente hic vero.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"97770d7d-1c7a-4492-b512-43aca0cc67ed\"},\"participants\":[],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/event_users/\" -d 'uuid=b5d6613f-9007-42ed-94be-6c827a195095&event_id=1' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: D26ZQX5Pa5RCgZu3fxR_\""
+      "curl": "curl \"http://localhost:5000/v1/event_users/\" -d 'uuid=4140f540-972c-4f29-9a2e-29f8b1b50651&event_id=5' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: RfHMxZrhjFAXy4bRyyRS\""
     }
   ]
 }
