@@ -3,7 +3,7 @@ module V1
     before_action :authenticate_user!
 
     def index
-      render json: events, each_serializer: BriefEventSerializer
+      render json: events
     end
 
     def show
@@ -17,7 +17,7 @@ module V1
 
       if event.save
         assign_members(event)
-        render json: event, serializer: BriefEventSerializer
+        render json: event
       else
         render json: { error: event.errors.to_a }, status: :unprocessable_entity
       end
@@ -27,7 +27,7 @@ module V1
       event = own_events.find(params[:id])
 
       if event.update(event_params)
-        render json: event, serializer: BriefEventSerializer
+        render json: event
       else
         render json: { error: event.errors.to_a }, status: :unprocessable_entity
       end
@@ -36,7 +36,7 @@ module V1
     def destroy
       event = own_events.find(params[:id])
       status = event.destroy ? :ok : :unprocessable_entity
-      render json: event, serializer: BriefEventSerializer, status: status
+      render json: event, status: status
     end
 
     private
