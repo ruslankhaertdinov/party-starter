@@ -22,19 +22,19 @@
       "request_body": "availability[event_id]=wrong_id",
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "BjPubKxxS7k16rM5HuBz"
+        "X-Auth-Token": "MkaqTwtuF9s25quZh5aY"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 404,
       "response_status_text": "Not Found",
-      "response_body": "{\"error\":{\"id\":\"2b37afb6-3776-4f4a-9b1c-e5f9de88926b\",\"status\":404,\"error\":\"Not Found\",\"validations\":null}}",
+      "response_body": "{\"error\":{\"id\":\"dc3af456-2c3b-43bd-ba3e-9dbdd2b6878b\",\"status\":404,\"error\":\"Not Found\",\"validations\":null}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/availability\" -d 'availability[event_id]=wrong_id' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: BjPubKxxS7k16rM5HuBz\""
+      "curl": "curl \"https://party-starter-staging.herokuapp.com/v1/availability\" -d 'availability[event_id]=wrong_id' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: MkaqTwtuF9s25quZh5aY\""
     }
   ]
 }

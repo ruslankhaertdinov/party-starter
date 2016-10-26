@@ -13,23 +13,23 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/v1/events/14",
+      "request_path": "/v1/events/6",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "yyiSALoUxsp3Ko7-3AzD"
+        "X-Auth-Token": "YRyddSRyTxr2so6mpZgD"
       },
       "request_query_parameters": {
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":14,\"name\":\"Repudiandae omnis praesentium et et sed.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"11db5306-52e1-49d9-975e-a03ca6654e76\"},\"participants\":[{\"uuid\":\"18bf2149-30b9-47fe-80a1-5de5bf040f6b\"}],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":6,\"name\":\"Rerum ea ipsam quas.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"17040225-7870-451f-8002-c60cd97cd7e5\"},\"participants\":[{\"uuid\":\"93b0b05e-c340-4a71-99b5-061c294bdf7e\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/14\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: yyiSALoUxsp3Ko7-3AzD\""
+      "curl": "curl \"https://party-starter-staging.herokuapp.com/v1/events/6\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: YRyddSRyTxr2so6mpZgD\""
     }
   ]
 }

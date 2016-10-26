@@ -17,19 +17,19 @@
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "dETWJsR8rDgv-amdx2A-"
+        "X-Auth-Token": "Ea7v5hk7pKykhsjZrxAG"
       },
       "request_query_parameters": {
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"events\":[{\"id\":8,\"name\":\"Laudantium corporis voluptas occaecati quo soluta dolor et ut.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"6cb779ef-8314-458b-81a8-c94ee7efbb9a\"},\"participants\":[{\"uuid\":\"438e472b-0e86-49f2-a387-749c07a17211\"}],\"checked_participants\":[]},{\"id\":9,\"name\":\"Ea est distinctio repudiandae aut iure ipsum autem ipsa.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"b8dfc07b-b023-4d88-af43-9aade9b93663\"},\"participants\":[{\"uuid\":\"438e472b-0e86-49f2-a387-749c07a17211\"}],\"checked_participants\":[]}]}",
+      "response_body": "{\"events\":[{\"id\":3,\"name\":\"Rerum omnis consequatur ut nobis ipsum repellat suscipit accusamus.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"eb644ffa-c0fd-4339-bd9d-e2dcff597b8f\"},\"participants\":[{\"uuid\":\"4185d2ad-1eed-484d-ad1f-44daa7938d78\"}],\"checked_participants\":[]},{\"id\":4,\"name\":\"Velit tenetur velit voluptate quibusdam cum tempora.\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"73a8a5cb-7ac0-4fda-a207-e0be7672a95d\"},\"participants\":[{\"uuid\":\"4185d2ad-1eed-484d-ad1f-44daa7938d78\"}],\"checked_participants\":[]}]}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: dETWJsR8rDgv-amdx2A-\""
+      "curl": "curl \"https://party-starter-staging.herokuapp.com/v1/events\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: Ea7v5hk7pKykhsjZrxAG\""
     }
   ]
 }

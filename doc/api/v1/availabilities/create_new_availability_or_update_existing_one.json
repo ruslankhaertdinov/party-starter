@@ -25,22 +25,22 @@
     {
       "request_method": "POST",
       "request_path": "/v1/availabilities",
-      "request_body": "availability[event_id]=4&availability[intervals][monday][][start_at]=11&availability[intervals][monday][][end_at]=12&availability[intervals][monday][][start_at]=15&availability[intervals][monday][][end_at]=17&availability[intervals][tuesday][][start_at]=9&availability[intervals][tuesday][][end_at]=10&availability[intervals][tuesday][][start_at]=18&availability[intervals][tuesday][][end_at]=19",
+      "request_body": "availability[event_id]=11&availability[intervals][monday][][start_at]=11&availability[intervals][monday][][end_at]=12&availability[intervals][monday][][start_at]=15&availability[intervals][monday][][end_at]=17&availability[intervals][tuesday][][start_at]=9&availability[intervals][tuesday][][end_at]=10&availability[intervals][tuesday][][start_at]=18&availability[intervals][tuesday][][end_at]=19",
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "xDLsyk4NAzTN4PJWWqsm"
+        "X-Auth-Token": "6GsyCMmxY7RsTkK4tUNc"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"availability\":{\"id\":4,\"intervals\":{\"monday\":[{\"start_at\":\"11\",\"end_at\":\"12\"},{\"start_at\":\"15\",\"end_at\":\"17\"}],\"tuesday\":[{\"start_at\":\"9\",\"end_at\":\"10\"},{\"start_at\":\"18\",\"end_at\":\"19\"}]}}}",
+      "response_body": "{\"availability\":{\"id\":1,\"intervals\":{\"monday\":[{\"start_at\":\"11\",\"end_at\":\"12\"},{\"start_at\":\"15\",\"end_at\":\"17\"}],\"tuesday\":[{\"start_at\":\"9\",\"end_at\":\"10\"},{\"start_at\":\"18\",\"end_at\":\"19\"}]}}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/availabilities\" -d 'availability[event_id]=4&availability[intervals][monday][][start_at]=11&availability[intervals][monday][][end_at]=12&availability[intervals][monday][][start_at]=15&availability[intervals][monday][][end_at]=17&availability[intervals][tuesday][][start_at]=9&availability[intervals][tuesday][][end_at]=10&availability[intervals][tuesday][][start_at]=18&availability[intervals][tuesday][][end_at]=19' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: xDLsyk4NAzTN4PJWWqsm\""
+      "curl": "curl \"https://party-starter-staging.herokuapp.com/v1/availabilities\" -d 'availability[event_id]=11&availability[intervals][monday][][start_at]=11&availability[intervals][monday][][end_at]=12&availability[intervals][monday][][start_at]=15&availability[intervals][monday][][end_at]=17&availability[intervals][tuesday][][start_at]=9&availability[intervals][tuesday][][end_at]=10&availability[intervals][tuesday][][start_at]=18&availability[intervals][tuesday][][end_at]=19' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: 6GsyCMmxY7RsTkK4tUNc\""
     }
   ]
 }

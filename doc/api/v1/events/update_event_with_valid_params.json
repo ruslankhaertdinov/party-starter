@@ -28,23 +28,23 @@
   "requests": [
     {
       "request_method": "PATCH",
-      "request_path": "/v1/events/12",
+      "request_path": "/v1/events/10",
       "request_body": "name=New+name",
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "q8dbLNbqCxYvxPsXSr5U"
+        "X-Auth-Token": "wofsJ-RGXqeqvF1n2KKv"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"event\":{\"id\":12,\"name\":\"New name\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"449b8300-24d1-46d8-8143-b345b117bc13\"},\"participants\":[{\"uuid\":\"e2a11e65-2a80-491c-8860-5f8ea2311290\"}],\"checked_participants\":[]}}",
+      "response_body": "{\"event\":{\"id\":10,\"name\":\"New name\",\"description\":\"\",\"start_at\":0,\"end_at\":0,\"is_weekly\":true,\"intersections\":{},\"owner\":{\"uuid\":\"cbeaf1b9-cc00-41f1-bc67-dfb3a9755f8e\"},\"participants\":[{\"uuid\":\"baf597c3-9cd8-4a49-9b7b-96743b51ad3d\"}],\"checked_participants\":[]}}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events/12\" -d 'name=New+name' -X PATCH \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: q8dbLNbqCxYvxPsXSr5U\""
+      "curl": "curl \"https://party-starter-staging.herokuapp.com/v1/events/10\" -d 'name=New+name' -X PATCH \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: wofsJ-RGXqeqvF1n2KKv\""
     }
   ]
 }

@@ -29,10 +29,10 @@
     {
       "request_method": "POST",
       "request_path": "/v1/events",
-      "request_body": "event[uuids][]=de128429-3298-4ca0-a598-d58c3c7e95ba&event[uuids][]=c9a5fb99-38f6-43f2-a014-413c73304670&event[name]=",
+      "request_body": "event[uuids][]=61939500-3b9a-4c4a-98a0-ef68c7f05eb8&event[uuids][]=1c20254c-73b7-4330-be6e-103cb85d2a63&event[name]=",
       "request_headers": {
         "Accept": "application/json",
-        "X-Auth-Token": "44s43paHz1iS-ryBsF2k"
+        "X-Auth-Token": "z9N1ihetjrUpXE4oryNc"
       },
       "request_query_parameters": {
       },
@@ -44,7 +44,7 @@
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/events\" -d 'event[uuids][]=de128429-3298-4ca0-a598-d58c3c7e95ba&event[uuids][]=c9a5fb99-38f6-43f2-a014-413c73304670&event[name]=' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: 44s43paHz1iS-ryBsF2k\""
+      "curl": "curl \"https://party-starter-staging.herokuapp.com/v1/events\" -d 'event[uuids][]=61939500-3b9a-4c4a-98a0-ef68c7f05eb8&event[uuids][]=1c20254c-73b7-4330-be6e-103cb85d2a63&event[name]=' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"X-Auth-Token: z9N1ihetjrUpXE4oryNc\""
     }
   ]
 }
